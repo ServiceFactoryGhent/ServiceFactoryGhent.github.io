@@ -1,69 +1,263 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
-    <head>
+<head>
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT" />
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta name=viewport content="width=device-width, initial-scale=1"> {% feed_meta %}
+    <title>{{ page.title }}</title>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108915800-1"></script>
     <script>
-    if (window.location.host.substr(-10) == '.github.io' && window.location.protocol != 'https:') {
-        window.location.protocol = 'https:';
-    }
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-108915800-1');
     </script>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <title>Lab9K | {{ page.title }}</title>
-        <meta name="author" content="HansF" />
-        <meta name=viewport content="width=device-width, initial-scale=1">
-        {% feed_meta %}
-        
-        <!-- ICONS -->
-        <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
-        <link rel="manifest" href="/images/favicons/manifest.json">
-        <link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
-        <link rel="shortcut icon" href="/images/favicons/favicon.ico">
-        <meta name="msapplication-config" content="/images/favicons/browserconfig.xml">
-        <meta name="theme-color" content="#ffffff">
+    <script>
+        if (window.location.host.substr(-10) == '.github.io' && window.location.protocol != 'https:') {
+            window.location.protocol = 'https:';
+        }
+    </script>
+    <script type="text/javascript" src="/instafeed.min.js"></script>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <meta name="author" content="HansF" />
 
-        <!-- Homepage CSS -->
-        <link rel="stylesheet" href="/css/post.css">
-        <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    </head>
+    <!-- ICONS -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="/images/favicons/manifest.json">
+    <link rel="mask-icon" href="/images/favicons/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/images/favicons/favicon.ico">
+    <meta name="msapplication-config" content="/images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
 
-    <body>
-        
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/theme.min.css">
+    <link rel="stylesheet" href="/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+</head>
 
-        <div class="flex">
-            <div class="content">
-                <div class="container">
-                    <a href="/" class="logo"><img src="/images/logo.svg"></a>
-                    <a href="{{site.url}}" id="homelink"><i class="ion-ios-arrow-left"></i></a>
-                    {{ content }}
-                    <a href="{{ site.url }}/contact"> Ik wens mee te doen aan dit project </a>
+<body>
+
+    <body class="home page-template-default page page-id-62 woo-cart-popup wpb-js-composer js-comp-ver-5.0.1 vc_responsive" cz-shortcut-listen="true">
+        <div class="sp-header sp-header-loaded"></div>
+        <div class="pace-overlay"></div>
+        <div class="top-bar swatch-red-white">
+            <div class="container">
+                <div class="top top-left">
+                </div>
+                <div class="top top-right">
                 </div>
             </div>
-            <aside>
-                <h4>Other Projects</h4>
-                <ul>
-                {% for post in site.categories.project limit:8 %}
-                    {% if post.tags.first != "future" %}
-                        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-                    {% endif %}    
-                {% endfor %}       
-                 
-                </ul>
-
-                <hr>
-            </aside>
         </div>
+        <div class="sticky-wrapper" style="height: 91px;">
+            <header class="navbar navbar-static-top navbar-sticky swatch-red-white text-caps navbar-stuck" id="masthead" role="banner">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button class="navbar-toggle collapsed" data-target="#main-navbar" data-toggle="collapse" data-original-title="" title="">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a href="{{ site.url }}" class="navbar-brand">
+                            <img src="/images/logo.svg" alt=" Bray">Service Factory</a>
+                    </div>
+                    <nav id="main-navbar" class="collapse navbar-collapse" role="navigation">
+                        <div class="menu-sidebar pull-right">
+                        </div>
+                        <div class="menu-navigation-container">
+                            <ul id="menu-navigation" class="nav navbar-nav navbar-right">
+                                <li id="menu-item-46" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-46 active active">
+                                    <a href="{{ site.url }}">Home</a>
+                                </li>
+                                <li id="menu-item-115" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-115 dropdown">
+                                    <a href="{{ site.url }}/projects" class="dropdown-toggle">Projects</a>
+                                </li>
+                                <li id="menu-item-49" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-49">
+                                    <a href="{{ site.url }}/contact">Contact</a>
+                                </li>
+                                <li id="menu-item-52" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-52">
+                                    <a href="{{ site.url }}/about">About</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+        </div>
+        <section class="section swatch-white-red">
+            <div class="container">
+                <div class="row row-eq-height">
+                    <div class="col-md-9">
+                        <h1> {{ page.title }} </h1>
+                        <img src="{{ site.baseurl }}{{ page.image }}" alt="img-4-1170x400.png">
+                        <div class="post-extras bordered text-center">
+                            <div class="text-center">
+                                <span class="post-category">
+                                    <i class="fa fa-folder-open"></i>
+                                    <a href="" rel="tag">{{page.category}}</a>
+                                </span>
+                                <span class="post-tags">
+                                    <i class="fa fa-tags"></i>
+                                    {% if page.tags.size > 0 %}
+                                        {% for tag in page.tags %}
+                                            <a href="" rel="tag">{{ tag }}</a>
+                                        {% endfor %}
+                                    {% endif %}
+                                </span>
+                            </div>
+                        </div>
+                        <p> {{ page.content | remove: page.excerpt }} </p>
+                        <br>
+                        <br>
+                        <br>
+                        {% if page.tags.first == "openstaand" %}
+                            <a href="{{ site.url }}/contact"> Ik wens mee te doen aan dit project </a>
+                        {% endif %} 
+                    </div>
+                    <aside class="col-md-3 ">
+                        <div class="sidebar-widget  widget_search">
+                            <h3>Other Projects</h3>
+                            <ul>
+                            {% for post in site.categories.project limit:8 %}
+                                {% if post.tags.first != "future" %}
+                                    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                                {% endif %}    
+                            {% endfor %}       
+                            </ul>
+                            <hr>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+        
+        
+
+
+            <footer id="footer" role="contentinfo">
+                <section class="section section-normal has-top swatch-black-white">
+                    <div class="decor-top">
+                        <svg class="decor hidden-xs hidden-sm" height="100%" preserveAspectRatio="none" version="1.1" viewBox="0 0 100 100" width="100%"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 100 L2 60 L4 100 L6 60 L8 100 L10 60 L12 100 L14 60 L16 100 L18 60 L20 100 L22 60 L24 100 L26 60 L28 100 L30 60 L32 100 L34 60 L36 100 L38 60 L40 100 L42 60 L44 100 L46 60 L48 100 L50 60 L52 100 L54 60 L56 100 L58 60 L60 100 L62 60 L64 100 L66 60 L68 100 L70 60 L72 100 L74 60 L76 100 L78 60 L80 100 L82 60 L84 100 L86 60 L88 100 L90 60 L92 100 L94 60 L96 100 L98 60 L100 100 Z"
+                                stroke-width="0"></path>
+                        </svg>
+                        <svg class="decor visible-xs visible-sm" height="100%" preserveAspectRatio="none" version="1.1" viewBox="0 0 100 100" width="100%"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 100 L5 60 L10 100 L5 60 L10 100 L15 60 L20 100 L25 60 L30 100 L35 60 L40 100 L45 60 L50 100 L55 60 L60 100 L65 60 L70 100 L75 60 L80 100 L85 60 L90 100 L95 60 L100 100"
+                                stroke-width="0"></path>
+                        </svg>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                <div id="swatch_social-3" class="sidebar-widget  widget_swatch_social">
+                                    <ul class="unstyled inline small-screen-center social-icons social-background social-normal">
+                                        <li>
+                                            <a data-iconcolor="#00acee" href="https://twitter.com/brayweb">
+                                                <i class="fa fa-twitter"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a data-iconcolor="#3b5998" href="https://www.facebook.com/BrayWeb">
+                                                <i class="fa fa-facebook"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a data-iconcolor="#4183c4" href="https://github.com/bray89">
+                                                <i class="fa fa-github"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a data-iconcolor="#E45135" href="https://plus.google.com/+Bray/">
+                                                <i class="fa fa-google-plus"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a data-iconcolor="#634d40" href="https://www.instagram.com/peakstopowder/">
+                                                <i class="fa fa-instagram"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div id="text-7" class="sidebar-widget  widget_text">
+                                    <div class="textwidget">
+                                     
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </footer>
+        </div>
+        <!-- Fixing the Back to top button -->
+        <a href="javascript:void(0)" class="go-top hex-alt" style="bottom: -44px; opacity: 0;">
+            <i class="fa fa-angle-up">
+            </i>
+        </a>
 
         <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+            ga('create', 'UA-20970794-1', 'auto');
+            ga('send', 'pageview');
+
+        </script>
+
+
+
+        <div class="mailmunch-overlay" id="mailmunch-overlay-15f77ba0affd6d2" style="display: none; background: rgba(0, 0, 0, 0.7);"></div>
+        <div class="mailmunch-popover" id="mailmunch-popover-15f77ba0affd6d2" style="position: fixed; left: 0px; top: 0px; display: none;">
+            <div class="mailmunch-popover-container" id="mailmunch-popover-container-15f77ba0affd6d2">
+                <div class="mailmunch-inner-overlay" id="mailmunch-inner-overlay-15f77ba0affd6d2"></div>
+                <div class="mailmunch-popover-content" style="max-width: 500px;">
+                    <div class="mailmunch-popover-iframe-scaler" style="padding-top: 367px;">
+                        <iframe id="mailmunch-popover-frame-15f77ba0affd6d2" class="mailmunch-popover-iframe" frameborder="0" scrolling="no" allowtransparency="true"
+                            style="height: 367px;"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    
+
+    <script>
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
             ga('create', 'UA-86297842-1', 'auto');
             ga('send', 'pageview');
-        </script>
-    </body>
+    </script>
+
+
+</body>
 
 </html>

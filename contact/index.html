@@ -48,34 +48,31 @@ title: Contact
 </div>
 
 <script>
-window.onload=function(){ 
+	window.onload=function(){
+	    function querySt(ji) {
+	        hu = window.location.search.substring(1); 
+	        gy = hu.split("&");
 
- function querySt(ji) {
-
- hu = window.location.search.substring(1); 
- gy = hu.split("&");
-
-for (i=0;i<gy.length;i++) { 
-ft = gy[i].split("="); 
-if (ft[0] == ji) { 
- return ft[1]; 
- } 
- } 
- } 
- var fieldName = decodeURIComponent(querySt("project"));
-
-
- if( fieldName==null){ 
- }else{ 
- 	var selectObj = document.getElementById('selectProject')
- 	for (var i = 0; i < selectObj.options.length; i++) {
-        if (selectObj.options[i].text == fieldName) {
-            selectObj.options[i].selected = true;
-            return;
-        }
-    }
- } 
- } 
+	        for (i=0;i<gy.length;i++) { 
+	            ft = gy[i].split("="); 
+	            if (ft[0] == ji) { 
+	                return ft[1]; 
+	            } 
+	        } 
+	    } 
+	    var fieldName = decodeURIComponent(querySt("project"));
+	    if( fieldName==null){ 
+	    }
+	    else{ 
+	        var selectObj = document.getElementById('selectProject')
+	        for (var i = 0; i < selectObj.options.length; i++) {
+	            if (selectObj.options[i].text == fieldName) {
+	                selectObj.options[i].selected = true;
+	                return;
+	            }
+	        }
+	    } 
+	} 
 </script>
 
 

@@ -77,16 +77,16 @@
                         </div>
                         <div class="menu-navigation-container">
                             <ul id="menu-navigation" class="nav navbar-nav navbar-right">
-                                <li id="menu-item-46" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home menu-item-46 active active">
+                                <li id="menu-item-home" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-46">
                                     <a href="{{ site.url }}">Home</a>
                                 </li>
-                                <li id="menu-item-115" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-115 dropdown">
+                                <li id="menu-item-projects" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-115 dropdown">
                                     <a href="{{ site.url }}/projects" class="dropdown-toggle">Projects</a>
                                 </li>
-                                <li id="menu-item-49" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-49">
+                                <li id="menu-item-contact" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-49">
                                     <a href="{{ site.url }}/contact">Contact</a>
                                 </li>
-                                <li id="menu-item-52" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-52">
+                                <li id="menu-item-about" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-52">
                                     <a href="{{ site.url }}/about">About</a>
                                 </li>
                             </ul>
@@ -191,23 +191,37 @@
         </div>
     </body>
 
-    
+    <script>
+        var prev_handler = window.onload;
+        window.onload=function(){
+            if (prev_handler) {
+                prev_handler();
+            }
+            var menuItem = window.location.pathname.split("/")[1];
+            if(menuItem==""){
+                menuItem="home";
+            }
+            console.log(menuItem);
+            var el = document.getElementById('menu-item-'+menuItem);
+            el.className += " current-menu-item current_page_item active";
+        }
+    </script>
 
     <script>
-            (function (i, s, o, g, r, a, m) {
-                i['GoogleAnalyticsObject'] = r;
-                i[r] = i[r] || function () {
-                    (i[r].q = i[r].q || []).push(arguments)
-                }, i[r].l = 1 * new Date();
-                a = s.createElement(o),
-                    m = s.getElementsByTagName(o)[0];
-                a.async = 1;
-                a.src = g;
-                m.parentNode.insertBefore(a, m)
-            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-            ga('create', 'UA-86297842-1', 'auto');
-            ga('send', 'pageview');
+        ga('create', 'UA-86297842-1', 'auto');
+        ga('send', 'pageview');
     </script>
     <script>
         //Watch on scroll and update nav

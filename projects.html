@@ -46,7 +46,7 @@ title: Service factory
 									</div>
 								</div>
 								<div class="post-body entry-content">
-									{{ post.content | strip_html | truncatewords: 50 }}
+									{{ post.content | remove: post.excerpt | remove: "Intro" | strip_html | truncatewords: 50 }}
 									<a href="{{ site.url }}\{{ post.url }}" class="more-link">Read more</a>
 								</div>
 								<div class="post-extras bordered text-center">
@@ -106,27 +106,19 @@ title: Service factory
 				<div id="recent-posts-3" class="sidebar-widget  widget_recent_entries">
 					<h3 class="sidebar-header">Recent Posts</h3>
 					<ul>
-						<li>
-							<div class="post-icon">
-								<i class="fa fa-file-text"></i>
-							</div>
-							<a href="https://www.adam-bray.com/2017/04/30/increase-traffic-being-mobile-friendly/" title="Increase Traffic being Mobile Friendly">Increase Traffic being Mobile Friendly</a>
-							<small></small>
-						</li>
-						<li>
-							<div class="post-icon">
-								<i class="fa fa-file-text"></i>
-							</div>
-							<a href="https://www.adam-bray.com/2017/02/21/create-a-popup-html-login-box-with-jquery/" title="Create a Popup HTML Login Box with jQuery">Create a Popup HTML Login Box with jQuery</a>
-							<small></small>
-						</li>
-						<li>
-							<div class="post-icon">
-								<i class="fa fa-file-text"></i>
-							</div>
-							<a href="https://www.adam-bray.com/2017/02/18/create-a-html-login-form-using-validation-rules/" title="Create a HTML Login Form using Validation Rules">Create a HTML Login Form using Validation Rules</a>
-							<small></small>
-						</li>
+						{% if site.posts.size > 0 %}
+							{% for post in site.posts limit:5 %}
+								<li>
+									<div class="post-icon">
+										<i class="fa fa-file-text"></i>
+									</div>
+									<a href="{{post.url}}">{{post.title}}</a>
+									<small></small>
+								</li>
+							{% endfor %}
+						{% else %}
+							<p>There are no posts available.</p>
+						{% endif %}
 					</ul>
 				</div>
 				<div id="archives-3" class="sidebar-widget  widget_archive">

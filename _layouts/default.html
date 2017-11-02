@@ -193,7 +193,11 @@
     </body>
 
     <script>
+        var prev_handler = window.onload;
         window.onload=function(){
+            if (prev_handler) {
+                prev_handler();
+            }
             var menuItem = window.location.pathname.split("/")[1];
             if(menuItem==""){
                 menuItem="home";

@@ -19,11 +19,12 @@ title: Contact
 						<form action="https://formspree.io/servicefactory@digipolis.gent" method="POST">
 							<h2>Ik wil meedoen aan project</h2>
 							<label>Project</label>
-							<select name="projects">
-									<option value="a">a</option>
-									<option value="b">b</option>
-									<option value="c">c</option>
-									<option value="d">d</option>
+							<select name="projects" id="selectProject">
+								{% if site.posts.size > 0 %}
+									{% for post in site.categories.project %}
+										<option value="{{post.title}}">{{post.title}}</option>
+									{% endfor %}
+                               	{% endif %}
 							</select>
 							<br>
 							<label>E-mail</label>
@@ -45,5 +46,36 @@ title: Contact
 		</section>
 	</article>
 </div>
+
+<script>
+window.onload=function(){ 
+
+ function querySt(ji) {
+
+ hu = window.location.search.substring(1); 
+ gy = hu.split("&");
+
+for (i=0;i<gy.length;i++) { 
+ft = gy[i].split("="); 
+if (ft[0] == ji) { 
+ return ft[1]; 
+ } 
+ } 
+ } 
+ var fieldName = decodeURIComponent(querySt("project"));
+
+
+ if( fieldName==null){ 
+ }else{ 
+ 	var selectObj = document.getElementById('selectProject')
+ 	for (var i = 0; i < selectObj.options.length; i++) {
+        if (selectObj.options[i].text == fieldName) {
+            selectObj.options[i].selected = true;
+            return;
+        }
+    }
+ } 
+ } 
+</script>
 
 

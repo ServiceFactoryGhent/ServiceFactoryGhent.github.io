@@ -109,7 +109,7 @@
                             {% for post in site.posts%}
                             {% if post == page %}
                             {% assign stop = true %}
-                            {% elsif post.categories == page.categories %}
+                            {% elsif post.tags contains "openstaand" or post.tags contains "lopend" or post.tags contains "afgewerkt"  %}
                             {% if stop %}
                             {% assign prev = post.url %}
                             {% assign pTitle = post.title %}
@@ -121,10 +121,10 @@
                             {% endif %}
                             {% endfor%}
                             {% if prev != "" %}
-                            <li class="previous"><a href="{{ prev }}">← Previous<!-- : {{pTitle}} --></a></li>
+                            <li class="previous"><a href="{{ prev }}">← Previous project<!-- : {{pTitle}} --></a></li>
                             {% endif %}
                             {% if next != "" %}
-                            <li class="next"><a href="{{ next }}"> Next<!-- : {{nTitle}}  -->→</a></li>
+                            <li class="next"><a href="{{ next }}"> Next project<!-- : {{nTitle}}  -->→</a></li>
                             {% endif %}
                         </ul>
                         <img src="{{ site.baseurl }}{{ page.image }}" alt="img-4-1170x400.png">
@@ -153,10 +153,10 @@
                         {% endif %}
                         <ul class="pager">
                             {% if prev != "" %}
-                            <li class="previous"><a href="{{ prev }}">← Previous<!-- : {{pTitle}} --></a></li>
+                            <li class="previous"><a href="{{ prev }}">← Previous project<!-- : {{pTitle}} --></a></li>
                             {% endif %}
                             {% if next != "" %}
-                            <li class="next"><a href="{{ next }}"> Next<!-- : {{nTitle}}  -->→</a></li>
+                            <li class="next"><a href="{{ next }}"> Next project<!-- : {{nTitle}}  -->→</a></li>
                             {% endif %}
                         </ul> 
                     </div>

@@ -45,6 +45,7 @@
     <link rel="stylesheet" href="/css/theme.min.css">
     <link rel="stylesheet" href="/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/post.css">
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 </head>
 
@@ -101,6 +102,31 @@
                 <div class="row row-eq-height">
                     <div class="col-md-9">
                         <h1> {{ page.title }} </h1>
+                        <ul class="pager"> 
+                            {% assign prev = "" %}
+                            {% assign next = "" %}
+                            {% assign stop = false %}
+                            {% for post in site.posts%}
+                            {% if post == page %}
+                            {% assign stop = true %}
+                            {% elsif post.categories == page.categories %}
+                            {% if stop %}
+                            {% assign prev = post.url %}
+                            {% assign pTitle = post.title %}
+                            {% break %}
+                            {% else %}
+                            {% assign next = post.url %}
+                            {% assign nTitle = post.title %}
+                            {% endif %}
+                            {% endif %}
+                            {% endfor%}
+                            {% if prev != "" %}
+                            <li class="previous"><a href="{{ prev }}">← Previous<!-- : {{pTitle}} --></a></li>
+                            {% endif %}
+                            {% if next != "" %}
+                            <li class="next"><a href="{{ next }}"> Next<!-- : {{nTitle}}  -->→</a></li>
+                            {% endif %}
+                        </ul>
                         <img src="{{ site.baseurl }}{{ page.image }}" alt="img-4-1170x400.png">
                         <div class="post-extras bordered text-center">
                             <div class="text-center">
@@ -124,7 +150,15 @@
                         <br>
                         {% if page.tags.first == "openstaand" %}
                             <a href="{{ site.url }}/contact?project={{ page.title }}"> Ik wens mee te doen aan dit project </a>
-                        {% endif %} 
+                        {% endif %}
+                        <ul class="pager">
+                            {% if prev != "" %}
+                            <li class="previous"><a href="{{ prev }}">← Previous<!-- : {{pTitle}} --></a></li>
+                            {% endif %}
+                            {% if next != "" %}
+                            <li class="next"><a href="{{ next }}"> Next<!-- : {{nTitle}}  -->→</a></li>
+                            {% endif %}
+                        </ul> 
                     </div>
                     <aside class="col-md-3 ">
                         <div class="sidebar-widget  widget_search">

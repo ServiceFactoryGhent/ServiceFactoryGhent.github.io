@@ -1,36 +1,49 @@
 ---
-layout: detail
+layout: default
 title: Contact
 ---
 <a href="{{site.url}}" id="homelink"><i class="ion-ios-arrow-left"></i></a>
 
-<div id="contact">
-	<div class="contact-content">
-		<form action="https://formspree.io/servicefactory@digipolis.gent" method="POST">
-			<h2>Ik wil meedoen aan project</h2>
-			<label>Project</label>
-			<select name="projects">
-					<option value="a">a</option>
-					<option value="b">b</option>
-					<option value="c">c</option>
-					<option value="d">d</option>
-			</select>
-			<br>
-			<br>
-			
+<div id="content contact" role="main">
+	<article class="page type-page status-publish hentry">
+		<div class="contact-content" style="display: none !important;"></div>
+		<section class="section swatch-white-red section-normal ">
+			<div class="background-media"></div>
+			<div class="background-overlay" style=""></div>
+			<div class="container">
+				<div class="row vertical-top">
+					<div class="col-md-12  text-default text-center">
+						<header class="section-header text-center no-underline">
+							<h1 class="headline regular">Contact</h1>
+						</header>
+						<form action="https://formspree.io/servicefactory@digipolis.gent" method="POST">
+							<h2>Ik wil meedoen aan project</h2>
+							<label>Project</label>
+							<select name="projects">
+									<option value="a">a</option>
+									<option value="b">b</option>
+									<option value="c">c</option>
+									<option value="d">d</option>
+							</select>
+							<br>
+							<label>E-mail</label>
+							<br>
+							<input type="email" name="_replyto">
+							<br>
+							<label>Plan van aanpak project</label>
+							<br>
+							<textarea name="h" cols="60" rows="10"></textarea>
 
-			<label>E-mail</label>
-			<input type="email" name="_replyto">
-			
-			<label>Plan van aanpak project</label>
-			<textarea name="h" cols="60" rows="10"></textarea>
-
-			<button type="submit" value="Send"  class="contactformbutton">Send</button>
-			<input type="hidden" name="_next" value="contact/thanks.html"/>
-			<input type="text" name="_gotcha" style="display:none" />
-			<input type="hidden" name="_subject" value="Contactform Lab9K" />
-		</form>
-	</div>
+							<button type="submit" value="Send"  class="contactformbutton">Send</button>
+							<input type="hidden" name="_next" value="contact/thanks.html"/>
+							<input type="text" name="_gotcha" style="display:none" />
+							<input type="hidden" name="_subject" value="Contactform Lab9K" />
+						</form>
+					</div>
+				</div>
+			</div>
+		</section>
+	</article>
 </div>
 
 

@@ -1,0 +1,8 @@
+markdown: kramdown
+highlighter: rouge
+gems:  [jekyll-feed,jekyll-paginate]
+paginate: 3
+url: https://lab9k.github.io/ServiceFactory/
+title: "Service Factory"
+description:  "Get your latest info about Service Factory here."
+author: HansF

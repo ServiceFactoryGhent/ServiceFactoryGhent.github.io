@@ -53,7 +53,7 @@
     <body class="home page-template-default page page-id-62 woo-cart-popup wpb-js-composer js-comp-ver-5.0.1 vc_responsive" cz-shortcut-listen="true">
         <div class="sp-header sp-header-loaded"></div>
         <div class="pace-overlay"></div>
-        <div class="top-bar swatch-red-white">
+        <div class="top-bar swatch-white">
             <div class="container">
                 <div class="top top-left">
                 </div>
@@ -61,8 +61,8 @@
                 </div>
             </div>
         </div>
-        <div class="sticky-wrapper" style="height: 91px;">
-            <header class="navbar navbar-static-top navbar-sticky swatch-red-white text-caps navbar-stuck" id="masthead" role="banner">
+        <div class="sticky-wrapper" style="height: 91px;position:absolute;top:0;left:0;">
+            <header class="navbar navbar-static-top navbar-sticky swatch-white text-caps navbar-stuck" id="masthead" role="banner">
                 <div class="container">
                     <div class="navbar-header">
                         <button class="navbar-toggle collapsed" data-target="#main-navbar" data-toggle="collapse" data-original-title="" title="">
@@ -70,8 +70,7 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a href="{{ site.url }}" class="navbar-brand">
-                            <img src="../images/logo.svg" alt=" Bray">Service Factory</a>
+                        <a href="{{ site.url }}" class="navbar-brand"></a>
                     </div>
                     <nav id="main-navbar" class="collapse navbar-collapse" role="navigation">
                         <div class="menu-sidebar pull-right">
@@ -209,6 +208,13 @@
 
             ga('create', 'UA-86297842-1', 'auto');
             ga('send', 'pageview');
+    </script>
+    <script>
+        //Watch on scroll and update nav
+        var logo = document.getElementsByClassName('navbar-brand')[0];
+        var nav = document.getElementsByTagName('header')[0];
+
+        // SCRIPT
     </script>
 
 

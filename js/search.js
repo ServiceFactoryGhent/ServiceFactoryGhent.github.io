@@ -1,12 +1,11 @@
 (function() {
   function displaySearchResults(results, store) {
     var searchResults = document.getElementById('search-results');
-
+    searchResults.innerHTML = "";
     if (results.length) { // Are there any results?
       var appendString = '';
-
-      var getUrl = window.location;
-      var baseUrl = getUrl .protocol + "//" + getUrl.host + "/" + getUrl.pathname.split('/')[1];
+      var postStringList = [];
+      
 
       for (var i = 0; i < results.length; i++) {  // Iterate over the results
         var item = store[results[i].ref];
@@ -36,36 +35,31 @@
         appendString += '<a href="" rel="tag">' + item.category + '</a>';
         appendString += '</span>';
 
-        console.log("size:" + item.tags.size);
-        console.log("size:" + item.tags.length);
-        console.log("normal:" + item.tags);
-
-        
         if(item.tags.length > 0) {
           appendString += '<span class="post-tags">';
           appendString += '<i class="fa fa-tags"></i>';
-          for(i = 0; i < item.tags.size; i++) {
-            appendString += '<a href="" rel="tag">' + tags[i] + '</a>';
-          }
+          console.log(item.tags);
+          item.tags.forEach(function (it) {
+            console.log(it);
+            appendString += '<a href="" rel="tag">' + it + '</a>';
+          })
           appendString += '</span>';
         }
                 
         appendString += '</div>';
         appendString += '</div>';
         appendString += '</article> ';
-        
-        
 
-
-        
-    
-
-
- /*        appendString += '<li><a href="' + item.url + '"><h3>' + item.title + '</h3></a>';
-        appendString += '<p>' + item.content.substring(0, 150) + '...</p></li>'; */
+        postStringList.push(appendString);
+        //console.log('list of posts' + postStringList);
+        appendString = "";
+        //console.log('appendstring:(should be empty)' + appendString);
       }
-
-      searchResults.innerHTML = appendString;
+      postStringList.forEach(function (item) {
+        console.log(item);
+        searchResults.innerHTML += item;
+      });
+      //searchResults.innerHTML = appendString;
     } else {
       searchResults.innerHTML = '<li>No results found</li>';
     }

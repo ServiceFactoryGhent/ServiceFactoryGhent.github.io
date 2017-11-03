@@ -3,6 +3,9 @@
  var nav = document.getElementsByTagName('header')[0];
  var bars = document.querySelectorAll('span.icon-bar');
 
+ var hamburger = document.getElementsByClassName('navbar-toggle collapsed')[0];
+ var navbar = document.getElementById('main-navbar');
+
  Element.prototype.hasClass = function(className) {
      return new RegExp(' ' + className + ' ').test(' ' + this.className + ' ');
  };
@@ -20,6 +23,17 @@
          this.className = newClass.replace(/^\s+|\s+$/g, '');
      }
  };
+ Element.prototype.toggleClass = function(className) {
+	var newClass = ' ' + this.className.replace( /[\t\r\n]/g, " " ) + ' ';
+    if (this.hasClass(className)) {
+        while (newClass.indexOf(" " + className + " ") >= 0 ) {
+            newClass = newClass.replace( " " + className + " " , " " );
+        }
+        this.className = newClass.replace(/^\s+|\s+$/g, '');
+    } else {
+        this.className += ' ' + className;
+    }
+};
 
  window.addEventListener('scroll', function() {
      logo.addClass('default-logo');
@@ -36,4 +50,9 @@
              bars[i].style.backgroundColor = "#FFF";
          }
      }
+ });
+ hamburger.addEventListener("click", function() {
+     hamburger.toggleClass('collapsed');
+     navbar.toggleClass('in');
+     navbar.style.transition = "height 258ms ease-out";
  });

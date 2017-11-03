@@ -6305,6 +6305,8 @@ footer .footer-sections .footer-section.be-informed form input[type="submit"] {
   width: 100px;
   color: white;
 }
+footer .footer-sections .footer-section.be-informed form input[type="email"],
+footer .footer-sections .footer-section.be-informed form input[type="password"],
 footer .footer-sections .footer-section.be-informed form input[type="text"] {
   padding: 5px 15px;
   width: calc(100% - 100px);

@@ -35,7 +35,7 @@
         appendString += '<a href="" rel="tag">' + item.category + '</a>';
         appendString += '</span>';
 
-        if(item.tags.length > 0) {
+        /* if(item.tags.length > 0) {
           appendString += '<span class="post-tags">';
           appendString += '<i class="fa fa-tags"></i>';
           console.log(item.tags);
@@ -44,7 +44,7 @@
             appendString += '<a href="" rel="tag">' + it + '</a>';
           })
           appendString += '</span>';
-        }
+        } */
                 
         appendString += '</div>';
         appendString += '</div>';

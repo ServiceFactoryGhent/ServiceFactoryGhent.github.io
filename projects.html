@@ -1,8 +1,12 @@
 ---
+<<<<<<< HEAD
 layout: pages
 pagination: 
   enabled: true
   category: project
+=======
+layout: default
+>>>>>>> 3beb100a096f7716fad1bcb6b76043e05ea18a03
 title: Service factory
 ---
 
@@ -18,10 +22,10 @@ title: Service factory
 	<section class="section swatch-white-red">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-9">
+				<div id="search-results" class="col-md-9">
 					{% if site.posts.size > 0 %}
 						{% for post in site.categories.project %}
-							<article id="search-results" class="post-showinfo  post-191 post type-post status-publish format-standard has-post-thumbnail hentry category-html category-seo tag-css tag-html tag-mobile">
+							<article class="post-showinfo  post-191 post type-post status-publish format-standard has-post-thumbnail hentry category-html category-seo tag-css tag-html tag-mobile">
 								<div class="post-media overlay">
 									<a href="{{ site.url }}\{{ post.url }}" class="feature-image hover-animate">
 									<img src="{{ site.baseurl }}{{ post.image }}" alt="img-4-1170x400.png"><i class="fa fa-link"></i></a>

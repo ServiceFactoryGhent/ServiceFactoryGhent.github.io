@@ -12370,24 +12370,70 @@ textarea.woocommerce-invalid {
 .woocommerce-account .form-row .chosen-container {
     width: 100%!important
 }
+
 @media (min-width: 320px) {
-    article#search-results .post-text {
+    #search-results article .post-text {
         padding-top: 30px;
     }
-    article#search-results {
+    #search-results article {
         display: flex;
         flex-direction: column;
     }
+    aside.col-md-3.sidebar {
+        position: absolute;
+        top: -70px;
+        margin: 0;
+        width: calc(100% - 10px);
+    }
+    aside #categories-3,
+    aside #tag_cloud-3,
+    aside #recent-posts-3,
+    aside #archives-3 {
+        display: none;
+    }
+    aside #search-4 form input {
+        padding: 5px 15px;
+        height: 40px;
+    }
+    aside #search-4 form {
+        display: flex;
+    }
+    aside #search-4 form input[type="text"] {
+        border: 1px solid #006495;
+    }
+    aside #search-4 form input[type="submit"] {
+        background: #006495;
+        color: #FFF;
+        width: 120px;
+    }
 }
 @media (min-width: 768px) {
-    article#search-results .post-text {
+    #search-results article .post-text {
         padding-top: 0;
     }
-    article#search-results {
+    #search-results article {
         display: flex;
         flex-direction: row;
     }
+    aside #categories-3,
+    aside #tag_cloud-3,
+    aside #recent-posts-3,
+    aside #archives-3 {
+        display: none;
+    }
 }
-article#search-results .post-text {
-    padding-left: 15px;
+#search-results article .post-text {
+    padding: 0 15px;
+}
+@media (min-width: 960px) {
+    aside.col-md-3.sidebar {
+        position: relative;
+        width: 25%;
+    }
+    aside #categories-3,
+    aside #tag_cloud-3,
+    aside #recent-posts-3,
+    aside #archives-3 {
+        display: initial;
+    }
 }

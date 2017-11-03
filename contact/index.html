@@ -21,7 +21,7 @@ title: Contact
 							<label>Project</label>
 							<select name="projects" id="selectProject">
 								{% if site.posts.size > 0 %}
-									{% for post in site.categories.project %}
+									{% for post in site.tags.openstaand %}
 										<option value="{{post.title}}">{{post.title}}</option>
 									{% endfor %}
                                	{% endif %}

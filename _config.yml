@@ -1,6 +1,6 @@
 markdown: kramdown
 highlighter: rouge
-gems:  [jekyll-feed,jekyll-paginate-v2]
+gems:  [jekyll-feed]
 url: https://servicefactoryghent.github.io/
 title: "Service Factory"
 description:  "Get your latest info about Service Factory here."

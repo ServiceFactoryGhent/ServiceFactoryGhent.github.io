@@ -1,5 +1,5 @@
 ---
-layout: default 
+layout: default
 title: Service factory 
 ---
 
@@ -150,7 +150,7 @@ title: Service factory
 						<div class="col-md-12  text-default">
 							<div class="row">
 								<ul class="list-unstyled list-container">								
-										{% for post in paginator.posts %}
+										{% for post in site.categories.news limit:3 %}
 										<li class="post-item col-md-4">
 												<div class="grid-post swatch-white-blue">
 													<article id="post-191" class="post-showinfo  post-191 post type-post status-publish format-standard has-post-thumbnail hentry category-html category-seo tag-css tag-html tag-mobile">
@@ -201,47 +201,47 @@ title: Service factory
 								</ul>
 							</div>
 
-							{% if paginator.total_pages > 1 %}
-							<div class="text-center ">
-								<ul class="post-navigation pagination">
-									{% if paginator.previous_page %}
-										<li>
-											<a href="{{ paginator.previous_page_path }}" class="">‹</a>
-										</li>										
-									{% else %}
-										<li class="disabled">
-											<a href="" class="">‹</a>
-										</li>	
-									{% endif %}
+							<!-- {% if paginator.total_pages > 1 %}
+								<div class="text-center ">
+									<ul class="post-navigation pagination">
+										{% if paginator.previous_page %}
+											<li>
+												<a href="{{ paginator.previous_page_path }}" class="">‹</a>
+											</li>										
+										{% else %}
+											<li class="disabled">
+												<a href="" class="">‹</a>
+											</li>	
+										{% endif %}
 
-									{% for page in (1..paginator.total_pages) %}
-										{% if page == paginator.page %}
-											<li class="active">
-												<span class="current">{{ page }}</span>
-											</li>
-										{% elsif page == 1 %}
-											<li>									
-												<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="inactive">{{ page }}</a>
+										{% for page in (1..paginator.total_pages) %}
+											{% if page == paginator.page %}
+												<li class="active">
+													<span class="current">{{ page }}</span>
+												</li>
+											{% elsif page == 1 %}
+												<li>									
+													<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="inactive">{{ page }}</a>
+												</li>
+											{% else %}
+												<li>
+													<a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}" class="inactive">{{ page }}</a>
+												</li>
+											{% endif %}
+									  	{% endfor %}
+			
+										{% if paginator.next_page %}
+											<li>
+												<a href="{{ paginator.next_page_path | prepend: site.baseurl }}">›</a>
 											</li>
 										{% else %}
-											<li>
-												<a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}" class="inactive">{{ page }}</a>
+											<li class="disabled">
+												<a href="">›</a>
 											</li>
 										{% endif %}
-								  	{% endfor %}
-		
-									{% if paginator.next_page %}
-										<li>
-											<a href="{{ paginator.next_page_path }}">›</a>
-										</li>
-									{% else %}
-										<li class="disabled">
-											<a href="">›</a>
-										</li>
-									{% endif %}
-								</ul>
-							</div>
-						{% endif %}	
+									</ul>
+								</div>
+							{% endif %}	 -->
 						</div>
 					</div>
 				</div>

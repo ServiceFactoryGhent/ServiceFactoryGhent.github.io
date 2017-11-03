@@ -7,8 +7,8 @@ title: Service factory
 	<section class="section swatch-red-white section-normal" style="min-height: 1px;">
 		<div class="container">
 			<header class="section-header text-center no-underline">
-				<h1 class="headline super regular">Projects</h1>
-				<p>Find a project you would like to contribute to.</p>
+				<h1 class="headline super regular">Projecten</h1>
+				<p>Vind een project waaraan je wilt deelnemen of bekijk oudere projecten.</p>
 			</header>
 		</div>
 	</section>
@@ -31,7 +31,7 @@ title: Service factory
 									</div>
 									<div class="post-body entry-content">
 										{{ post.content | remove: post.excerpt | remove: "Intro" | strip_html | truncatewords: 50 }}
-										<a href="{{ site.url }}\{{ post.url }}" class="more-link">Read more</a>
+										<a href="{{ site.url }}\{{ post.url }}" class="more-link">Lees meer</a>
 									</div>
 									<div class="post-extras bordered text-center">
 										<div class="text-center">
@@ -59,13 +59,13 @@ title: Service factory
 				<aside class="col-md-3 sidebar">
 					<div id="search-4" class="sidebar-widget  widget_search">
 					<form action="/projects.html" method="get">
-						<input type="text" id="search-box" name="query" placeholder="Search for a project">
-						<input type="submit" value="search">
+						<input type="text" id="search-box" name="query" placeholder="Zoek naar een project">
+						<input type="submit" value="zoek">
 					  </form>
 				</div>
 
 				<div id="categories-3" class="sidebar-widget  widget_categories">
-					<h3 class="sidebar-header">Categories</h3>		
+					<h3 class="sidebar-header">Categoriën</h3>		
 					<ul>
 						{% for category in site.categories %}
 							<li class="cat-item cat-item-16"><a href="">{{ category | first }}</a>
@@ -74,7 +74,7 @@ title: Service factory
 				</div>
 				
 				<div id="tag_cloud-3" class="sidebar-widget  widget_tag_cloud">
-					<h3 class="sidebar-header">Popular Tags</h3>
+					<h3 class="sidebar-header">Populaire Tags</h3>
 					<div class="tagcloud">
 						<ul>
 							{% for tag in site.tags %}
@@ -84,7 +84,7 @@ title: Service factory
 					</div>
 				</div>
 				<div id="recent-posts-3" class="sidebar-widget  widget_recent_entries">
-					<h3 class="sidebar-header">Recent Posts</h3>
+					<h3 class="sidebar-header">Recente Posts</h3>
 					<ul>
 						{% if site.posts.size > 0 %}
 							{% for post in site.posts limit:5 %}
@@ -101,13 +101,13 @@ title: Service factory
 						{% endif %}
 					</ul>
 				</div>
-				<div id="archives-3" class="sidebar-widget  widget_archive">
+				<!-- <div id="archives-3" class="sidebar-widget  widget_archive">
 					<h3 class="sidebar-header">Archives</h3>
 						<ul>
 							<li><a href="https://www.adam-bray.com/2017/04/">April 2017</a></li>
 							<li><a href="https://www.adam-bray.com/2017/02/">February 2017</a></li>
 						</ul>
-				</div></aside>
+				</div></aside> -->
 			</div>
 		</div>
 	</section>

@@ -45,7 +45,6 @@
           var tags = str.split(", ");
 
           tags.forEach(function (it) {
-            console.log(it);
             appendString += '<a href="" rel="tag">' + it + '</a>';
           })
           appendString += '</span>';
@@ -56,15 +55,12 @@
         appendString += '</article> ';
 
         postStringList.push(appendString);
-        //console.log('list of posts' + postStringList);
         appendString = "";
-        //console.log('appendstring:(should be empty)' + appendString);
       }
       postStringList.forEach(function (item) {
         console.log(item);
         searchResults.innerHTML += item;
       });
-      //searchResults.innerHTML = appendString;
     } else {
       searchResults.innerHTML = '<li>No results found</li>';
     }

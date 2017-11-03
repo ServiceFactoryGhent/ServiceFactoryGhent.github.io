@@ -179,13 +179,12 @@ title: Service Factory
 															</div>
 														</div>
 														<div class="post-body entry-content">
-															<p>{{ post.meta }}</p>
+															<p>{{ post.content | strip_html | truncatewords: 35 }}</p>
 															<a href="{{ site.baseurl }}{{ post.url }}" class="more-link">Read more</a>
 														</div>
-														<div class="post-extras bordered text-center">
+														{% comment %} <div class="post-extras bordered text-center">
 															<div class="text-center">
 															
-																
 																<span class="post-tags">
 																	<i class="fa fa-tags"></i>
 																	{% for tag in post.tags %}
@@ -194,7 +193,7 @@ title: Service Factory
 																</span>
 		
 															</div>
-														</div>									
+														</div>	 {% endcomment %}								
 													</article>
 												</div>
 											</li>								

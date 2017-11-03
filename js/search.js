@@ -65,22 +65,6 @@
     }
   }
 
-
-							
-							
-									
-										
-											
-											
-										
-										
-											
-											
-
-
-
-
-
   function getQueryVariable(variable) {
     var query = window.location.search.substring(1);
     var vars = query.split('&');

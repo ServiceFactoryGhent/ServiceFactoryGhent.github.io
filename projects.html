@@ -1,5 +1,8 @@
 ---
 layout: pages
+pagination: 
+  enabled: true
+  category: project
 title: Service factory
 ---
 
@@ -17,7 +20,7 @@ title: Service factory
 			<div class="row">
 				<div id="search-results" class="col-md-9">
 					{% if site.posts.size > 0 %}
-						{% for post in site.categories.project %}
+						{% for post in paginator.posts %}
 							<article class="post-showinfo  post-191 post type-post status-publish format-standard has-post-thumbnail hentry category-html category-seo tag-css tag-html tag-mobile">
 								<div class="post-media overlay">
 									<a href="{{ site.url }}\{{ post.url }}" class="feature-image hover-animate">
@@ -55,6 +58,47 @@ title: Service factory
 					{% else %}
 						<p>There are no posts available.</p>
 					{% endif %}
+					{% if paginator.total_pages > 1 %}
+						<div class="text-center ">
+							<ul class="post-navigation pagination">
+								{% if paginator.previous_page %}
+									<li>
+										<a href="{{ paginator.previous_page_path }}" class="">‹</a>
+									</li>										
+								{% else %}
+									<li class="disabled">
+										<a href="" class="">‹</a>
+									</li>	
+								{% endif %}
+
+								{% for page in (1..paginator.total_pages) %}
+									{% if page == paginator.page %}
+										<li class="active">
+											<span class="current">{{ page }}</span>
+										</li>
+									{% elsif page == 1s %}
+										<li>									
+											<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="inactive">{{ page }}</a>
+										</li>
+									{% else %}
+										<li>
+											<a href="{{site.url}}/projects{{ site.paginate_path | replace: '//', '/' | replace: ':num', page }}.html" class="inactive">{{ page }}</a>
+										</li>
+									{% endif %}
+							  	{% endfor %}
+	
+								{% if paginator.next_page %}
+									<li>
+										<a href="{{ paginator.next_page_path | prepend: site.baseurl }}">›</a>
+									</li>
+								{% else %}
+									<li class="disabled">
+										<a href="">›</a>
+									</li>
+								{% endif %}
+							</ul>
+						</div>
+					{% endif %}	
 				</div>
 				<aside class="col-md-3 sidebar">
 					<div id="search-4" class="sidebar-widget  widget_search">

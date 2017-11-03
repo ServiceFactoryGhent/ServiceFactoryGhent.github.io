@@ -12397,6 +12397,7 @@ textarea.woocommerce-invalid {
     }
     aside #search-4 form {
         display: flex;
+        flex-direction: row;
     }
     aside #search-4 form input[type="text"] {
         border: 1px solid #006495;
@@ -12404,6 +12405,7 @@ textarea.woocommerce-invalid {
     aside #search-4 form input[type="submit"] {
         background: #006495;
         color: #FFF;
+        margin-top: 0;
         width: 120px;
     }
 }
@@ -12426,14 +12428,23 @@ textarea.woocommerce-invalid {
     padding: 0 15px;
 }
 @media (min-width: 960px) {
+    aside #search-4 form {
+        display: flex;
+        flex-direction: column;
+    }
     aside.col-md-3.sidebar {
         position: relative;
         width: 25%;
+        top: 0;
     }
     aside #categories-3,
     aside #tag_cloud-3,
     aside #recent-posts-3,
     aside #archives-3 {
         display: initial;
+    }
+    aside #search-4 form input[type="submit"] {
+        margin-top: 10px;
+        width: 100%;
     }
 }

@@ -2876,7 +2876,7 @@ h2 small {
 h3 {
     font-size: 21px;
     line-height: 24px;
-    margin: 24px 0 0 0;
+    margin: 24px 0 8px 0;
 }
 h3 small {
     font-size: 16px;
@@ -7377,8 +7377,7 @@ div.mejs-speed-button {
 .post-extras {
     font-size: 14px;
     position: relative;
-    margin-bottom: 96px!important;
-    padding-bottom: 48px!important
+    margin-bottom: 30px !important;
 }
 .post-extras span {
     display: inline-block;
@@ -7407,10 +7406,9 @@ div.mejs-speed-button {
 .post-showinfo .post-navigation,
 .post-showinfo .post-share {
     position: relative;
-    margin-left: 80px
 }
 .post-showinfo .post-head {
-    padding-top: 8px
+    
 }
 .post-showinfo .post-icon {
     display: block;
@@ -7422,7 +7420,6 @@ div.mejs-speed-button {
 }
 .grid-post .post-body,
 .grid-post .post-head {
-    padding: 12px;
     margin-left: 0
 }
 .grid-post .post-extras {
@@ -7430,7 +7427,6 @@ div.mejs-speed-button {
 }
 .grid-post .post-head {
     margin-bottom: 0;
-    padding-top: 24px;
     padding-bottom: 0;
     position: relative;
     text-align: center
@@ -7442,7 +7438,6 @@ div.mejs-speed-button {
     margin-left: 0
 }
 .grid-post .post-showinfo .post-head {
-    padding-top: 36px;
     z-index: 2
 }
 .grid-post .post-showinfo .post-icon {
@@ -7578,7 +7573,7 @@ div.mejs-speed-button {
     .grid-post .post-showinfo .post-head,
     .post-showinfo .comments-head,
     .post-showinfo .post-head {
-        padding-top: 30px;
+        padding-top: 0;
         z-index: 2
     }
     .grid-post .post-showinfo .post-icon,
@@ -12374,4 +12369,25 @@ textarea.woocommerce-invalid {
 }
 .woocommerce-account .form-row .chosen-container {
     width: 100%!important
+}
+@media (min-width: 320px) {
+    article#search-results .post-text {
+        padding-top: 30px;
+    }
+    article#search-results {
+        display: flex;
+        flex-direction: column;
+    }
+}
+@media (min-width: 768px) {
+    article#search-results .post-text {
+        padding-top: 0;
+    }
+    article#search-results {
+        display: flex;
+        flex-direction: row;
+    }
+}
+article#search-results .post-text {
+    padding-left: 15px;
 }

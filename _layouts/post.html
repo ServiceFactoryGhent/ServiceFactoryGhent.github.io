@@ -100,7 +100,7 @@
         <section class="section swatch-white-red">
             <div class="container">
                 <div class="row row-eq-height">
-                    <div class="col-md-9">
+                    <div class="col-md-12">
                         <h1> {{ page.title }} </h1>
                         {% if page.category == "project"  %}
                             <ul class="pager"> 
@@ -236,36 +236,18 @@
                                 <li class="next"><a href="{{ next }}"> Next news post<!-- : {{nTitle}}  -->→</a></li>
                                 {% endif %}
                             </ul>
-                        {% endif %}  
-                    </div>
-                    <aside class="col-md-3 ">
-                        <div class="sidebar-widget  widget_search">
+                        {% endif %}
+                        <div class="text-center">
                             <h3>Projects</h3>
                             <ul>
-                            {% for post in site.categories.project limit:8 %}
-                                {% if post.tags contains "openstaand" or post.tags contains "lopend" or post.tags contains "afgewerkt"  %}
-                                    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-                                {% endif %}    
-                            {% endfor %}       
+                                {% for post in site.categories.project limit:8 %}
+                                    {% if post.tags contains "openstaand" or post.tags contains "lopend" or post.tags contains "afgewerkt"  %}
+                                        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                                    {% endif %}    
+                                {% endfor %}       
                             </ul>
-                            <h3>News</h3>
-                            <ul>
-                            {% for post in site.categories.news limit:8 %}
-                                    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-                            {% endfor %}       
-                            </ul>
-                            <h3>Future challenges</h3>
-                            <ul>
-                            {% for post in site.categories.project limit:8 %}
-                                {% if post.tags contains "future" %}
-                                    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-                                {% endif %}    
-                            {% endfor %}       
-                            </ul>
-                            <hr>
-                            <hr>
-                        </div>
-                    </aside>
+                        </div>  
+                    </div>
                 </div>
             </div>
         </section>

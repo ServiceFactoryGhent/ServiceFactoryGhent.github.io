@@ -35,16 +35,21 @@
         appendString += '<a href="" rel="tag">' + item.category + '</a>';
         appendString += '</span>';
 
-        /* if(item.tags.length > 0) {
+        if(item.tags.length > 0) {
           appendString += '<span class="post-tags">';
           appendString += '<i class="fa fa-tags"></i>';
-          console.log(item.tags);
-          item.tags.forEach(function (it) {
+
+          var str = item.tags.split("[")[1];
+          str = str.split("]")[0];
+          str = str.replace(/&quot;/g, "");
+          var tags = str.split(", ");
+
+          tags.forEach(function (it) {
             console.log(it);
             appendString += '<a href="" rel="tag">' + it + '</a>';
           })
           appendString += '</span>';
-        } */
+        }
                 
         appendString += '</div>';
         appendString += '</div>';

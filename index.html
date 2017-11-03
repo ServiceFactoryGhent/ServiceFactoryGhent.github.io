@@ -144,7 +144,7 @@ title: Service factory
 				</div>
 			</div>
 		</section>
-			{% if site.categories.news.size > 0 %}
+		{% if site.categories.news.size > 0 %}
 			<section class="section swatch-light-grey section-normal ">
 				<div class="container">
 					<header class="section-header text-center no-underline">
@@ -250,12 +250,22 @@ title: Service factory
 					</div>
 				</div>
 			</section>
-			{% endif %}		
-			
-		</article>
-		<!-- <h2>Instagram</h2>		
-		<div id="instafeed"></div> -->
-		
+		{% endif %}		
+		<section class="section swatch-light-grey section-normal ">
+				<div class="container">
+					<header class="section-header text-center no-underline">
+						<h1 class="headline  regular">Instagram</h1>
+					</header>
+					<div class="row vertical-top">
+						<div class="col-md-12  text-default text-center">
+							<ul class="list-unstyled list-container">
+								<div id="instafeed"></div>
+							</ul>			
+						</div>
+					</div>
+				</div>
+			</section>	
+		</article>		
 	</div>
 
 
@@ -266,7 +276,12 @@ title: Service factory
     var feed = new Instafeed({
 		get:'user',
 		userId:'6298482520',
-		accessToken:'6298482520.74aec84.59a7792dcb90443f85ba5edb991ebb9f',		
+		accessToken:'6298482520.74aec84.59a7792dcb90443f85ba5edb991ebb9f',
+		resolution: 'standard_resolution',
+		// template: {% raw %}'<a href="{{link}}" target="_blank" id="{{id}}"><img src="{{image}}"/><div class="footer"><div class="caption">{{caption}}</div><div class="user"><img src="{{model.user.profile_picture}}"/><span>{{model.user.username}}</span></div></div></a>'{% endraw %},
+		template: {% raw %}'<li class="post-item col-md-4"><div class="grid-post swatch-white-blue"><article class="post-showinfo post type-post status-publish format-standard has-post-thumbnail hentry category-html category-seo tag-css tag-html tag-mobile"><div class="post-media overlay"><a href="{{link}}" class="feature-image hover-animate"><img src="{{image}}" alt="img-4-1170x400.png"><i class="fa fa-link"></i></a></div><div class="post-head small-screen-center"><div class="post-icon"><div class="hex hex-big"><i class="fa fa-file-text"></i></div></div></div><div class="post-body entry-content"><p>{{caption}}</p></div><div class="post-extras bordered text-center"><div class="text-center"></div></div></article></div></li>'{% endraw %},
+		sortBy: 'most-recent',
+    	limit: 3,		
     });
     feed.run();
 	

@@ -6219,6 +6219,7 @@
 .section-home p {
   color: white;
 }
+/* CONTACT */
 .section-contact h1,
 .section-contact h2,
 .section-contact p {
@@ -6226,6 +6227,40 @@
 }
 .section-contact label{
   color: #337ab7;
+}
+form#contactform {
+  margin: 0 auto;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+}
+form#contactform input,
+form#contactform select {
+  height: 40px;
+  color: #006495;
+  padding: 0 15px;
+  margin-bottom: 20px;
+  width: 100%;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0px;
+}
+form#contactform textarea {
+  color: #006495;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+}
+form#contactform button[type="submit"] {
+  height: 50px;
+  background-color: #006495;
+  color: white;
+  margin-top: -50px;
+  width: 50px;
+  margin-left: calc(100% - 30px);
+  border-radius: 50%;
+}
+form#contactform button[type="submit"]:hover {
+  transition: all 358ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  background-color: #004669;
 }
 button.navbar-toggle span.icon-bar {
   background: white;

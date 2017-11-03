@@ -2955,10 +2955,6 @@ input[type=url],
 input[type=week],
 select,
 textarea {
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
     font-weight: light;
     -webkit-font-smoothing: antialiased
 }

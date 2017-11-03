@@ -6240,6 +6240,9 @@ nav#main-navbar.in ul li a {
 }
 
 /* PROJECTS */
+.sidebar-widget.widget_recent_entries ul li {
+  margin-bottom: 10px;
+}
 .sidebar-widget.widget_recent_entries ul li a {
   line-height: 40px;
 }

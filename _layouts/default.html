@@ -46,6 +46,9 @@
     <link rel="stylesheet" href="../css/font-awesome.min.css">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+    <!-- FONT -->
+    <link href="https://fonts.googleapis.com/css?family=Kanit:300,400,700" rel="stylesheet">
 </head>
 
 <body>
@@ -227,6 +230,7 @@
         //Watch on scroll and update nav
         var logo = document.getElementsByClassName('navbar-brand')[0];
         var nav = document.getElementsByTagName('header')[0];
+        var bars = document.querySelectorAll('span.icon-bar');
 
         Element.prototype.hasClass = function(className) {
             return new RegExp(' ' + className + ' ').test(' ' + this.className + ' ');
@@ -249,11 +253,17 @@
         window.addEventListener('scroll', function() {
             logo.addClass('default-logo');
             nav.style.backgroundColor = "rgba(255,255,255,.97)";
-            nav.style.boxShadow = "1px 1px 5px grey";
+            nav.style.boxShadow = "rgba(0, 0, 0, 0.1) 1px 1px 5px";
+            for (var i = 0; i <= 2; i++) {
+                bars[i].style.backgroundColor = "#006495";
+            }
             if (!window.scrollY >= 1) {
                 logo.removeClass('default-logo');
                 nav.style.backgroundColor = "transparent";
                 nav.style.boxShadow = "none";
+                for (var i = 0; i <= 2; i++) {
+                    bars[i].style.backgroundColor = "#FFF";
+                }
             }
         });
     </script>

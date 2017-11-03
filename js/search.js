@@ -7,8 +7,59 @@
 
       for (var i = 0; i < results.length; i++) {  // Iterate over the results
         var item = store[results[i].ref];
-        appendString += '<li><a href="' + item.url + '"><h3>' + item.title + '</h3></a>';
-        appendString += '<p>' + item.content.substring(0, 150) + '...</p></li>';
+        appendString += '<article class="post-showinfo post-191 post type-post status-publish format-standard has-post-thumbnail hentry category-html category-seo tag-css tag-html tag-mobile">'; 
+        appendString += '<div class="post-media overlay">';
+        appendString += '<a href="' + item.url + '" class="feature-image hover-animate">';
+        appendString += '<img src="{{ site.baseurl }}' + item.image + '" alt="img-4-1170x400.png"><i class="fa fa-link"></i></a>';
+        appendString += '</div>';
+        appendString += '<div class="post-head small-screen-center">';
+        appendString += '<h2 class="post-title entry-title">';
+        appendString += '<a href="' + item.url + '" title="' + item.title + '" rel="bookmark">' + item.title + '</a>';
+        appendString += '</h2>';
+        appendString += '<div class="post-icon">';
+        appendString += '<div class="hex hex-big">';
+        appendString += '<i class="fa fa-file-text"></i>';
+        appendString += '</div>';
+        appendString += '</div>';
+        appendString += '</div>';
+        appendString += '<div class="post-body entry-content">';
+        appendString +=  item.content; //filters to be added like 
+        appendString += '<a href="' +  item.url + '" class="more-link">Read more</a>';
+        appendString += '</div>';
+        appendString += '<div class="post-extras bordered text-center">';
+        appendString += '<div class="text-center">';
+        appendString += '<span class="post-category">';
+        appendString += '<i class="fa fa-folder-open"></i>';
+        appendString += '<a href="" rel="tag">' + item.category + '</a>';
+        appendString += '</span>';
+        appendString += '<span class="post-tags">';
+        appendString += '<i class="fa fa-tags"></i>';
+
+
+        /* appendString += '';
+        {% if post.tags.size > 0 %}
+        {% for tag in post.tags %}
+          <a href="" rel="tag">{{ tag }}</a>
+        {% endfor %}
+      {% endif %} */
+
+
+
+
+        appendString += '</span>';
+        appendString += '</div>';
+        appendString += '</div>';
+        appendString += '</article> ';
+        
+        
+
+
+        
+    
+
+
+ /*        appendString += '<li><a href="' + item.url + '"><h3>' + item.title + '</h3></a>';
+        appendString += '<p>' + item.content.substring(0, 150) + '...</p></li>'; */
       }
 
       searchResults.innerHTML = appendString;
@@ -16,6 +67,22 @@
       searchResults.innerHTML = '<li>No results found</li>';
     }
   }
+
+
+							
+							
+									
+										
+											
+											
+										
+										
+											
+											
+
+
+
+
 
   function getQueryVariable(variable) {
     var query = window.location.search.substring(1);

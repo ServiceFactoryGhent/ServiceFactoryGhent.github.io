@@ -2,45 +2,44 @@
 layout: default
 title: Contact
 ---
-<a href="{{site.url}}" id="homelink"><i class="ion-ios-arrow-left"></i></a>
+<!-- <a href="{{site.url}}" id="homelink"><i class="ion-ios-arrow-left"></i></a> -->
 
 <div id="content contact" role="main">
 	<article class="page type-page status-publish hentry">
 		<div class="contact-content" style="display: none !important;"></div>
-		<section class="section swatch-white-red section-normal ">
+		<section class="section swatch-white-red section-contact ">
 			<div class="background-media"></div>
 			<div class="background-overlay" style=""></div>
 			<div class="container">
-				<div class="row vertical-top">
-					<div class="col-md-12  text-default text-center">
-						<header class="section-header text-center no-underline">
-							<h1 class="headline regular">Contact</h1>
-						</header>
-						<form action="https://formspree.io/servicefactory@digipolis.gent" method="POST">
-							<h2>Ik wil meedoen aan project</h2>
-							<label>Project</label>
-							<select name="projects" id="selectProject">
-								{% if site.posts.size > 0 %}
-									{% for post in site.tags.openstaand %}
-										<option value="{{post.title}}">{{post.title}}</option>
-									{% endfor %}
-                               	{% endif %}
-							</select>
-							<br>
-							<label>E-mail</label>
-							<br>
-							<input type="email" name="_replyto">
-							<br>
-							<label>Plan van aanpak project</label>
-							<br>
-							<textarea name="h" cols="60" rows="10"></textarea>
+				<header class="section-header text-center no-underline">
+					<h1 class="headline regular">Contact</h1>
+				</header>
+				<div class="text-center">
+					<h2>Ik wil meedoen aan project</h2>
+					<form action="https://formspree.io/servicefactory@digipolis.gent" method="POST">
+						<label>Project</label>
+						<select name="projects" id="selectProject">
+							{% if site.posts.size > 0 %}
+								{% for post in site.tags.openstaand %}
+									<option value="{{post.title}}">{{post.title}}</option>
+								{% endfor %}
+	                       	{% endif %}
+						</select>
+						<br>
+						<br>
+						<label>E-mail</label>
+						<input type="email" name="_replyto">
+						<br>
+						<br>
+						<label>Plan van aanpak project</label>
+						<br>
+						<textarea name="h" cols="60" rows="10"></textarea>
 
-							<button type="submit" value="Send"  class="contactformbutton">Send</button>
-							<input type="hidden" name="_next" value="contact/thanks.html"/>
-							<input type="text" name="_gotcha" style="display:none" />
-							<input type="hidden" name="_subject" value="Contactform Lab9K" />
-						</form>
-					</div>
+						<button type="submit" value="Send"  class="contactformbutton">Send</button>
+						<input type="hidden" name="_next" value="contact/thanks.html"/>
+						<input type="text" name="_gotcha" style="display:none" />
+						<input type="hidden" name="_subject" value="Contactform Lab9K" />
+					</form>
 				</div>
 			</div>
 		</section>

@@ -6219,6 +6219,14 @@
 .section-home p {
   color: white;
 }
+.section-contact h1,
+.section-contact h2,
+.section-contact p {
+  color: white;
+}
+.section-contact label{
+  color: #337ab7;
+}
 button.navbar-toggle span.icon-bar {
   background: white;
 }

@@ -1,41 +1,39 @@
 ---
-layout: default
+layout: pages
 title: Contact
 ---
-<!-- <a href="{{site.url}}" id="homelink"><i class="ion-ios-arrow-left"></i></a> -->
 
 <div id="content contact" role="main">
 	<article class="page type-page status-publish hentry">
 		<div class="contact-content" style="display: none !important;"></div>
 		<section class="section swatch-white-red section-contact ">
 			<div class="background-media"></div>
-			<div class="background-overlay" style=""></div>
 			<div class="container">
 				<header class="section-header text-center no-underline">
 					<h1 class="headline regular">Contact</h1>
 				</header>
 				<div class="text-center">
 					<h2>Ik wil meedoen aan project</h2>
-					<form action="https://formspree.io/servicefactory@digipolis.gent" method="POST">
+					<form id="contactform"action="https://formspree.io/servicefactory@digipolis.gent" method="POST">
 						<label>Project</label>
-						<select name="projects" id="selectProject">
-							{% if site.posts.size > 0 %}
-								{% for post in site.tags.openstaand %}
-									<option value="{{post.title}}">{{post.title}}</option>
-								{% endfor %}
-	                       	{% endif %}
-						</select>
-						<br>
-						<br>
+						<div class="selectform" style="position:relative">
+							<select name="projects" id="selectProject">
+								{% if site.posts.size > 0 %}
+									{% for post in site.tags.openstaand %}
+										<option value="{{post.title}}">{{post.title}}</option>
+									{% endfor %}
+								{% endif %}
+							</select>
+							<i class="fa fa-caret-down" aria-hidden="true" style="position:absolute;top:12px;right:15px;"></i>
+						</div>
 						<label>E-mail</label>
-						<input type="email" name="_replyto">
-						<br>
-						<br>
+						<input type="email" name="_replyto" required>
 						<label>Plan van aanpak project</label>
-						<br>
-						<textarea name="h" cols="60" rows="10"></textarea>
+						<textarea name="h" cols="60" rows="10" required></textarea>
 
-						<button type="submit" value="Send"  class="contactformbutton">Send</button>
+						<button type="submit" value="Send"  class="contactformbutton">
+							<i class="fa fa-paper-plane" aria-hidden="true"></i>
+						</button>
 						<input type="hidden" name="_next" value="contact/thanks.html"/>
 						<input type="text" name="_gotcha" style="display:none" />
 						<input type="hidden" name="_subject" value="Contactform Lab9K" />

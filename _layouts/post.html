@@ -45,6 +45,7 @@
     <link rel="stylesheet" href="/css/theme.min.css">
     <link rel="stylesheet" href="/css/font-awesome.min.css">
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/post.css">
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
 </head>
 
@@ -101,6 +102,87 @@
                 <div class="row row-eq-height">
                     <div class="col-md-9">
                         <h1> {{ page.title }} </h1>
+                        {% if page.tags contains "openstaand" or page.tags contains "lopend" or page.tags contains "afgewerkt"  %}
+                            <ul class="pager"> 
+                                {% assign prev = "" %}
+                                {% assign next = "" %}
+                                {% assign stop = false %}
+                                {% for post in site.posts%}
+                                {% if post == page %}
+                                {% assign stop = true %}
+                                {% elsif post.tags contains "openstaand" or post.tags contains "lopend" or post.tags contains "afgewerkt"  %}
+                                {% if stop %}
+                                {% assign prev = post.url %}
+                                {% assign pTitle = post.title %}
+                                {% break %}
+                                {% else %}
+                                {% assign next = post.url %}
+                                {% assign nTitle = post.title %}
+                                {% endif %}
+                                {% endif %}
+                                {% endfor%}
+                                {% if prev != "" %}
+                                <li class="previous"><a href="{{ prev }}">← Previous project<!-- : {{pTitle}} --></a></li>
+                                {% endif %}
+                                {% if next != "" %}
+                                <li class="next"><a href="{{ next }}"> Next project<!-- : {{nTitle}}  -->→</a></li>
+                                {% endif %}
+                            </ul>
+                        {% endif %}
+                        {% if page.tags contains "future" %}
+                            <ul class="pager"> 
+                                {% assign prev = "" %}
+                                {% assign next = "" %}
+                                {% assign stop = false %}
+                                {% for post in site.posts%}
+                                {% if post == page %}
+                                {% assign stop = true %}
+                                {% elsif post.tags contains "future" %}
+                                {% if stop %}
+                                {% assign prev = post.url %}
+                                {% assign pTitle = post.title %}
+                                {% break %}
+                                {% else %}
+                                {% assign next = post.url %}
+                                {% assign nTitle = post.title %}
+                                {% endif %}
+                                {% endif %}
+                                {% endfor%}
+                                {% if prev != "" %}
+                                <li class="previous"><a href="{{ prev }}">← Previous challenge<!-- : {{pTitle}} --></a></li>
+                                {% endif %}
+                                {% if next != "" %}
+                                <li class="next"><a href="{{ next }}"> Next challenge<!-- : {{nTitle}}  -->→</a></li>
+                                {% endif %}
+                            </ul>
+                        {% endif %}
+                        {% if page.category == "news" %}
+                            <ul class="pager"> 
+                                {% assign prev = "" %}
+                                {% assign next = "" %}
+                                {% assign stop = false %}
+                                {% for post in site.posts%}
+                                {% if post == page %}
+                                {% assign stop = true %}
+                                {% elsif post.category == "news" %}
+                                {% if stop %}
+                                {% assign prev = post.url %}
+                                {% assign pTitle = post.title %}
+                                {% break %}
+                                {% else %}
+                                {% assign next = post.url %}
+                                {% assign nTitle = post.title %}
+                                {% endif %}
+                                {% endif %}
+                                {% endfor%}
+                                {% if prev != "" %}
+                                <li class="previous"><a href="{{ prev }}">← Previous news post<!-- : {{pTitle}} --></a></li>
+                                {% endif %}
+                                {% if next != "" %}
+                                <li class="next"><a href="{{ next }}"> Next news post<!-- : {{nTitle}}  -->→</a></li>
+                                {% endif %}
+                            </ul>
+                        {% endif %}
                         <img src="{{ site.baseurl }}{{ page.image }}" alt="img-4-1170x400.png">
                         <div class="post-extras bordered text-center">
                             <div class="text-center">
@@ -122,20 +204,65 @@
                         <br>
                         <br>
                         <br>
-                        {% if page.tags.first == "openstaand" %}
+                        {% if page.tags contains "openstaand" %}
                             <a href="{{ site.url }}/contact?project={{ page.title }}"> Ik wens mee te doen aan dit project </a>
+                        {% endif %}
+                        {% if page.tags contains "openstaand" or page.tags contains "lopend" or page.tags contains "afgewerkt"  %}
+                            <ul class="pager">
+                                {% if prev != "" %}
+                                <li class="previous"><a href="{{ prev }}">← Previous project<!-- : {{pTitle}} --></a></li>
+                                {% endif %}
+                                {% if next != "" %}
+                                <li class="next"><a href="{{ next }}"> Next project<!-- : {{nTitle}}  -->→</a></li>
+                                {% endif %}
+                            </ul>
+                        {% endif %}
+                        {% if page.tags contains "future" %}
+                            <ul class="pager">
+                                {% if prev != "" %}
+                                <li class="previous"><a href="{{ prev }}">← Previous challenge<!-- : {{pTitle}} --></a></li>
+                                {% endif %}
+                                {% if next != "" %}
+                                <li class="next"><a href="{{ next }}"> Next challenge<!-- : {{nTitle}}  -->→</a></li>
+                                {% endif %}
+                            </ul>
                         {% endif %} 
+                        {% if page.category == "news" %}
+                            <ul class="pager">
+                                {% if prev != "" %}
+                                <li class="previous"><a href="{{ prev }}">← Previous news post<!-- : {{pTitle}} --></a></li>
+                                {% endif %}
+                                {% if next != "" %}
+                                <li class="next"><a href="{{ next }}"> Next news post<!-- : {{nTitle}}  -->→</a></li>
+                                {% endif %}
+                            </ul>
+                        {% endif %}  
                     </div>
                     <aside class="col-md-3 ">
                         <div class="sidebar-widget  widget_search">
-                            <h3>Other Projects</h3>
+                            <h3>Projects</h3>
                             <ul>
                             {% for post in site.categories.project limit:8 %}
-                                {% if post.tags.first != "future" %}
+                                {% if post.tags contains "openstaand" or post.tags contains "lopend" or post.tags contains "afgewerkt"  %}
                                     <li><a href="{{ post.url }}">{{ post.title }}</a></li>
                                 {% endif %}    
                             {% endfor %}       
                             </ul>
+                            <h3>News</h3>
+                            <ul>
+                            {% for post in site.categories.news limit:8 %}
+                                    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                            {% endfor %}       
+                            </ul>
+                            <h3>Future challenges</h3>
+                            <ul>
+                            {% for post in site.categories.project limit:8 %}
+                                {% if post.tags contains "future" %}
+                                    <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                                {% endif %}    
+                            {% endfor %}       
+                            </ul>
+                            <hr>
                             <hr>
                         </div>
                     </aside>

@@ -83,13 +83,13 @@
                                     <a href="{{ site.url }}">Home</a>
                                 </li>
                                 <li id="menu-item-projects" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-115 dropdown current-menu-item current_page_item active">
-                                    <a href="{{ site.url }}/projects" class="dropdown-toggle">Projects</a>
+                                    <a href="{{ site.url }}/projects" class="dropdown-toggle">Projecten</a>
                                 </li>
                                 <li id="menu-item-contact" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-49">
                                     <a href="{{ site.url }}/contact">Contact</a>
                                 </li>
                                 <li id="menu-item-about" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-52">
-                                    <a href="{{ site.url }}/about">About</a>
+                                    <a href="{{ site.url }}/about">Over</a>
                                 </li>
                             </ul>
                         </div>
@@ -102,7 +102,7 @@
                 <div class="row row-eq-height">
                     <div class="col-md-9">
                         <h1> {{ page.title }} </h1>
-                        {% if page.tags contains "openstaand" or page.tags contains "lopend" or page.tags contains "afgewerkt"  %}
+                        {% if page.category == "project"  %}
                             <ul class="pager"> 
                                 {% assign prev = "" %}
                                 {% assign next = "" %}
@@ -110,7 +110,7 @@
                                 {% for post in site.posts%}
                                 {% if post == page %}
                                 {% assign stop = true %}
-                                {% elsif post.tags contains "openstaand" or post.tags contains "lopend" or post.tags contains "afgewerkt"  %}
+                                {% elsif post.category == "project"  %}
                                 {% if stop %}
                                 {% assign prev = post.url %}
                                 {% assign pTitle = post.title %}
@@ -129,7 +129,7 @@
                                 {% endif %}
                             </ul>
                         {% endif %}
-                        {% if page.tags contains "future" %}
+                        {% if page.category == "challenge" %}
                             <ul class="pager"> 
                                 {% assign prev = "" %}
                                 {% assign next = "" %}
@@ -137,7 +137,7 @@
                                 {% for post in site.posts%}
                                 {% if post == page %}
                                 {% assign stop = true %}
-                                {% elsif post.tags contains "future" %}
+                                {% elsif post.cateogry == "future" %}
                                 {% if stop %}
                                 {% assign prev = post.url %}
                                 {% assign pTitle = post.title %}
@@ -207,7 +207,7 @@
                         {% if page.tags contains "openstaand" %}
                             <a href="{{ site.url }}/contact?project={{ page.title }}"> Ik wens mee te doen aan dit project </a>
                         {% endif %}
-                        {% if page.tags contains "openstaand" or page.tags contains "lopend" or page.tags contains "afgewerkt"  %}
+                        {% if page.category == "project"  %}
                             <ul class="pager">
                                 {% if prev != "" %}
                                 <li class="previous"><a href="{{ prev }}">← Previous project<!-- : {{pTitle}} --></a></li>
@@ -217,7 +217,7 @@
                                 {% endif %}
                             </ul>
                         {% endif %}
-                        {% if page.tags contains "future" %}
+                        {% if page.category == "challenge" %}
                             <ul class="pager">
                                 {% if prev != "" %}
                                 <li class="previous"><a href="{{ prev }}">← Previous challenge<!-- : {{pTitle}} --></a></li>

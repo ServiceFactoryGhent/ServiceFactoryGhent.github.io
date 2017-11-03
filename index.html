@@ -1,5 +1,5 @@
 ---
-layout: default 
+layout: default
 title: Service factory 
 ---
 
@@ -14,7 +14,7 @@ title: Service factory
 					<div class="row vertical-top">
 						<div class="col-md-12  text-default">
 							<header class="section-header text-center no-underline">
-								<h1 class="headline regular">What is the Service factory?</h1>
+								<h1 class="headline regular">Wat is de Service factory?</h1>
 							</header>
 							<ul class="list-unstyled row horizontal-icon-border box-list">
 								<li class="col-md-4">
@@ -26,10 +26,12 @@ title: Service factory
 									</div>
 									<h3 class="text-center">
 										<a href="" target="_self">
-											Setting challenges </a>
+											Uitdagingen formuleren.</a>
 									</h3>
 									<p class="text-center">
-										First, a future challenge is set by a client or partner. This could just be a concept or idea for a certain service or usage of a particular technology. These challenges are potential candidates to become active projects. </p>
+										Eerst formuleren we uitdagingen die we als IT organisatie van de stad moeten overwinnen.
+										Dit kan een probleem zijn dat regelamtig terug komt of een verbetering die we graag zouden zien.
+										Deze uitdagingen zijn kandidaat om te worden vertaald naar één of meerdere projecten.</p>
 								</li>
 								<li class="col-md-4">
 									<div class="box-round box">
@@ -40,10 +42,12 @@ title: Service factory
 									</div>
 									<h3 class="text-center">
 										<a href="" target="_self">
-											Active project </a>
+										Actieve projecten.</a>
 									</h3>
 									<p class="text-center">
-										Next, the goals of the project get set and the details get fleshed out. The challenge becomes an active project. </p>
+										Vervolgens worden kandidaat projecten geformuleerd, met input van de verschillende actoren. 
+										We kijken met verschillende partners naar technologie die ze kunnen aanbieden om de noden te beantwoorden,
+										we geven de prioriteit aan herbruikbare services die we breed kunnen inzetten.</p>
 								</li>
 								<li class="col-md-4">
 									<div class="box-round box">
@@ -54,10 +58,10 @@ title: Service factory
 									</div>
 									<h3 class="text-center">
 										<a href="" target="_self">
-											Project distribution </a>
+										Ingebruikname </a>
 									</h3>
 									<p class="text-center">
-										The active project is open for interested developers and/or designers. The project's positions need to be filled. For every open project candidates can choose to fill out a contact form to apply. </p>
+										De service wordt ontwikkeld en in productie gezet, de maakt dan deel uit van het geheel van services die een vlotte werking mogelijk maakt. </p>
 								</li>
 							</ul>
 						</div>
@@ -73,11 +77,11 @@ title: Service factory
 					<div class="col-md-12  text-default">
 						<div class="sidebar-widget widget_recent_entries col-md-12">
 							<header class="section-header text-center no-underline">
-								<h1 class="headline  regular">Projects</h1>
+								<h1 class="headline  regular">Projecten</h1>
 							</header>
 							<div class="col-md-4">
 								<h3 class="text-center">
-									<a href="" target="_self"> Open projects </a>
+									<a href="" target="_self"> Openstaande Projecten </a>
 								</h3>
 								{% if site.posts.size > 0 %}
 									{% for post in site.tags.openstaand limit:10 %}
@@ -97,7 +101,7 @@ title: Service factory
 							</div>
 							<div class="col-md-4">
 								<h3 class="text-center">
-									<a href="" target="_self"> Running projects </a>
+									<a href="" target="_self"> Lopende Projecten</a>
 								</h3>
 								{% if site.posts.size > 0 %}
 									{% for post in site.tags.lopend limit:10 %}
@@ -117,7 +121,7 @@ title: Service factory
 							</div>
 							<div class="col-md-4">
 								<h3 class="text-center">
-									<a href="" target="_self"> Closed projects </a>
+									<a href="" target="_self"> Opgeleverde projecten </a>
 								</h3>
 								{% if site.posts.size > 0 %}
 									{% for post in site.tags.afgewerkt limit:10 %}
@@ -150,7 +154,7 @@ title: Service factory
 						<div class="col-md-12  text-default">
 							<div class="row">
 								<ul class="list-unstyled list-container">								
-										{% for post in paginator.posts %}
+										{% for post in site.categories.news limit:3 %}
 										<li class="post-item col-md-4">
 												<div class="grid-post swatch-white-blue">
 													<article id="post-191" class="post-showinfo  post-191 post type-post status-publish format-standard has-post-thumbnail hentry category-html category-seo tag-css tag-html tag-mobile">
@@ -201,47 +205,47 @@ title: Service factory
 								</ul>
 							</div>
 
-							{% if paginator.total_pages > 1 %}
-							<div class="text-center ">
-								<ul class="post-navigation pagination">
-									{% if paginator.previous_page %}
-										<li>
-											<a href="{{ paginator.previous_page_path }}" class="">‹</a>
-										</li>										
-									{% else %}
-										<li class="disabled">
-											<a href="" class="">‹</a>
-										</li>	
-									{% endif %}
+							<!-- {% if paginator.total_pages > 1 %}
+								<div class="text-center ">
+									<ul class="post-navigation pagination">
+										{% if paginator.previous_page %}
+											<li>
+												<a href="{{ paginator.previous_page_path }}" class="">‹</a>
+											</li>										
+										{% else %}
+											<li class="disabled">
+												<a href="" class="">‹</a>
+											</li>	
+										{% endif %}
 
-									{% for page in (1..paginator.total_pages) %}
-										{% if page == paginator.page %}
-											<li class="active">
-												<span class="current">{{ page }}</span>
-											</li>
-										{% elsif page == 1 %}
-											<li>									
-												<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="inactive">{{ page }}</a>
+										{% for page in (1..paginator.total_pages) %}
+											{% if page == paginator.page %}
+												<li class="active">
+													<span class="current">{{ page }}</span>
+												</li>
+											{% elsif page == 1 %}
+												<li>									
+													<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="inactive">{{ page }}</a>
+												</li>
+											{% else %}
+												<li>
+													<a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}" class="inactive">{{ page }}</a>
+												</li>
+											{% endif %}
+									  	{% endfor %}
+			
+										{% if paginator.next_page %}
+											<li>
+												<a href="{{ paginator.next_page_path | prepend: site.baseurl }}">›</a>
 											</li>
 										{% else %}
-											<li>
-												<a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}" class="inactive">{{ page }}</a>
+											<li class="disabled">
+												<a href="">›</a>
 											</li>
 										{% endif %}
-								  	{% endfor %}
-		
-									{% if paginator.next_page %}
-										<li>
-											<a href="{{ paginator.next_page_path }}">›</a>
-										</li>
-									{% else %}
-										<li class="disabled">
-											<a href="">›</a>
-										</li>
-									{% endif %}
-								</ul>
-							</div>
-						{% endif %}	
+									</ul>
+								</div>
+							{% endif %}	 -->
 						</div>
 					</div>
 				</div>

@@ -159,51 +159,49 @@ title: Service factory
                     <br>
                     <ul class="list-unstyled list-container">
                         {% for post in site.categories.project limit:4 %}
-                            {% if post.tags contains "openstaand" or post.tags contains "lopend" or post.tags contains "afgewerkt"  %}
-                                <li class="post-item col-md-3">
-                                    <div class="grid-post swatch-white-blue">
-                                        <article id="post-191" class="post-showinfo  post-191 post type-post status-publish format-standard has-post-thumbnail hentry category-html category-seo tag-css tag-html tag-mobile">
-                                            <div class="post-media overlay">
-                                                <a href="{{ site.baseurl }}{{ post.url }}" class="feature-image hover-animate">
-                                                    <img src="{{ site.baseurl }}{{ post.image }}" alt="img-4-1170x400.png">
-                                                    <i class="fa fa-link"></i>
-                                                </a>
-                                            </div>
-                                            <div class="post-head small-screen-center">
-                                                <h2 class="post-title entry-title">
-                                                    <a href="{{ site.baseurl }}{{ post.url }}" title="Permalink to Increase Traffic being Mobile Friendly"
-                                                        rel="bookmark">
-                                                        {{ post.title }} </a>
-                                                </h2>
-                                                
-                                                <small class="post-date">
-                                                        {{ post.date | date_to_long_string }} </small>
-                                                <div class="post-icon">
-                                                    <div class="hex hex-big">
-                                                        <i class="fa fa-file-text"></i>
-                                                    </div>
+                            <li class="post-item col-md-3">
+                                <div class="grid-post swatch-white-blue">
+                                    <article id="post-191" class="post-showinfo  post-191 post type-post status-publish format-standard has-post-thumbnail hentry category-html category-seo tag-css tag-html tag-mobile">
+                                        <div class="post-media overlay">
+                                            <a href="{{ site.baseurl }}{{ post.url }}" class="feature-image hover-animate">
+                                                <img src="{{ site.baseurl }}{{ post.image }}" alt="img-4-1170x400.png">
+                                                <i class="fa fa-link"></i>
+                                            </a>
+                                        </div>
+                                        <div class="post-head small-screen-center">
+                                            <h2 class="post-title entry-title">
+                                                <a href="{{ site.baseurl }}{{ post.url }}" title="Permalink to Increase Traffic being Mobile Friendly"
+                                                    rel="bookmark">
+                                                    {{ post.title }} </a>
+                                            </h2>
+                                            
+                                            <small class="post-date">
+                                                    {{ post.date | date_to_long_string }} </small>
+                                            <div class="post-icon">
+                                                <div class="hex hex-big">
+                                                    <i class="fa fa-file-text"></i>
                                                 </div>
                                             </div>
-                                            <!-- <div class="post-body entry-content">
-                                                <p>{{ post.content | strip_html | truncatewords: 35 }}</p>
-                                                <a href="{{ site.baseurl }}{{ post.url }}" class="more-link">Lees meer</a>
-                                            </div> -->
-                                            {% comment %} <div class="post-extras bordered text-center">
-                                                <div class="text-center">
-                                                
-                                                    <span class="post-tags">
-                                                        <i class="fa fa-tags"></i>
-                                                        {% for tag in post.tags %}
-                                                        <a href="" rel="tag">{{ tag | first }} test</a>,
-                                                        {% endfor %}                                                                
-                                                    </span>
+                                        </div>
+                                        <!-- <div class="post-body entry-content">
+                                            <p>{{ post.content | strip_html | truncatewords: 35 }}</p>
+                                            <a href="{{ site.baseurl }}{{ post.url }}" class="more-link">Lees meer</a>
+                                        </div> -->
+                                        {% comment %} <div class="post-extras bordered text-center">
+                                            <div class="text-center">
+                                            
+                                                <span class="post-tags">
+                                                    <i class="fa fa-tags"></i>
+                                                    {% for tag in post.tags %}
+                                                    <a href="" rel="tag">{{ tag | first }} test</a>,
+                                                    {% endfor %}                                                                
+                                                </span>
 
-                                                </div>
-                                            </div>   {% endcomment %}                               
-                                        </article>
-                                    </div>
-                                </li>
-                            {% endif %}    
+                                            </div>
+                                        </div>   {% endcomment %}                               
+                                    </article>
+                                </div>
+                            </li>   
                         {% endfor %}       
                     </ul>  
                 </div>

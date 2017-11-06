@@ -162,7 +162,11 @@ title: Service factory
                     {% endif %}
                     <br>
                     <ul class="list-unstyled list-container">
-                        {% for post in site.categories.project limit:4 %}
+                        {% assign projectsbyweight = site.categories.project | sort:"weight"  %}
+                        {% for post in projectsbyweight reversed%}
+                            {% if forloop.index == 5 %}
+                                {% break %}
+                            {% endif %}
                             <li class="post-item col-md-3">
                                 <div class="grid-post swatch-white-blue">
                                     <article id="post-191" class="post-showinfo  post-191 post type-post status-publish format-standard has-post-thumbnail hentry category-html category-seo tag-css tag-html tag-mobile">

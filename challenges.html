@@ -17,7 +17,8 @@ title: Service factory
 			<div class="row">
 				<div id="search-results" class="col-md-12">
 					{% if site.posts.size > 0 %}
-						{% for post in site.categories.challenge %}
+						{% assign challengesbyweight = site.categories.challenge | sort:"weight"  %}
+						{% for post in challengesbyweight reversed %}
 							<article class="post-showinfo post type-post status-publish format-standard has-post-thumbnail hentry category-html category-seo tag-css tag-html tag-mobile">
 								<div class="post-media overlay">
 									<a href="{{ site.url }}{{ post.url }}" class="feature-image hover-animate">

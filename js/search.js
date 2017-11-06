@@ -9,52 +9,44 @@
 
       for (var i = 0; i < results.length; i++) {  // Iterate over the results
         var item = store[results[i].ref];
-        appendString += '<article class="post-showinfo post-191 post type-post status-publish format-standard has-post-thumbnail hentry category-html category-seo tag-css tag-html tag-mobile">'; 
+        appendString += '<article class="post-showinfo post type-post status-publish format-standard has-post-thumbnail hentry category-html category-seo tag-css tag-html tag-mobile">'; 
         appendString += '<div class="post-media overlay">';
         appendString += '<a href="' + item.url + '" class="feature-image hover-animate">';
         appendString += '<img src="'+ item.baseUrl + item.image + '" alt="img-4-1170x400.png"><i class="fa fa-link"></i></a>';
         appendString += '</div>';
+        appendString += '<div class="post-text">';
         appendString += '<div class="post-head small-screen-center">';
         appendString += '<h2 class="post-title entry-title">';
         appendString += '<a href="' + item.url + '" title="' + item.title + '" rel="bookmark">' + item.title + '</a>';
         appendString += '</h2>';
-        appendString += '<div class="post-icon">';
-        appendString += '<div class="hex hex-big">';
-        appendString += '<i class="fa fa-file-text"></i>';
-        appendString += '</div>';
-        appendString += '</div>';
         appendString += '</div>';
         appendString += '<div class="post-body entry-content">';
-        appendString +=  item.content; 
-        appendString += '<a href="' +  item.url + '" class="more-link">Read more</a>';
+        appendString += item.content;
+        appendString += '<a href="{{ site.url }}{{ post.url }}" class="more-link">Lees meer</a>';
         appendString += '</div>';
         appendString += '<div class="post-extras bordered text-center">';
         appendString += '<div class="text-center">';
-        appendString += '<span class="post-category">';
+        appendString += '<span class="post-category">'; 
         appendString += '<i class="fa fa-folder-open"></i>';
-        appendString += '<a href="" rel="tag">' + item.category + '</a>';
+        appendString += '<a href="" rel="tag">'+item.category+'</a>';
         appendString += '</span>';
+        if(item.tags.length>0){
+          appendString += '<span class="post-tags">';
+          appendString += '<i class="fa fa-tags"></i>';
+          var str = item.tags.split("[")[1];
+          str = str.split("]")[0];
+          str = str.replace(/&quot;/g, "");
+          var tags = str.split(", ");
 
-        if(item.category == "project") {
-          if(item.tags.length > 0) {
-            appendString += '<span class="post-tags">';
-            appendString += '<i class="fa fa-tags"></i>';
-
-            var str = item.tags.split("[")[1];
-            str = str.split("]")[0];
-            str = str.replace(/&quot;/g, "");
-            var tags = str.split(", ");
-
-            tags.forEach(function (it) {
-              appendString += '<a href="" rel="tag">' + it + '</a>';
-            })
-            appendString += '</span>';
-          }
+          tags.forEach(function (it) {
+            appendString += '<a href="" rel="tag">' + it + '</a>';
+          })
+          appendString += '</span>';          
         }
-                
         appendString += '</div>';
         appendString += '</div>';
-        appendString += '</article> ';
+        appendString += '</div>';
+        appendString += '</article>';
 
         postStringList.push(appendString);
         appendString = "";

@@ -73,7 +73,7 @@ title: Service factory
 					<div class="tagcloud">
 						<ul>
 							{% for tag in site.tags %}
-								<li><a href="" class="post-tagfilter">{{ tag | first }}</a></a></li>				
+								<li><a href="{{ site.url }}/projects.html?query={{ tag | first }}" id="tags-list" class="post-tagfilter">{{ tag | first }}</a></a></li>				
 		  					{% endfor %}
 						</ul>
 					</div>

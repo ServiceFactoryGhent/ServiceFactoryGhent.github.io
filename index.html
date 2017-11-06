@@ -82,8 +82,9 @@ title: Service Factory
 								<h3 class="text-center">
 									<a href="" target="_self"> Openstaande Projecten </a>
 								</h3>
-								{% if site.posts.size > 0 %}
-									{% for post in site.tags.openstaand limit:10 %}
+								{% if site.tags.openstaand.size > 0 %}
+								{% assign projectpostsopenstaand = site.tags.openstaand | sort:"weight"  %}
+									{% for post in projectpostsopenstaand reversed limit:10 %}
 										<ul>
 											<li>
 												<div class="post-icon">
@@ -95,15 +96,16 @@ title: Service Factory
 										</ul>
 									{% endfor %}
 								{% else %}
-									<p>There are no posts available.</p>
+									<p>Er zijn geen openstaande projecten.</p>
 								{% endif %}
 							</div>
 							<div class="col-md-4">
 								<h3 class="text-center">
 									<a href="" target="_self"> Lopende Projecten</a>
 								</h3>
-								{% if site.posts.size > 0 %}
-									{% for post in site.tags.lopend limit:10 %}
+								{% if site.tags.lopend.size > 0 %}
+									{% assign projectpostslopend = site.tags.lopend | sort:"weight"  %}
+									{% for post in projectpostslopend reversed limit:10 %}
 										<ul>
 											<li>
 												<div class="post-icon">
@@ -115,15 +117,16 @@ title: Service Factory
 										</ul>
 									{% endfor %}
 								{% else %}
-									<p>There are no posts available.</p>
+									<p>Er zijn geen lopende projecten beschikbaar.</p>
 								{% endif %}
 							</div>
 							<div class="col-md-4">
 								<h3 class="text-center">
 									<a href="" target="_self"> Opgeleverde projecten </a>
 								</h3>
-								{% if site.posts.size > 0 %}
-									{% for post in site.tags.afgewerkt limit:10 %}
+								{% if site.tags.afgewerkt.size > 0 %}
+									{% assign projectpostsafgewerkt = site.tags.afgewerkt | sort:"weight"  %}
+									{% for post in projectpostsafgewerkt reversed limit:10 %}
 										<ul>
 											<li>
 												<div class="post-icon">
@@ -135,7 +138,7 @@ title: Service Factory
 										</ul>
 									{% endfor %}
 								{% else %}
-									<p>There are no posts available.</p>
+									<p>Er zijn geen opgeleverde projecten beschikbaar.</p>
 								{% endif %}
 							</div>
 						</div>

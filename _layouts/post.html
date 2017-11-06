@@ -10,14 +10,18 @@ title: Service factory
 <body>
 
 <div id="content" role="main">
-
-    {% include header_projects.html %}
-
+    <!-- <section class="section swatch-red-white section-normal" style="min-height: 1px;">
+        <div class="container">
+            <header class="section-header text-center no-underline">
+                
+            </header>
+        </div>
+    </section> -->
     <section class="section swatch-white-red">
         <div class="container">
+            <h1 class="headline super regular"> {{ page.title }} </h1>
             <div class="row row-eq-height">
                 <div class="col-md-12">
-                    <h1> {{ page.title }} </h1>
                     {% if page.category == "project"  %}
                         <ul class="pager"> 
                             {% assign prev = "" %}

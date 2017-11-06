@@ -95,3 +95,29 @@ img.project-image:focus + p + div + a.btn-details,
 img.project-image:active + p + div + a.btn-details {
     z-index: 15;
 }
+
+.post-tagfilter {
+    display: inline-block;
+    background: rgba(106,159,181,0.15);
+    padding: 0 .5rem;
+    margin-right: .5rem;
+    border-radius: 4px;
+    color: #6a9fb5;
+    font-family: "PT Sans",Helvetica,Arial,sans-serif;
+    font-size: 90%;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+
+.post-tagfilter:before {
+    content: "\f02b";
+    font-family: FontAwesome;
+    padding-right: .5em;
+}
+
+.post-tagfilter:hover {
+    text-decoration: none;
+    background: #6a9fb5;
+    color: #fff;
+}

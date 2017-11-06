@@ -35,19 +35,21 @@
         appendString += '<a href="" rel="tag">' + item.category + '</a>';
         appendString += '</span>';
 
-        if(item.tags.length > 0) {
-          appendString += '<span class="post-tags">';
-          appendString += '<i class="fa fa-tags"></i>';
+        if(item.category == "project") {
+          if(item.tags.length > 0) {
+            appendString += '<span class="post-tags">';
+            appendString += '<i class="fa fa-tags"></i>';
 
-          var str = item.tags.split("[")[1];
-          str = str.split("]")[0];
-          str = str.replace(/&quot;/g, "");
-          var tags = str.split(", ");
+            var str = item.tags.split("[")[1];
+            str = str.split("]")[0];
+            str = str.replace(/&quot;/g, "");
+            var tags = str.split(", ");
 
-          tags.forEach(function (it) {
-            appendString += '<a href="" rel="tag">' + it + '</a>';
-          })
-          appendString += '</span>';
+            tags.forEach(function (it) {
+              appendString += '<a href="" rel="tag">' + it + '</a>';
+            })
+            appendString += '</span>';
+          }
         }
                 
         appendString += '</div>';
@@ -58,7 +60,6 @@
         appendString = "";
       }
       postStringList.forEach(function (item) {
-        console.log(item);
         searchResults.innerHTML += item;
       });
     } else {

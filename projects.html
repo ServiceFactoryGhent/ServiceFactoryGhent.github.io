@@ -60,14 +60,14 @@ title: Service factory
 					  </form>
 				</div>
 
-				<div id="categories-3" class="sidebar-widget  widget_categories">
+			{% comment %} 	<div id="categories-3" class="sidebar-widget  widget_categories">
 					<h3 class="sidebar-header">Categorieën</h3>		
 					<ul>
 						{% for category in site.categories %}
 							<li class="cat-item cat-item-16"><a href="">{{ category | first }}</a>
  						{% endfor %}
 					</ul>
-				</div>
+				</div> {% endcomment %}
 				
 				<div id="tag_cloud-3" class="sidebar-widget  widget_tag_cloud">
 					<h3 class="sidebar-header">Populaire Tags</h3>
@@ -106,16 +106,18 @@ title: Service factory
 <script>
 	window.store = {
 		{% for post in site.posts %}
-		"{{ post.url | slugify }}": {
-			"title": "{{ post.title | xml_escape }}",
-			"category": "{{ post.category | xml_escape }}",
-			"content": {{ post.content | remove: post.excerpt | remove: "Intro" | strip_html | truncatewords: 50| strip_newlines | jsonify }},
-			"url": "{{ post.url | xml_escape }}",
-			"baseUrl": "{{ site.baseurl | xml_escape }}",
-			"image": "{{ post.image | xml_escape }}",
-			"tags": "{{ post.tags | xml_escape }}"
-		}
-		{% unless forloop.last %},{% endunless %}
+			{% if post.categories contains "project" or post.categories contains "news" %}
+			"{{ post.url | slugify }}": {
+				"title": "{{ post.title | xml_escape }}",
+				"category": "{{ post.category | xml_escape }}",
+				"content": {{ post.content | remove: post.excerpt | remove: "Intro" | strip_html | truncatewords: 50| strip_newlines | jsonify }},
+				"url": "{{ post.url | xml_escape }}",
+				"baseUrl": "{{ site.baseurl | xml_escape }}",
+				"image": "{{ post.image | xml_escape }}",
+				"tags": "{{ post.tags | xml_escape }}"
+			}
+			{% unless forloop.last %},{% endunless %}
+			{% endif %}
 		{% endfor %}
 	};
 </script>

@@ -6398,3 +6398,7 @@ footer .footer-sections .footer-section.partners img {
     border-bottom: 2px solid #004669;
   }
 }
+
+.section-normal{
+  min-height:70vh;
+}

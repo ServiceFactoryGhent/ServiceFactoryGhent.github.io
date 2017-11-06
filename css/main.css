@@ -6228,6 +6228,9 @@
 .section-contact label{
   color: #337ab7;
 }
+.section-contact a{
+  color: #337ab7;
+}
 form#contactform {
   margin: 0 auto;
   max-width: 500px;
@@ -6397,6 +6400,11 @@ footer .footer-sections .footer-section.partners img {
   nav#main-navbar.in ul#menu-navigation li:hover {
     border-bottom: 2px solid #004669;
   }
+}
+
+.menu-item-active{
+  border-bottom: 2px solid #004669;
+  border-bottom-color: #337ab7;
 }
 
 .section-normal{

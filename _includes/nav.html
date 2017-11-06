@@ -24,19 +24,35 @@
                 </div>
                 <div class="menu-navigation-container">
                     <ul id="menu-navigation" class="nav navbar-nav navbar-right">
-                        <li id="menu-item-home" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-46">
+                        {% assign active = 'menu-item-active' %}
+                        {% if page.url == "/" %}
+                            {% assign start = active %}
+                        {% endif %}
+                        <li id="menu-item-home" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-46 {{start}}">
                             <a href="{{ site.url }}">Start</a>
                         </li>
-                        <li id="menu-item-projects" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-115 dropdown">
+                        {% if page.url contains "/project" %}
+                            {% assign projects = active %}
+                        {% endif %}
+                        <li id="menu-item-projects" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-115 dropdown {{projects}}">
                             <a href="{{ site.baseurl }}/projects" class="dropdown-toggle">Projecten</a>
                         </li>
-                        <li id="menu-item-projects" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-115 dropdown">
+                        {% if page.url contains "/challenge" %}
+                            {% assign challenges = active %}
+                        {% endif %}
+                        <li id="menu-item-projects" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-115 dropdown {{challenges}}">
                             <a href="{{ site.baseurl }}/challenges" class="dropdown-toggle">Challenges</a>
                         </li>
-                        <li id="menu-item-contact" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-49">
+                        {% if page.url contains "/contact" %}
+                            {% assign contact = active %}
+                        {% endif %}
+                        <li id="menu-item-contact" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-49 {{contact}}">
                             <a href="{{ site.baseurl }}/contact">Contact</a>
                         </li>
-                        <li id="menu-item-about" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-52">
+                        {% if page.url contains "/about" %}
+                            {% assign over = active %}
+                        {% endif %}
+                        <li id="menu-item-about" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-52 {{over}}">
                             <a href="{{ site.baseurl }}/about">Over</a>
                         </li>
                     </ul>

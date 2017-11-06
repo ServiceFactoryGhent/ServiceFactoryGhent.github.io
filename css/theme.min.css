@@ -2859,8 +2859,8 @@ h6.headings-caps {
 .headline,
 h1 {
     font-size: 36px;
-    line-height: 48px;
-    margin-bottom: 24px
+    line-height: 1em !important;
+    margin-bottom: 24px !important;
 }
 h1 small {
     font-size: 24px
@@ -3155,7 +3155,9 @@ pre {
     text-align: right!important
 }
 .text-center {
-    text-align: center!important
+    text-align: center!important;
+    max-width: 500px;
+    margin: 0 auto;
 }
 .text-justify {
     text-align: justify!important
@@ -3285,8 +3287,11 @@ pre {
 .section {
     position: relative;
     z-index: 4;
-    padding: 150px 0 0 0;
+    padding: 150px 0 50px 0;
     min-height: 100vh;
+}
+.section.swatch-white-red {
+    padding: 50px 0 0 0;
 }
 .section.has-bottom {
     z-index: 5
@@ -3460,7 +3465,7 @@ pre {
 }
 @media (min-width: 1400px) {
     .section {
-        padding: 120px 0
+        padding: 150px 0 50px;
     }
     .section-short {
         padding: 72px 0
@@ -3487,7 +3492,7 @@ pre {
 }
 @media (max-width: 767px) {
     .section {
-        padding: 100px 0 0 0
+        padding: 100px 0 50px 0
     }
     .section-short {
         padding: 48px 0
@@ -7624,7 +7629,7 @@ div.mejs-speed-button {
     .grid-post .post-showinfo .post-head,
     .post-showinfo .comments-head,
     .post-showinfo .post-head {
-        padding-top: 0;
+        padding-top: 20px;
         z-index: 2
     }
     .grid-post .post-showinfo .post-icon,
@@ -12502,4 +12507,12 @@ textarea.woocommerce-invalid {
         margin-top: 10px;
         width: 100%;
     }
+}
+.section-contact ul {
+    padding: 0;
+    list-style: none;
+}
+.section-contact ul li {
+    color: white;
+    line-height: 35px;
 }

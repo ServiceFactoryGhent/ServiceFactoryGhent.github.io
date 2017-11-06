@@ -647,6 +647,3 @@ img.post-image:focus + p + div + a.btn-details,
 img.post-image:active + p + div + a.btn-details {
     z-index: 15;
 }
-
-
-

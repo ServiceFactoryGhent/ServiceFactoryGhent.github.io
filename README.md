@@ -8,11 +8,8 @@ This section will show you how to write different types of posts.
 
 #### Challenge post
 1. Navigate to https://github.com/ServiceFactoryGhent/ServiceFactoryGhent.github.io/tree/master/_posts/challenges.
-2. click on the button 'create new file'.
-3. 
-
-
-
+2. Click on the button 'create new file'.
+3. Copy-paste following code into the new file.
 ``` 
 ---
 layout: post                                
@@ -22,30 +19,62 @@ date: 2017-10-10 00:00:00 -0500
 category: challenge
 weight: 2
 ---
+
+Write your Challenge description here
 ``` 
-
-
-
+4. Adjust the settings:
+  *  layout DON'T CHANGE - this property sets the post layout for a challenge
+  *  title CHANGE - this property sets the title of a challenge
+  *  image CHANGE - this property sets the path for the image you want to use for the challenge
+  *  date CHANGE - this property sets the date when the post is made
+  *  weight CHANGE - this property sets the importance of the challenge (range: 1(less important) - 10(very important)
 
 #### Project post
-Navigate to ServiceFactoryGhent.github.io/_posts/
-
+1. Navigate to https://github.com/ServiceFactoryGhent/ServiceFactoryGhent.github.io/tree/master/_posts/challenges.
+2. Click on the button 'create new file'.
+3. Copy-paste following code into the new file.
 ``` 
 ---
-layout: post
-title: test1 - future project
+layout: post                                
+title: Challenge post
 image: /images/posts/cras-ultricies.jpg
 date: 2017-10-10 00:00:00 -0500
 category: challenge
 weight: 2
 ---
 
-# Title_Of_Challenge
-write your text in markdown here
+Write your Project description here
 ``` 
+4. Adjust the settings:
+  *  layout DON'T CHANGE - this property sets the post layout for a challenge
+  *  title CHANGE - this property sets the title of a challenge
+  *  image CHANGE - this property sets the path for the image you want to use for the challenge
+  *  date CHANGE - this property sets the date when the post is made
+  *  weight CHANGE - this property sets the importance of the challenge (range: 1(less important) - 10(very important)
+Navigate to https://github.com/ServiceFactoryGhent/ServiceFactoryGhent.github.io/tree/master/_posts/projects
 
 #### News post
+1. Navigate to https://github.com/ServiceFactoryGhent/ServiceFactoryGhent.github.io/tree/master/_posts/news.
+2. Click on the button 'create new file'.
+3. Copy-paste following code into the new file.
+``` 
+---
+layout: post                                
+title: Challenge post
+image: /images/posts/cras-ultricies.jpg
+date: 2017-10-10 00:00:00 -0500
+category: challenge
+weight: 2
+---
 
+Write your news post here
+``` 
+4. Adjust the settings:
+  *  layout DON'T CHANGE - this property sets the post layout for a challenge
+  *  title CHANGE - this property sets the title of a challenge
+  *  image CHANGE - this property sets the path for the image you want to use for the challenge
+  *  date CHANGE - this property sets the date when the post is made
+  *  weight CHANGE - this property sets the importance of the challenge (range: 1(less important) - 10(very important)
 
 
 

@@ -59,14 +59,14 @@ title: Service factory
 					  </form>
 				</div>
 
-				<div id="categories-3" class="sidebar-widget  widget_categories">
+			{% comment %} 	<div id="categories-3" class="sidebar-widget  widget_categories">
 					<h3 class="sidebar-header">Categorieën</h3>		
 					<ul>
 						{% for category in site.categories %}
 							<li class="cat-item cat-item-16"><a href="">{{ category | first }}</a>
  						{% endfor %}
 					</ul>
-				</div>
+				</div> {% endcomment %}
 				
 				<div id="tag_cloud-3" class="sidebar-widget  widget_tag_cloud">
 					<h3 class="sidebar-header">Populaire Tags</h3>

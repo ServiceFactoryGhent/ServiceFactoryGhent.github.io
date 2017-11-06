@@ -88,54 +88,31 @@ Write your news post here
 
 ## Instruction manual for Developers
 
-### Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
-See deployment for notes on how to deploy the project on gh-pages.
-
 ### Prerequisites
 
-What things you need to install and how to install them
+In order to run the project locally you need to install the following software:
 * gem
 * jekyll
 
+### Local Deployment
 
-
-### Installing
-
-
-
-```
-gem install jekyll bundler
-cd "ServiceFactoryGhent.github.io"
+``` 
+git clone https://github.com/ServiceFactoryGhent/ServiceFactoryGhent.github.io.git
+cd ServiceFactoryGhent.github.io.git
 bundle exec jekyll serve
-Now browse to http://localhost:4000
-```
+``` 
+Now go to localhost:4000, the project should appear.
 
+### Deployment to github
 
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+``` 
+git clone https://github.com/ServiceFactoryGhent/ServiceFactoryGhent.github.io.git
+// make adjustments to project
+git add .
+git commit -m "yourcommitmessage"
+git push origin master
+``` 
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the GNU License - see the [LICENSE.md](LICENSE.md) file for details

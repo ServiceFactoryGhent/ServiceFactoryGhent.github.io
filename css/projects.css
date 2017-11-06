@@ -98,7 +98,7 @@ img.project-image:active + p + div + a.btn-details {
 
 .post-tagfilter {
     display: inline-block;
-    background: rgba(106,159,181,0.15);
+    background: rgba(0, 100, 149, .3);
     padding: 0 .5rem;
     margin-right: .5rem;
     border-radius: 4px;
@@ -118,6 +118,6 @@ img.project-image:active + p + div + a.btn-details {
 
 .post-tagfilter:hover {
     text-decoration: none;
-    background: #6a9fb5;
+    background: #4c92b7;
     color: #fff;
 }

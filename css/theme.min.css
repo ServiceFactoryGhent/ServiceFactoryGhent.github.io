@@ -2914,8 +2914,51 @@ a:focus {
     outline: 0;
     text-decoration: none
 }
+article {
+    overflow: hidden;
+}
+#search-results .more-link {
+    margin: -10px 0 0;
+    padding: 0 0 5px;
+}
+.more-link.box {
+    position:relative;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transition:0.5s;
+    border: 2px solid white;
+}
+.more-link.box:hover {
+    border: 2px solid white;
+}
+.more-link.box::before, .box::after {
+    width: 100%;
+    height:100%;
+    z-index: 3;
+    content:'';
+    position: absolute;
+    top:0;
+    left:0;
+    box-sizing: border-box;
+    -webkit-transform: scale(0);
+    transition: 0.5s;
+}
+.more-link.box:hover::after, .box:hover::before {
+    -webkit-transform: scale(1);
+}
 .more-link {
-    display: block
+    padding: 8px 15px;
+    margin: 0 20px 15px;
+}
+.more-link::before {
+    border-bottom: 2px solid #006495;
+    border-left: 0;
+    -webkit-transform-origin: -1% 100%;
+}
+.more-link::after {
+    border-top: 0;
+    border-right: 0;
+    -webkit-transform-origin: 50% 50%;
 }
 .bordered-header {
     position: relative;
@@ -3338,6 +3381,7 @@ pre {
     z-index: 1;
     overflow: hidden;
     background: url('../images/bg.jpg');
+    background-size: cover;
 }
 [class*=oxy-agent-] .background-media {
     background-attachment: scroll!important
@@ -7370,6 +7414,15 @@ div.mejs-speed-button {
 .post-media {
     margin-bottom: 24px
 }
+.post-body p::after {
+    height: 14.28571rem;
+    background-image: linear-gradient(rgba(255,255,255,0) 40%,#fff 80%);
+    bottom: 0;
+    content: "";
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
 .post-extras {
     font-size: 14px;
     position: relative;
@@ -7423,7 +7476,7 @@ div.mejs-speed-button {
 }
 .grid-post .post-head {
     margin-bottom: 0;
-    padding-bottom: 0;
+    padding: 36px 0 0;
     position: relative;
     text-align: center
 }
@@ -7464,12 +7517,13 @@ div.mejs-speed-button {
     margin-bottom: 0
 }
 .grid-post .post-body {
-    margin-bottom: 0
+    padding: 15px 20px;
+    margin-bottom: 0;
 }
 .grid-post .post-extras {
     margin-top: 12px;
     margin-left: 0;
-    margin-bottom: 24px!important;
+    margin-bottom: 0 !important;
     padding-top: 12px!important
 }
 .grid-post .post-extras:before {
@@ -12380,6 +12434,7 @@ textarea.woocommerce-invalid {
         top: -70px;
         margin: 0;
         width: calc(100% - 10px);
+        border-left: none;
     }
     aside #categories-3,
     aside #tag_cloud-3,
@@ -12412,6 +12467,9 @@ textarea.woocommerce-invalid {
     #search-results article {
         display: flex;
         flex-direction: row;
+    }
+    aside.col-md-3.sidebar {
+        border-left: 1px solid #eee;
     }
     aside #categories-3,
     aside #tag_cloud-3,

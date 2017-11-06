@@ -192,8 +192,8 @@ title: Service Factory
 														</div>
 														<div class="post-body entry-content">
 															<p>{{ post.content | strip_html | truncatewords: 35 }}</p>
-															<a href="{{ site.baseurl }}{{ post.url }}" class="more-link">Lees meer</a>
 														</div>
+														<a href="{{ site.baseurl }}{{ post.url }}" class="more-link box">Lees meer</a>
 														{% comment %} <div class="post-extras bordered text-center">
 															<div class="text-center">
 															
@@ -214,48 +214,6 @@ title: Service Factory
 														
 								</ul>
 							</div>
-
-							<!-- {% if paginator.total_pages > 1 %}
-								<div class="text-center ">
-									<ul class="post-navigation pagination">
-										{% if paginator.previous_page %}
-											<li>
-												<a href="{{ paginator.previous_page_path }}" class="">‹</a>
-											</li>										
-										{% else %}
-											<li class="disabled">
-												<a href="" class="">‹</a>
-											</li>	
-										{% endif %}
-
-										{% for page in (1..paginator.total_pages) %}
-											{% if page == paginator.page %}
-												<li class="active">
-													<span class="current">{{ page }}</span>
-												</li>
-											{% elsif page == 1 %}
-												<li>									
-													<a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="inactive">{{ page }}</a>
-												</li>
-											{% else %}
-												<li>
-													<a href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}" class="inactive">{{ page }}</a>
-												</li>
-											{% endif %}
-									  	{% endfor %}
-			
-										{% if paginator.next_page %}
-											<li>
-												<a href="{{ paginator.next_page_path | prepend: site.baseurl }}">›</a>
-											</li>
-										{% else %}
-											<li class="disabled">
-												<a href="">›</a>
-											</li>
-										{% endif %}
-									</ul>
-								</div>
-							{% endif %}	 -->
 						</div>
 					</div>
 				</div>
@@ -289,7 +247,7 @@ title: Service Factory
 		accessToken:'6298482520.74aec84.59a7792dcb90443f85ba5edb991ebb9f',
 		resolution: 'standard_resolution',
 		// template: {% raw %}'<a href="{{link}}" target="_blank" id="{{id}}"><img src="{{image}}"/><div class="footer"><div class="caption">{{caption}}</div><div class="user"><img src="{{model.user.profile_picture}}"/><span>{{model.user.username}}</span></div></div></a>'{% endraw %},
-		template: {% raw %}'<li class="post-item col-md-4"><div class="grid-post swatch-white-blue"><article class="post-showinfo post type-post status-publish format-standard has-post-thumbnail hentry category-html category-seo tag-css tag-html tag-mobile"><div class="post-media overlay"><a href="{{link}}" class="feature-image hover-animate"><img src="{{image}}" alt="img-4-1170x400.png"><i class="fa fa-link"></i></a></div><div class="post-head small-screen-center"><div class="post-icon"><div class="hex hex-big"><i class="fa fa-file-text"></i></div></div></div><div class="post-body entry-content"><p>{{caption}}</p></div><div class="post-extras bordered text-center"><div class="text-center"></div></div></article></div></li>'{% endraw %},
+		template: {% raw %}'<li class="post-item instagram col-md-4"><div class="grid-post swatch-white-blue"><article class="post-showinfo post type-post status-publish format-standard has-post-thumbnail hentry category-html category-seo tag-css tag-html tag-mobile"><div class="post-media overlay"><a href="{{link}}" class="feature-image hover-animate"><img src="{{image}}" alt="img-4-1170x400.png"><i class="fa fa-link"></i></a></div><div class="post-head small-screen-center"><div class="post-icon"><div class="hex hex-big"><i class="fa fa-2x fa-instagram"></i></div></div></div><div class=" entry-content"><p>{{caption}}</p></div><div class="post-extras bordered text-center"><div class="text-center"></div></div></article></div></li>'{% endraw %},
 		sortBy: 'most-recent',
     	limit: 3,		
     });

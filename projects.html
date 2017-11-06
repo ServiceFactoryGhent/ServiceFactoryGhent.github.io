@@ -26,9 +26,9 @@ title: Service factory
 										</h2>
 									</div>
 									<div class="post-body entry-content">
-										{{ post.content | remove: post.excerpt | remove: "Intro" | strip_html | truncatewords: 50 }}
-										<a href="{{ site.url }}{{ post.url }}" class="more-link">Lees meer</a>
+										<p>{{ post.content | remove: post.excerpt | remove: "Intro" | strip_html | truncatewords: 50 }}</p>
 									</div>
+									<a href="{{ site.url }}{{ post.url }}" class="more-link box">Lees meer</a>
 									<div class="post-extras bordered text-center">
 										<div class="text-center">
 											<span class="post-category">

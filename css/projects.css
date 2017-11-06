@@ -1,3 +1,8 @@
+
+button.navbar-toggle span.icon-bar {
+    background: black;
+}
+
 ul.tags {
     display: block;
     list-style-type: none;
@@ -84,6 +89,7 @@ ul.projects li.project a.btn-details {
     background: white;
     z-index: -1;
 }
+
 img.project-image:hover + p + div + a.btn-details,
 img.project-image:focus + p + div + a.btn-details,
 img.project-image:active + p + div + a.btn-details {

@@ -2916,6 +2916,7 @@ a:focus {
 }
 article {
     overflow: hidden;
+    border-bottom: 1px solid #eee;
 }
 #search-results .more-link {
     margin: -10px 0 0;

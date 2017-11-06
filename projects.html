@@ -13,20 +13,20 @@ title: Service factory
 				<div id="search-results" class="col-md-9">
 					{% if site.posts.size > 0 %}
 						{% for post in site.categories.project %}
-							<article class="post-showinfo  post-191 post type-post status-publish format-standard has-post-thumbnail hentry category-html category-seo tag-css tag-html tag-mobile">
+							<article class="post-showinfo post type-post status-publish format-standard has-post-thumbnail hentry category-html category-seo tag-css tag-html tag-mobile">
 								<div class="post-media overlay">
-									<a href="{{ site.url }}\{{ post.url }}" class="feature-image hover-animate">
+									<a href="{{ site.url }}{{ post.url }}" class="feature-image hover-animate">
 									<img src="{{ site.baseurl }}{{ post.image }}" alt="img-4-1170x400.png"><i class="fa fa-link"></i></a>
 								</div>
 								<div class="post-text">
 									<div class="post-head small-screen-center">
 										<h2 class="post-title entry-title">
-											<a href="{{ site.url }}\{{ post.url }}" title="Permalink to Increase Traffic being Mobile Friendly" rel="bookmark"> {{ post.title }} </a>
+											<a href="{{ site.url }}{{ post.url }}" title="Permalink to Increase Traffic being Mobile Friendly" rel="bookmark"> {{ post.title }} </a>
 										</h2>
 									</div>
 									<div class="post-body entry-content">
 										{{ post.content | remove: post.excerpt | remove: "Intro" | strip_html | truncatewords: 50 }}
-										<a href="{{ site.url }}\{{ post.url }}" class="more-link">Lees meer</a>
+										<a href="{{ site.url }}{{ post.url }}" class="more-link">Lees meer</a>
 									</div>
 									<div class="post-extras bordered text-center">
 										<div class="text-center">
@@ -73,7 +73,7 @@ title: Service factory
 					<div class="tagcloud">
 						<ul>
 							{% for tag in site.tags %}
-								<li><a href="" class="post-tagfilter">{{ tag | first }}</a></a></li>				
+								<li><a href="{{ site.url }}/projects.html?query={{ tag | first }}" id="tags-list" class="post-tagfilter">{{ tag | first }}</a></a></li>				
 		  					{% endfor %}
 						</ul>
 					</div>

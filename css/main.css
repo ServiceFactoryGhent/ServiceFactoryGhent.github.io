@@ -6228,6 +6228,9 @@
 .section-contact label{
   color: #337ab7;
 }
+.section-contact a{
+  color: #337ab7;
+}
 form#contactform {
   margin: 0 auto;
   max-width: 500px;

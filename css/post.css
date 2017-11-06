@@ -9,3 +9,5 @@
 .pager .previous>a,
 .pager .previous>span{float:left}
 .pager .disabled>a,.pager .disabled>a:hover,.pager .disabled>a:focus,.pager .disabled>span{color:#999;cursor:not-allowed;background-color:#fff}
+.pager .participate>a{background-color:#337ab7;color:#fff;}
+.pager .participate>a:hover{color:#23527c;}

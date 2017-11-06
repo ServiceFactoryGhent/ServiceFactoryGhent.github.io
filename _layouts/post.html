@@ -40,6 +40,9 @@ title: Service factory
                             {% if prev != "" %}
                             <li class="previous"><a href="{{ prev }}">← Vorig project<!-- : {{pTitle}} --></a></li>
                             {% endif %}
+                            {% if page.tags contains "openstaand" %}
+                                <li class="participate"><a href="{{ site.url }}/contact?project={{ page.title }}"> Ik wens mee te doen aan dit project </a></li>
+                            {% endif %}
                             {% if next != "" %}
                             <li class="next"><a href="{{ next }}"> Volgend project<!-- : {{nTitle}}  -->→</a></li>
                             {% endif %}
@@ -120,13 +123,13 @@ title: Service factory
                     <br>
                     <br>
                     <br>
-                    {% if page.tags contains "openstaand" %}
-                        <a href="{{ site.url }}/contact?project={{ page.title }}"> Ik wens mee te doen aan dit project </a>
-                    {% endif %}
                     {% if page.category == "project"  %}
                         <ul class="pager">
                             {% if prev != "" %}
                             <li class="previous"><a href="{{ prev }}">← Vorig project<!-- : {{pTitle}} --></a></li>
+                            {% endif %}
+                            {% if page.tags contains "openstaand" %}
+                                <li class="participate"><a href="{{ site.url }}/contact?project={{ page.title }}"> Ik wens mee te doen aan dit project </a></li>
                             {% endif %}
                             {% if next != "" %}
                             <li class="next"><a href="{{ next }}"> Volgend project<!-- : {{nTitle}}  -->→</a></li>

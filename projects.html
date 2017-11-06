@@ -79,10 +79,11 @@ title: Service factory
 					</div>
 				</div>
 				<div id="recent-posts-3" class="sidebar-widget  widget_recent_entries">
-					<h3 class="sidebar-header">Recente Posts</h3>
+					<h3 class="sidebar-header">Recente Projecten</h3>
 					<ul>
 						{% if site.posts.size > 0 %}
-							{% for post in site.posts limit:5 %}
+							{% assign projectpostsrecent = site.categories.project | sort:"date"  %}
+							{% for post in projectpostsrecent reversed limit:5 %}
 								<li>
 									<div class="post-icon">
 										<i class="fa fa-file-text"></i>
@@ -96,13 +97,6 @@ title: Service factory
 						{% endif %}
 					</ul>
 				</div>
-				<!-- <div id="archives-3" class="sidebar-widget  widget_archive">
-					<h3 class="sidebar-header">Archives</h3>
-						<ul>
-							<li><a href="https://www.adam-bray.com/2017/04/">April 2017</a></li>
-							<li><a href="https://www.adam-bray.com/2017/02/">February 2017</a></li>
-						</ul>
-				</div></aside> -->
 			</div>
 		</div>
 	</section>

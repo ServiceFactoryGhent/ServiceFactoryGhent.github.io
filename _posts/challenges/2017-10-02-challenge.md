@@ -1,6 +1,6 @@
 ---
 layout: post                        
-title: test1 - future project
+title: challenge
 image: /images/posts/cras-ultricies.jpg
 date: 2017-10-10 00:00:00 -0500
 category: challenge

@@ -3,7 +3,7 @@ Service factory site
 
 ## Instruction manual for End-users
 
-### How to write a post?
+### How to write/adjust a post?
 This section will show you how to write different types of posts.
 
 #### Challenge post
@@ -27,31 +27,40 @@ Write your Challenge description here
   *  title CHANGE - this property sets the title of a challenge
   *  image CHANGE - this property sets the path for the image you want to use for the challenge
   *  date CHANGE - this property sets the date when the post is made
+  *  category DON'T CHANGE - this property categorizes the posts as a challenge
   *  weight CHANGE - this property sets the importance of the challenge (range: 1(less important) - 10(very important)
+5. Write your content where 'Write your Challenge description here' is written.
+6. Click 'commit new file', if you followed the previous steps carefully the post should appear on the website.
+
 
 #### Project post
-1. Navigate to https://github.com/ServiceFactoryGhent/ServiceFactoryGhent.github.io/tree/master/_posts/challenges.
+1. Navigate to https://github.com/ServiceFactoryGhent/ServiceFactoryGhent.github.io/tree/master/_posts/projects.
 2. Click on the button 'create new file'.
 3. Copy-paste following code into the new file.
 ``` 
 ---
-layout: post                                
-title: Challenge post
+layout: post
+title: test2 - openstaand project
 image: /images/posts/cras-ultricies.jpg
 date: 2017-10-10 00:00:00 -0500
-category: challenge
-weight: 2
+category: project
+tags: [openstaand]
+weight: 3
 ---
 
 Write your Project description here
 ``` 
 4. Adjust the settings:
-  *  layout DON'T CHANGE - this property sets the post layout for a challenge
-  *  title CHANGE - this property sets the title of a challenge
-  *  image CHANGE - this property sets the path for the image you want to use for the challenge
+  *  layout DON'T CHANGE - this property sets the post layout for a project
+  *  title CHANGE - this property sets the title of a project
+  *  image CHANGE - this property sets the path for the image you want to use for the project
   *  date CHANGE - this property sets the date when the post is made
-  *  weight CHANGE - this property sets the importance of the challenge (range: 1(less important) - 10(very important)
-Navigate to https://github.com/ServiceFactoryGhent/ServiceFactoryGhent.github.io/tree/master/_posts/projects
+  *  category DON'T CHANGE - this property categorizes the post as a project
+  *  tags CHANGE - this property sets the status of the project, only one tag at a time allowed! (openstaand,lopend,afgewerkt)
+  *  weight CHANGE - this property sets the importance of the project (range: 1(less important) - 10(very important)
+5. Write your content where 'Write your Project description here' is written.
+6. Click 'commit new file', if you followed the previous steps carefully the post should appear on the website.
+
 
 #### News post
 1. Navigate to https://github.com/ServiceFactoryGhent/ServiceFactoryGhent.github.io/tree/master/_posts/news.
@@ -59,12 +68,11 @@ Navigate to https://github.com/ServiceFactoryGhent/ServiceFactoryGhent.github.io
 3. Copy-paste following code into the new file.
 ``` 
 ---
-layout: post                                
-title: Challenge post
+layout: post
+title: test4
 image: /images/posts/cras-ultricies.jpg
 date: 2017-10-10 00:00:00 -0500
-category: challenge
-weight: 2
+category: news
 ---
 
 Write your news post here
@@ -74,10 +82,9 @@ Write your news post here
   *  title CHANGE - this property sets the title of a challenge
   *  image CHANGE - this property sets the path for the image you want to use for the challenge
   *  date CHANGE - this property sets the date when the post is made
-  *  weight CHANGE - this property sets the importance of the challenge (range: 1(less important) - 10(very important)
-
-
-
+  *  category DON'T CHANGE - this property categorizes the post as a news post
+5. Write your content where 'Write your news post here' is written.
+6. Click 'commit new file', if you followed the previous steps carefully the post should appear on the website.
 
 ## Instruction manual for Developers
 

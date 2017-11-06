@@ -80,7 +80,9 @@ title: Service Factory
 							</header>
 							<div class="col-md-4">
 								<h3 class="text-center">
-									<a href="" target="_self"> Openstaande Projecten </a>
+									<a href="/projects.html" target="_self" style="margin-bottom: 10px;display: block;">
+										Openstaande Projecten 
+									</a>
 								</h3>
 								{% if site.tags.openstaand.size > 0 %}
 									{% assign openstaandbyweight = site.tags.openstaand | sort:"weight"  %}
@@ -104,7 +106,9 @@ title: Service Factory
 							</div>
 							<div class="col-md-4">
 								<h3 class="text-center">
-									<a href="" target="_self"> Lopende Projecten</a>
+									<a href="/projects.html" target="_self" style="margin-bottom: 10px;display: block;">
+										Lopende Projecten
+									</a>
 								</h3>
 								{% if site.tags.lopend.size > 0 %}
 									{% assign lopendbyweight = site.tags.lopend | sort:"weight"  %}
@@ -128,7 +132,9 @@ title: Service Factory
 							</div>
 							<div class="col-md-4">
 								<h3 class="text-center">
-									<a href="" target="_self"> Opgeleverde projecten </a>
+									<a href="/projects.html" target="_self" style="margin-bottom: 10px;display: block;">
+										Opgeleverde projecten
+									</a>
 								</h3>
 								{% if site.tags.afgewerkt.size > 0 %}
 									{% assign afgewerktbyweight = site.tags.afgewerkt | sort:"weight"  %}
@@ -222,10 +228,10 @@ title: Service Factory
 			<br>
 			<div class="container">
 					<header class="section-header text-center no-underline">
-						<h1 class="headline  regular">Instagram</h1>
+						<h1 class="headline regular">Instagram</h1>
 					</header>
 					<div class="row vertical-top">
-						<div class="col-md-12  text-default text-center">
+						<div class="col-md-12  text-default">
 							<ul class="list-unstyled list-container">
 								<div id="instafeed"></div>
 							</ul>			
@@ -247,7 +253,7 @@ title: Service Factory
 		accessToken:'6298482520.74aec84.59a7792dcb90443f85ba5edb991ebb9f',
 		resolution: 'standard_resolution',
 		// template: {% raw %}'<a href="{{link}}" target="_blank" id="{{id}}"><img src="{{image}}"/><div class="footer"><div class="caption">{{caption}}</div><div class="user"><img src="{{model.user.profile_picture}}"/><span>{{model.user.username}}</span></div></div></a>'{% endraw %},
-		template: {% raw %}'<li class="post-item instagram col-md-4"><div class="grid-post swatch-white-blue"><article class="post-showinfo post type-post status-publish format-standard has-post-thumbnail hentry category-html category-seo tag-css tag-html tag-mobile"><div class="post-media overlay"><a href="{{link}}" target="_blank" class="feature-image hover-animate"><img src="{{image}}" alt="img-4-1170x400.png"><i class="fa fa-link"></i></a></div><div class="post-head small-screen-center"><div class="post-icon"><div class="hex hex-big"><i class="fa fa-2x fa-instagram"></i></div></div></div><div class=" entry-content"><p>{{caption}}</p></div><div class="post-extras bordered text-center"><div class="text-center"></div></div></article></div></li>'{% endraw %},
+		template: {% raw %}'<li class="post-item instagram col-md-4"><div class="grid-post swatch-white-blue"><article class="post-showinfo post type-post status-publish format-standard has-post-thumbnail hentry category-html category-seo tag-css tag-html tag-mobile"><div class="post-media overlay"><a href="{{link}}" target="_blank" class="feature-image hover-animate"><img src="{{image}}" alt="img-4-1170x400.png"><i class="fa fa-link"></i></a></div><div class="post-head small-screen-center"><div class="post-icon"><div class="hex hex-big"><i class="fa fa-2x fa-instagram"></i></div></div></div><div class=" entry-content"><p class="text-center">{{caption}}</p></div><div class="post-extras bordered text-center"><div class="text-center"></div></div></article></div></li>'{% endraw %},
 		sortBy: 'most-recent',
     	limit: 3,		
     });

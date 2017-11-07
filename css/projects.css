@@ -122,3 +122,9 @@ img.project-image:active + p + div + a.btn-details {
     color: #fff;
 }
 
+.menu-item a{
+  color:#337ab7;
+}
+.menu-item a:focus, a:hover{
+  color:#23527c;
+}

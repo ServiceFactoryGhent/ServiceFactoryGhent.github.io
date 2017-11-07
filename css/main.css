@@ -6410,3 +6410,10 @@ footer .footer-sections .footer-section.partners img {
 .section-normal{
   min-height:70vh;
 }
+
+.navbar-white a{
+  color:#fff;
+}
+.navbar-white a:focus, a:hover{
+  color:#337ab7;
+}

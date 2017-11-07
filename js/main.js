@@ -37,6 +37,7 @@
 
  window.addEventListener('scroll', function() {
      logo.addClass('default-logo');
+     navbar.removeClass('navbar-white');
      nav.style.backgroundColor = "rgba(255,255,255,.97)";
      nav.style.boxShadow = "1px 1px 5px grey";
      for (var i = 0; i <= 2; i++) {
@@ -44,6 +45,7 @@
      }
      if (!window.scrollY >= 1) {
          logo.removeClass('default-logo');
+         navbar.addClass('navbar-white');
          nav.style.backgroundColor = "transparent";
          nav.style.boxShadow = "none";
          for (var i = 0; i <= 2; i++) {

@@ -24,12 +24,12 @@ section.related-posts  .grid-post .post-showinfo .post-head {
     z-index: 2;
     padding: 36px 15px 10px;
 }
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 320px) {
     .button-text {
         display: none;
     }
 }
-@media screen and (min-width: : 300px) {
+@media screen and (min-width: : 320px) {
     .button-text-small {
         display: none;
     }

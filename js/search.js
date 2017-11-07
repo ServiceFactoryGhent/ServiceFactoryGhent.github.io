@@ -23,7 +23,7 @@
         appendString += '<div class="post-body entry-content">';
         appendString += '<p>' + item.content + '</p>';
         appendString += '</div>';
-        appendString += '<a href="{{ site.url }}{{ post.url }}" class="more-link box">Lees meer</a>';
+        appendString += '<a href="' + item.url + '" class="more-link box">Lees meer</a>';
         appendString += '<div class="post-extras bordered text-center">';
         appendString += '<div class="text-center">';
         appendString += '<span class="post-category">'; 

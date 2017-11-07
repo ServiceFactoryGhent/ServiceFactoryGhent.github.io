@@ -45,7 +45,7 @@ function removeClass(element, className) {
 function toggleClass(element, className) {
     "use strict";
     var newClass = " " + element.className.replace(/[\t\r\n]/g, " ") + " ";
-    if (element.hasClass(className)) {
+    if (hasClass(element, className)) {
         while (newClass.indexOf(" " + className + " ") >= 0) {
             newClass = newClass.replace(" " + className + " ", " ");
         }

@@ -128,3 +128,7 @@ img.project-image:active + p + div + a.btn-details {
 .menu-item a:focus, a:hover{
   color:#23527c;
 }
+
+img{
+    width:100%;
+}

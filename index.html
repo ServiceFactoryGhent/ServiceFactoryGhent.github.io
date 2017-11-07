@@ -3,6 +3,9 @@ layout: default
 title: Service Factory 
 ---
 
+<link rel="stylesheet" href="css/owl.carousel.min.css">
+<link rel="stylesheet" href="css/owl.theme.default.min.css">
+
 <div id="content" role="main">
 		<article class="page type-page status-publish hentry">
 			<div class="mailmunch-forms-before-post" style="display: none !important;"></div>
@@ -170,9 +173,9 @@ title: Service Factory
 					<div class="row vertical-top">
 						<div class="col-md-12  text-default">
 							<div class="row">
-								<ul class="list-unstyled list-container">								
-										{% for post in site.categories.news limit:3 %}
-										<li class="post-item col-md-4">
+								<ul class="list-unstyled list-container owl-carousel owl-theme">								
+										{% for post in site.categories.news %}
+										<li class="post-item">
 												<div class="grid-post swatch-white-blue">
 													<article id="post-191" class="post-showinfo  post-191 post type-post status-publish format-standard has-post-thumbnail hentry category-html category-seo tag-css tag-html tag-mobile">
 														<div class="post-media overlay">
@@ -242,10 +245,10 @@ title: Service Factory
 		</article>		
 	</div>
 
-
-
 </div>
-<script src="instafeed.min.js"></script>
+<script src="js/instafeed.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+
 <script type="text/javascript">
     var feed = new Instafeed({
 		get:'user',
@@ -272,4 +275,23 @@ title: Service Factory
         }
         return temp;
     }
+
+	$(document).ready(function(){
+		$('.owl-carousel').owlCarousel({
+			loop:true,
+			margin:10,
+			nav:true,
+			responsive:{
+				0:{
+					items:1
+				},
+				600:{
+					items:2
+				},
+				1000:{
+					items:3
+				}
+			}
+		})
+	});
 </script>

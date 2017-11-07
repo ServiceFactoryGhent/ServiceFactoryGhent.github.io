@@ -1,4 +1,11 @@
 (function() {
+  function decodeTags(tags){
+    var str = tags.split("[")[1];
+    str = str.split("]")[0];
+    str = str.replace(/&quot;/g, "");
+    return str.split(", ");
+  }
+
   function displaySearchResults(results, store) {
     var searchResults = document.getElementById('search-results');
     searchResults.innerHTML = "";
@@ -31,10 +38,7 @@
         appendString += '<a href="" rel="tag">'+item.category+'</a>';
         appendString += '</span>';
 
-        var str = item.tags.split("[")[1];
-        str = str.split("]")[0];
-        str = str.replace(/&quot;/g, "");
-        var tags = str.split(", ");
+        var tags = decodeTags(item.tags);
 
         if(tags[0] != ""){
           appendString += '<span class="post-tags">';
@@ -87,18 +91,24 @@
       this.field('category');
       this.field('image');
       this.field('content');
+      this.field('tags');
     });
 
+
+
     for (var key in window.store) { // Add the data to lunr
+      window.store[key].tags
       idx.add({
         'id': key,
         'title': window.store[key].title,
         'category': window.store[key].category,
         'image': window.store[key].image,
-        'content': window.store[key].content
+        'content': window.store[key].content,
+        'tags': decodeTags(window.store[key].tags)
       });
 
       var results = idx.search(searchTerm); // Get lunr to perform a search
+      console.log(results);
       displaySearchResults(results, window.store); // We'll write this in the next section
     }
   }

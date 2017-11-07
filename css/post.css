@@ -10,7 +10,7 @@
 .pager .previous>span{float:left}
 .pager .disabled>a,.pager .disabled>a:hover,.pager .disabled>a:focus,.pager .disabled>span{color:#999;cursor:not-allowed;background-color:#fff}
 .pager .participate>a{background-color:#337ab7;color:#fff;}
-.pager .participate>a:hover{color:#23527c;}
+.pager .participate>a:hover,.pager .participate>a:focus{color:#23527c;}
 ul.pager li.participate {
     display: flex;
     width: 50%;
@@ -23,4 +23,14 @@ section.related-posts {
 section.related-posts  .grid-post .post-showinfo .post-head {
     z-index: 2;
     padding: 36px 15px 10px;
+}
+@media screen and (max-width: 300px) {
+    .button-text {
+        display: none;
+    }
+}
+@media screen and (min-width: : 300px) {
+    .button-text-small {
+        display: none;
+    }
 }

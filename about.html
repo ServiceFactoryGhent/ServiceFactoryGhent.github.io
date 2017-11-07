@@ -8,16 +8,9 @@ title: Service factory
         <div class="container">
             <div class="row row-eq-height">
                 <div class="col-md-12">
-                	<h1 class="headline regular text-center">Over de Service Factory</h1>
-                	<h2>What?</h2>
-					<p>“<em>Without smart people, there are no smart cities.</em>”</p>
-					<p>We need people to help us cultivate the smartness of our beloved city. So we're calling upon all thinkers, dreamers,
-						builders, designers, coders, pixelpushers, solder artists, data refiners.</p>
-
-					<p>Good ideas need to be built before they can be tested, building takes time and effort Lab9k will secure funding to compensate
-						the hard work done by the participants. At the moment, we're still looking for students to work for us, since studentcontracts
-						are flexible enough to support this model.</p>
-					<p>Also, if you want to do an internship let us know.</p>
+				{% for post in site.categories.about %}
+					{{ post.content }}
+				{% endfor %}
 				</div>
 			</div>
 		</div>

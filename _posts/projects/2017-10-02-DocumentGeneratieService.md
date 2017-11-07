@@ -15,4 +15,4 @@ weight: 10
 Het genereren van documenten op basis van een template en variabele inhoud zodat een op maat gemaakt document ontstaat.
 
 ## Verwacht
-November 2017 plaatsen we een oproep naar geïnteresseerde partners.
+In november 2017 plaatsen we een oproep naar geïnteresseerde partners.

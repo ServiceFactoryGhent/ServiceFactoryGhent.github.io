@@ -17,9 +17,9 @@ Op een veilige en uniforme manier gegevens uit het Rijksregister (RR) en de Verr
 ## Services
 
 Er werden 3 services gebouwd
-RrSimplePersonService
-RrSimplePersonService_v02
-VkboSimpleOrganizationService
+* RrSimplePersonService
+* RrSimplePersonService_v02
+* VkboSimpleOrganizationService
 
 ## Return
 

@@ -6489,42 +6489,24 @@ footer .footer-sections .footer-section.partners img {
 }
 
 #dribbble{
-  top: 25px;
+  top: 15px;
   left: 90px;
   right: -25px;
-  background: #ef5b93;
-  height: 80px;
-  width: 80px;
-  border: 5px solid #c5376d;
+  /* background: #ef5b93; */
+  height: 110px;
+  width: 110px;
+  /* border: 5px solid #c5376d; */
   border-radius: 100%;
   overflow: hidden;
   position: absolute;
-  box-shadow: 0 0 0 5px #eee,
-              inset -20px -60px 0 -22px #ef5b93,
-              inset -20px -60px 0 -17px #c5376d;}
+  /* box-shadow: 0 0 0 5px #eee, inset -20px -60px 0 -22px #ef5b93, inset -20px -60px 0 -17px #c5376d; */
+  background-image: url(../images/logo.svg);
+  background-size: 100px 100px;
+  background-repeat: no-repeat;      
+  }
 
-#dribbble:before,
-#dribbble:after{
-  content:'';
-  display: block;
-  border: 5px solid #c5376d;
-  border-radius: 100%;
-  width: 170px;
-  height: 190px;
-  background: transparent;
-  position: absolute;
-}
 
-#dribbble:before{
-  top: 30px;
-  left: -18px;
-}
 
-#dribbble:after{
-  top: -30px;
-  left: -120px;
-  height: 200px;
-}
 
 #returnhome {
   background: #006495;

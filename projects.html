@@ -14,12 +14,12 @@ title: Service factory
 					{% if site.posts.size > 0 %}
 						{% assign projectsbyweight = site.categories.project | sort:"weight"  %}
 						{% for post in projectsbyweight reversed %}
-							<article class="post-showinfo post type-post status-publish format-standard has-post-thumbnail hentry category-html category-seo tag-css tag-html tag-mobile">
-								<div class="post-media overlay">
+							<article class="post-showinfo post type-post status-publish format-standard has-post-thumbnail hentry category-html category-seo tag-css tag-html tag-mobile row">
+								<div class="post-media overlay col-md-6">
 									<a href="{{ site.url }}{{ post.url }}" class="feature-image hover-animate">
-									<img src="{{ site.baseurl }}{{ post.image }}" alt="img-4-1170x400.png"><i class="fa fa-link"></i></a>
+									<img src="{{ site.baseurl }}{{ post.image }}" alt="img-4-1170x400.png" class="proj-image"><i class="fa fa-link"></i></a>
 								</div>
-								<div class="post-text">
+								<div class="post-text col-md-6">
 									<div class="post-head small-screen-center">
 										<h2 class="post-title entry-title">
 											<a href="{{ site.url }}{{ post.url }}" title="Permalink to Increase Traffic being Mobile Friendly" rel="bookmark"> {{ post.title }} </a>
@@ -124,6 +124,7 @@ title: Service factory
 </script>
 <script src="/js/lunr.min.js"></script>
 <script src="/js/search.js"></script>
+<<script src="/js/smartcrop.js"></script>
 <script type="text/javascript">
     // custom method added to string
     String.prototype.capitalize = function () {
@@ -136,4 +137,33 @@ title: Service factory
     //     }
     //     return temp;
     // }
+</script>
+<script>
+	var processed = {},
+	options = {
+		debug: true,
+		width: 640,
+		height: 640
+	};
+	
+	$(".proj-image").each(function() {
+		$(this).on('load', function() {
+			window.setTimeout(function() {
+				var img = this;
+				// if (processed[img.src]) return;
+				// processed[img.src] = true;
+				SmartCrop.crop(img, options).then(function(result) {
+					var crop = result.topCrop,
+					canvas = $('<canvas>')[0],
+					ctx = canvas.getContext('2d');
+					canvas.width = options.width;
+					canvas.height = options.height;
+					ctx.drawImage(img, crop.x, crop.y, crop.width, crop.height, 0, 0, canvas.width, canvas.height);
+					img.src = canvas.toDataURL();
+				});
+			}.bind(this), 100);
+		});
+		// if (this.complete)
+		// 	$(this).load();
+	});
 </script>

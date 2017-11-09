@@ -26,7 +26,7 @@ title: Service factory
 										</h2>
 									</div>
 									<div class="post-body entry-content">
-										<p>{{ post.content | remove: post.excerpt | remove: "Intro" | strip_html | truncatewords: 50 }}</p>
+										<p>{{ post.content | remove: post.excerpt | remove: "Uitdaging" | strip_html | truncatewords: 50 }}</p>
 									</div>
 									<a href="{{ site.url }}{{ post.url }}" class="more-link box">Lees meer</a>
 									<div class="post-extras bordered text-center">
@@ -111,7 +111,7 @@ title: Service factory
 			"{{ post.url | slugify }}": {
 				"title": "{{ post.title | xml_escape }}",
 				"category": "{{ post.category | xml_escape }}",
-				"content": {{ post.content | remove: post.excerpt | remove: "Intro" | strip_html | truncatewords: 50| strip_newlines | jsonify }},
+				"content": {{ post.content | remove: post.excerpt | remove: "Uitdaging" | strip_html | truncatewords: 50| strip_newlines | jsonify }},
 				"url": "{{ post.url | xml_escape }}",
 				"baseUrl": "{{ site.baseurl | xml_escape }}",
 				"image": "{{ post.image | xml_escape }}",

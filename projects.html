@@ -122,9 +122,11 @@ title: Service factory
 		{% endfor %}
 	};
 </script>
+
 <script src="/js/lunr.min.js"></script>
 <script src="/js/search.js"></script>
 <<script src="/js/smartcrop.js"></script>
+
 <script type="text/javascript">
     // custom method added to string
     String.prototype.capitalize = function () {
@@ -143,7 +145,7 @@ title: Service factory
 	options = {
 		debug: true,
 		width: 640,
-		height: 640
+		height: 480
 	};
 	
 	$(".proj-image").each(function() {
@@ -161,7 +163,7 @@ title: Service factory
 					ctx.drawImage(img, crop.x, crop.y, crop.width, crop.height, 0, 0, canvas.width, canvas.height);
 					img.src = canvas.toDataURL();
 				});
-			}.bind(this), 100);
+			}.bind(this), 10);
 		});
 		// if (this.complete)
 		// 	$(this).load();

@@ -6488,7 +6488,7 @@ footer .footer-sections .footer-section.partners img {
   margin: 0 auto;
 }
 
-#dribbble{
+#logoenveloppe{
   top: 15px;
   left: 90px;
   right: -25px;
@@ -6505,9 +6505,6 @@ footer .footer-sections .footer-section.partners img {
   background-repeat: no-repeat;      
   }
 
-
-
-
 #returnhome {
   background: #006495;
   background-image: -webkit-linear-gradient(top, #006495, #006495);
@@ -6520,6 +6517,7 @@ footer .footer-sections .footer-section.partners img {
   font-size: 14px;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
+  
 }
 
 #returnhome:hover {

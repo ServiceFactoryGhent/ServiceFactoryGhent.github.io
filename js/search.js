@@ -89,7 +89,6 @@
       this.field('id');
       this.field('title', { boost: 10 });
       this.field('category');
-      this.field('image');
       this.field('content');
       this.field('tags');
     });
@@ -102,7 +101,6 @@
         'id': key,
         'title': window.store[key].title,
         'category': window.store[key].category,
-        'image': window.store[key].image,
         'content': window.store[key].content,
         'tags': decodeTags(window.store[key].tags)
       });

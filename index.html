@@ -318,9 +318,10 @@ $(document).ready(function() {
 						img.src = canvas.toDataURL();
 					});
 				}.bind(this), 100);
+			}).each(function() {
+				if (this.complete) $(this).trigger('load');
 			});
-			// if (this.complete)
-			// 	$(this).load();
 		});
     // });
+
 </script>

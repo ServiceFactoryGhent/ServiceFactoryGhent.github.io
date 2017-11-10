@@ -175,7 +175,7 @@ title: Service factory
                                     <article id="post-191" class="post-showinfo  post-191 post type-post status-publish format-standard has-post-thumbnail hentry category-html category-seo tag-css tag-html tag-mobile">
                                         <div class="post-media overlay">
                                             <a href="{{ site.baseurl }}{{ post.url }}" class="feature-image hover-animate">
-                                                <img src="{{ site.baseurl }}{{ post.image }}" alt="img-4-1170x400.png">
+                                                <img class="proj-image" src="{{ site.baseurl }}{{ post.image }}" alt="img-4-1170x400.png">
                                                 <i class="fa fa-link"></i>
                                             </a>
                                         </div>
@@ -250,6 +250,8 @@ title: Service factory
         </div>
 </body>
 
+<script src="/js/smartcrop.js"></script>
+
     <script>
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
@@ -266,6 +268,39 @@ title: Service factory
         ga('create', 'UA-86297842-1', 'auto');
         ga('send', 'pageview');
     </script>
+
+    <script>
+    var processed = {},
+    options = {
+        debug: true,
+        width: 256,
+        height: 172
+    };
+    
+    // jQuery(document).ready(function(){
+        $(".proj-image").each(function() {
+            $(this).on('load', function() {
+                window.setTimeout(function() {
+                    var img = this;
+                    // if (processed[img.src]) return;
+                    // processed[img.src] = true;
+                    SmartCrop.crop(img, options).then(function(result) {
+                        var crop = result.topCrop,
+                        canvas = $('<canvas>')[0],
+                        ctx = canvas.getContext('2d');
+                        canvas.width = options.width;
+                        canvas.height = options.height;
+                        ctx.drawImage(img, crop.x, crop.y, crop.width, crop.height, 0, 0, canvas.width, canvas.height);
+                        img.src = canvas.toDataURL();
+                    });
+                }.bind(this), 100);
+            }).each(function() {
+                if (this.complete) $(this).trigger('load');
+            });
+        });
+    // });
+    
+</script>
 
 
 </body>

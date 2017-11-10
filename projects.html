@@ -148,9 +148,9 @@ title: Service factory
 		height: 480
 	};
 	
-	jQuery(document).ready(function(){
+	// jQuery(document).ready(function(){
         $(".proj-image").each(function() {
-			// $(this).on('load', function() {
+			$(this).on('load', function() {
 				window.setTimeout(function() {
 					var img = this;
 					// if (processed[img.src]) return;
@@ -164,11 +164,11 @@ title: Service factory
 						ctx.drawImage(img, crop.x, crop.y, crop.width, crop.height, 0, 0, canvas.width, canvas.height);
 						img.src = canvas.toDataURL();
 					});
-				}.bind(this), 100);
-			// });
+				}.bind(this), 10);
+			});
 			// if (this.complete)
 			// 	$(this).load();
 		});
-    });
+    // });
 	
 </script>

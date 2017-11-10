@@ -317,7 +317,7 @@ $(document).ready(function() {
 						ctx.drawImage(img, crop.x, crop.y, crop.width, crop.height, 0, 0, canvas.width, canvas.height);
 						img.src = canvas.toDataURL();
 					});
-				}.bind(this), 10);
+				}.bind(this), 100);
 			});
 			// if (this.complete)
 			// 	$(this).load();

@@ -6522,3 +6522,8 @@ footer .footer-sections .footer-section.partners img {
   text-decoration: none;
   color:black;
 }
+
+
+#tag_cloud-3,#recent-posts-3 {
+  display: block !important; 
+}

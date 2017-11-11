@@ -6523,7 +6523,8 @@ footer .footer-sections .footer-section.partners img {
   color:black;
 }
 
-
-#tag_cloud-3,#recent-posts-3 {
-  display: block !important; 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  #tag_cloud-3,#recent-posts-3 {
+    display: block !important; 
+  }
 }

@@ -6527,4 +6527,12 @@ footer .footer-sections .footer-section.partners img {
   #tag_cloud-3,#recent-posts-3 {
     display: block !important; 
   }
+
+  .cropnews {
+    height:16em;
+  }
+
+  .cropprojects {
+    height:16em;
+  }
 }

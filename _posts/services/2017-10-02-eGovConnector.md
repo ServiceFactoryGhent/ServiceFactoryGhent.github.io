@@ -1,6 +1,6 @@
 ---
 layout: post
-title: eGovConnector
+title: Connectoren
 image: /images/posts/koppelen-systemen.jpg
 date: 2017-10-10 00:00:00 -0500
 category: service
@@ -9,18 +9,15 @@ weight: 1
 ---
 
 
-# eGovConnector
+# Connectoren met authentieke bronnen
 
 ## Uitdaging 
-Op een veilige en uniforme manier gegevens uit het Rijksregister (RR) en de Verrijkte Kruispuntbank voor Ondernemingen (VKBO) opvragen.
+Op een veilige en uniforme manier gegevens uit authentieke bronnen opvragen. 
 
 ## Services
 
-Er werden 3 services gebouwd
-* RrSimplePersonService
-* RrSimplePersonService_v02
-* VkboSimpleOrganizationService
+We hebben ondertussen connectoren met het Rijksregister (RR), Verrijkte Kruispuntbank voor Ondernemingen (VKBO) en de Dienst voor Inschrijving van Voertuigen (DIV).
 
 ## Beschikbaar
 
-Deze service is operationeel.
+Deze services zijn operationeel.

@@ -99,11 +99,11 @@ title: Service factory
                             {% endif %}
                         </ul>
                     {% endif %}
-                    
-                    {% if post.image == "" or post.image == nil or post.image == blank %}
-                        <img src="../../../../images/logo.svg" alt="img.png">
+
+                    {% if page.image == "" or page.image == nil or page.image == blank %}
+
                     {% else %}
-                        <img src="{{ site.baseurl }}{{ post.image }}" alt="img.png">
+                        <img src="{{ site.baseurl }}{{ page.image }}" alt="img.png">
                     {% endif %}
                     
                     <div class="post-extras bordered text-center">

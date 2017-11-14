@@ -3,7 +3,7 @@ layout: post
 title: eGovConnector
 image: /images/posts/4.jpg
 date: 2017-10-10 00:00:00 -0500
-category: project
+category: service
 tags: [afgewerkt]
 weight: 1
 ---

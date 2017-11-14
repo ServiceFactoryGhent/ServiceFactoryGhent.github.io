@@ -3,7 +3,7 @@ layout: post
 title: Gentse Notificatie Service
 image: /images/posts/2.jpg
 date: 2017-10-10 00:00:00 -0500
-category: project
+category: service
 tags: [lopend]
 weight: 4
 ---

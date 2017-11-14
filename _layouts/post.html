@@ -15,7 +15,7 @@ title: Service factory
             <h1 class="headline super regular"> {{ page.title }} </h1>
             <div class="row row-eq-height">
                 <div class="col-md-12">
-                    {% if page.category == "project"  %}
+                    {% if page.category == "service"  %}
                         <ul class="pager"> 
                             {% assign prev = "" %}
                             {% assign next = "" %}
@@ -23,7 +23,7 @@ title: Service factory
                             {% for post in site.posts%}
                             {% if post == page %}
                             {% assign stop = true %}
-                            {% elsif post.category == "project"  %}
+                            {% elsif post.category == "service"  %}
                             {% if stop %}
                             {% assign prev = post.url %}
                             {% assign pTitle = post.title %}
@@ -102,7 +102,7 @@ title: Service factory
                     <img src="{{ site.baseurl }}{{ page.image }}" alt="">
                     <div class="post-extras bordered text-center">
                         <div class="text-center">
-                            {% if page.category == 'project' or page.category == 'news' or page.category == 'challenge' %}
+                            {% if page.category == 'service' or page.category == 'news' or page.category == 'challenge' %}
                             <span class="post-category">
                                 <i class="fa fa-folder-open"></i>
                                 <a href="" rel="tag">{{page.category}}</a>
@@ -122,16 +122,16 @@ title: Service factory
                     <br>
                     <br>
                     <br>
-                    {% if page.category == "project"  %}
+                    {% if page.category == "service"  %}
                         <ul class="pager">
                             {% if prev != "" %}
-                            <li class="previous"><a href="{{ prev }}">← Vorig project<!-- : {{pTitle}} --></a></li>
+                            <li class="previous"><a href="{{ prev }}">← Vorige service<!-- : {{pTitle}} --></a></li>
                             {% endif %}
                             {% if page.tags contains "openstaand" %}
-                                <li class="participate"><a href="{{ site.url }}/contact/participate.html?project={{ page.title }}"><span class="button-text">Ik wens mee te doen aan dit project </span><span class="button-text-small">Meedoen</span></a></li>
+                                <li class="participate"><a href="{{ site.url }}/contact/participate.html?project={{ page.title }}"><span class="button-text">Ik wens mee te doen aan dit service </span><span class="button-text-small">Meedoen</span></a></li>
                             {% endif %}
                             {% if next != "" %}
-                            <li class="next"><a href="{{ next }}"> Volgend project<!-- : {{nTitle}}  -->→</a></li>
+                            <li class="next"><a href="{{ next }}"> Volgende service<!-- : {{nTitle}}  -->→</a></li>
                             {% endif %}
                         </ul>
                     {% endif %}
@@ -159,14 +159,14 @@ title: Service factory
             </div>
         </div>
     </section>
-    {% if page.category == 'project' %}
+    {% if page.category == 'service' %}
         <section class="related-posts">
             <div class="container">
                 <div class="col-md-12">
                     <h1>Related posts</h1>
                     <ul class="list-unstyled list-container">
-                        {% assign projectsbyweight = site.categories.project | sort:"weight"  %}
-                        {% for post in projectsbyweight reversed%}
+                        {% assign servicesbyweight = site.categories.service | sort:"weight"  %}
+                        {% for post in servicesbyweight reversed%}
                             {% if forloop.index == 5 %}
                                 {% break %}
                             {% endif %}
@@ -175,7 +175,7 @@ title: Service factory
                                     <article id="post-191" class="post-showinfo  post-191 post type-post status-publish format-standard has-post-thumbnail hentry category-html category-seo tag-css tag-html tag-mobile">
                                         <div class="post-media overlay">
                                             <a href="{{ site.baseurl }}{{ post.url }}" class="feature-image hover-animate">
-                                                <img class="proj-image" src="{{ site.baseurl }}{{ post.image }}" alt="img-4-1170x400.png">
+                                                <img class="service-image" src="{{ site.baseurl }}{{ post.image }}" alt="img-4-1170x400.png">
                                                 <i class="fa fa-link"></i>
                                             </a>
                                         </div>
@@ -278,7 +278,7 @@ title: Service factory
     };
     
     // jQuery(document).ready(function(){
-        $(".proj-image").each(function() {
+        $(".service-image").each(function() {
             $(this).on('load', function() {
                 window.setTimeout(function() {
                     var img = this;

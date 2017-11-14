@@ -6535,4 +6535,8 @@ footer .footer-sections .footer-section.partners img {
   .cropservices {
     height:16em;
   }
+
+  .service-image{
+    height:10em;
+  }
 }

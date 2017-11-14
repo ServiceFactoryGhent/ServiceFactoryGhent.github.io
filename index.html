@@ -261,7 +261,11 @@ var feed = new Instafeed({
     // template: {% raw %}'<a href="{{link}}" target="_blank" id="{{id}}"><img src="{{image}}"/><div class="footer"><div class="caption">{{caption}}</div><div class="user"><img src="{{model.user.profile_picture}}"/><span>{{model.user.username}}</span></div></div></a>'{% endraw %},
     template: '{% raw %}<li class="post-item instagram col-md-4"><div class="grid-post swatch-white-blue"><article class="post-showinfo post type-post status-publish format-standard has-post-thumbnail hentry category-html category-seo tag-css tag-html tag-mobile"><div class="post-media overlay"><a href="{{link}}" target="_blank" class="feature-image hover-animate"><img src="{{image}}" alt="img-4-1170x400.png"><i class="fa fa-link"></i></a></div><div class="post-head small-screen-center"><div class="post-icon"><div class="hex hex-big"><i class="fa fa-2x fa-instagram"></i></div></div></div><div class=" entry-content"><p class="text-center">{{caption}}</p></div><div class="post-extras bordered text-center"><div class="text-center"></div></div></article></div></li>{% endraw %}',
     sortBy: 'most-recent',
-    limit: 3
+    limit: 3,
+	error: function(message) {
+			//hides instagram if no images are returned or something else goes wrong
+			$('#instagramsection').hide();
+        }
 });
 feed.run();
 
@@ -271,13 +275,6 @@ String.prototype.capitalize = function () {
     "use strict";
     return this.charAt(0).toUpperCase() + this.slice(1);
 }
-// String.prototype.format = function(...a) {
-//     let temp = this;
-//     for (let letter of a) {
-//         temp = temp.replace("{$}", letter)
-//     }
-//     return temp;
-// }
 
 $(document).ready(function() {
     $('.owl-carousel').owlCarousel({

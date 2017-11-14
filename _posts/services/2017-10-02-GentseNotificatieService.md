@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Gentse Notificatie Service
-image: /images/posts/2.jpg
+image: /images/posts/email-sms.png
 date: 2017-10-10 00:00:00 -0500
 category: service
 tags: [lopend]

@@ -31,11 +31,11 @@
                         <li id="menu-item-home" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-46 {{start}}">
                             <a href="{{ site.url }}">Start</a>
                         </li>
-                        {% if page.url contains "/project" %}
+                        {% if page.url contains "/services" %}
                             {% assign projects = active %}
                         {% endif %}
                         <li id="menu-item-projects" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-115 dropdown {{projects}}">
-                            <a href="{{ site.baseurl }}/projects" class="dropdown-toggle">Services</a>
+                            <a href="{{ site.baseurl }}/services" class="dropdown-toggle">Services</a>
                         </li>
                         {% if page.url contains "/challenge" %}
                             {% assign challenges = active %}

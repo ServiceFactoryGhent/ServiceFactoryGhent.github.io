@@ -8,4 +8,4 @@ category: news
 
 # Gentse Notificatie Service in ontwikkeling
 
- 
+Op 6 november had de kick-off plaats voor de ontwikkeling van de Gentse Notificatie Service. Na een selectieproces werd een Gentse start-up geselecteerd om samen met Digipolis deze service te ontwikkelen.

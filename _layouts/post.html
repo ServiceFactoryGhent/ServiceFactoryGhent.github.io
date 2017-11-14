@@ -35,13 +35,13 @@ title: Service factory
                             {% endif %}
                             {% endfor%}
                             {% if prev != "" %}
-                            <li class="previous"><a href="{{ prev }}">← Vorig project<!-- : {{pTitle}} --></a></li>
+                            <li class="previous"><a href="{{ prev }}">← Vorige service<!-- : {{pTitle}} --></a></li>
                             {% endif %}
                             {% if page.tags contains "openstaand" %}
-                                <li class="participate"><a href="{{ site.url }}/contact/participate.html?service={{ page.title }}"><span class="button-text">Ik wens mee te doen aan dit project </span><span class="button-text-small">Meedoen</span></a></li>
+                                <li class="participate"><a href="{{ site.url }}/contact/participate.html?service={{ page.title }}"><span class="button-text">Ik wens mee te doen aan de ontwikkeling van deze service</span><span class="button-text-small">Meedoen</span></a></li>
                             {% endif %}
                             {% if next != "" %}
-                            <li class="next"><a href="{{ next }}"> Volgend project<!-- : {{nTitle}}  -->→</a></li>
+                            <li class="next"><a href="{{ next }}"> Volgende service<!-- : {{nTitle}}  -->→</a></li>
                             {% endif %}
                         </ul>
                     {% endif %}
@@ -92,10 +92,10 @@ title: Service factory
                             {% endif %}
                             {% endfor%}
                             {% if prev != "" %}
-                            <li class="previous"><a href="{{ prev }}">← Vorige news post<!-- : {{pTitle}} --></a></li>
+                            <li class="previous"><a href="{{ prev }}">← Vorig nieuwsberict<!-- : {{pTitle}} --></a></li>
                             {% endif %}
                             {% if next != "" %}
-                            <li class="next"><a href="{{ next }}"> Volgende news post<!-- : {{nTitle}}  -->→</a></li>
+                            <li class="next"><a href="{{ next }}"> Volgend nieuwsbericht<!-- : {{nTitle}}  -->→</a></li>
                             {% endif %}
                         </ul>
                     {% endif %}
@@ -134,7 +134,7 @@ title: Service factory
                             <li class="previous"><a href="{{ prev }}">← Vorige service<!-- : {{pTitle}} --></a></li>
                             {% endif %}
                             {% if page.tags contains "openstaand" %}
-                                <li class="participate"><a href="{{ site.url }}/contact/participate.html?project={{ page.title }}"><span class="button-text">Ik wens mee te doen aan dit service </span><span class="button-text-small">Meedoen</span></a></li>
+                                <li class="participate"><a href="{{ site.url }}/contact/participate.html?project={{ page.title }}"><span class="button-text">Ik wens mee te doen aan de ontwikkeling van deze service</span><span class="button-text-small">Meedoen</span></a></li>
                             {% endif %}
                             {% if next != "" %}
                             <li class="next"><a href="{{ next }}"> Volgende service<!-- : {{nTitle}}  -->→</a></li>
@@ -154,10 +154,10 @@ title: Service factory
                     {% if page.category == "news" %}
                         <ul class="pager">
                             {% if prev != "" %}
-                            <li class="previous"><a href="{{ prev }}">← Vorige news post<!-- : {{pTitle}} --></a></li>
+                            <li class="previous"><a href="{{ prev }}">← Vorig nieuwsbericht<!-- : {{pTitle}} --></a></li>
                             {% endif %}
                             {% if next != "" %}
-                            <li class="next"><a href="{{ next }}"> Volgende news post<!-- : {{nTitle}}  -->→</a></li>
+                            <li class="next"><a href="{{ next }}"> Volgend nieuwsbericht<!-- : {{nTitle}}  -->→</a></li>
                             {% endif %}
                         </ul>
                     {% endif %}

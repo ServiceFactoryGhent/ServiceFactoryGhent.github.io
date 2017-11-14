@@ -21,6 +21,6 @@ Er werden 3 services gebouwd
 * RrSimplePersonService_v02
 * VkboSimpleOrganizationService
 
-## Waar staan we?
+## Beschikbaar
 
 Deze service is operationeel.

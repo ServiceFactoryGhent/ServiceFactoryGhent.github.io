@@ -6523,6 +6523,14 @@ footer .footer-sections .footer-section.partners img {
   color:black;
 }
 
+#instagramsection {
+  padding: 50px 0 50px;
+}
+
+#instafeed > li > div > article {
+  background: #ececec;
+}
+
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   #tag_cloud-3,#recent-posts-3 {
     display: block !important; 

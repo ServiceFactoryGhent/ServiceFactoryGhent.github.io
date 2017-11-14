@@ -99,10 +99,16 @@ title: Service factory
                             {% endif %}
                         </ul>
                     {% endif %}
-                    <img src="{{ site.baseurl }}{{ page.image }}" alt="">
+                    
+                    {% if post.image == "" or post.image == nil or post.image == blank %}
+                        <img src="../../../../images/logo.svg" alt="img.png">
+                    {% else %}
+                        <img src="{{ site.baseurl }}{{ post.image }}" alt="img.png">
+                    {% endif %}
+                    
                     <div class="post-extras bordered text-center">
                         <div class="text-center">
-                            {% if page.category == 'service' or page.category == 'news' or page.category == 'challenge' %}
+                            {% if page.category == 'service' or page.category == 'challenge' %}
                             <span class="post-category">
                                 <i class="fa fa-folder-open"></i>
                                 <a href="" rel="tag">{{page.category}}</a>
@@ -175,7 +181,11 @@ title: Service factory
                                     <article id="post-191" class="post-showinfo  post-191 post type-post status-publish format-standard has-post-thumbnail hentry category-html category-seo tag-css tag-html tag-mobile">
                                         <div class="post-media overlay">
                                             <a href="{{ site.baseurl }}{{ post.url }}" class="feature-image hover-animate">
-                                                <img class="service-image" src="{{ site.baseurl }}{{ post.image }}" alt="img-4-1170x400.png">
+                                                {% if post.image == "" or post.image == nil or post.image == blank %}
+                                                    <img src="../../../../images/posts/news_placeholder.png" class="" alt="img-4-1170x400.png">
+                                                {% else %}
+                                                    <img class="service-image" src="{{ site.baseurl }}{{ post.image }}" alt="img-4-1170x400.png">
+                                                {% endif %}
                                                 <i class="fa fa-link"></i>
                                             </a>
                                         </div>

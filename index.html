@@ -177,8 +177,12 @@ title: Service Factory
 													<article id="post-191" class="post-showinfo  post-191 post type-post status-publish format-standard has-post-thumbnail hentry category-html category-seo tag-css tag-html tag-mobile">
 														<div class="post-media overlay">
 															<a href="{{ site.baseurl }}{{ post.url }}" class="feature-image hover-animate">
-																<img src="{{ site.baseurl }}{{ post.image }}" class="cropnews" alt="img-4-1170x400.png">
-																<i class="fa fa-link"></i>
+																{% if post.image == "" or post.image == nil or post.image == blank %}
+																	<img src="images/posts/news_placeholder.png" class="" alt="img-4-1170x400.png">
+																{% else %}
+																	<img src="{{ site.baseurl }}{{ post.image }}" class="cropnews" alt="img-4-1170x400.png">
+																{% endif %}
+													
 															</a>
 														</div>
 														<div class="post-head small-screen-center">
@@ -226,6 +230,9 @@ title: Service Factory
 			{% endif %}
 			<br>
 			<br>
+			
+		</section>
+		<section id="instagramsection" class="section swatch-white-blue section-normal">
 			<div class="container">
 					<header class="section-header text-center no-underline">
 						<h1 class="headline regular">Instagram</h1>

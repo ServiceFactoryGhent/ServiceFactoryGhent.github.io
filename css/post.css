@@ -24,6 +24,8 @@ section.related-posts  .grid-post .post-showinfo .post-head {
     z-index: 2;
     padding: 36px 15px 10px;
 }
+
+
 @media screen and (max-width: 768px) {
     .button-text {
         display: none;

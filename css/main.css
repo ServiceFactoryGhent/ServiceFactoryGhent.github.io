@@ -6535,6 +6535,17 @@ footer .footer-sections .footer-section.partners img {
   background: #ececec;
 }
 
+.markdownlayout > h2,h3,h4 {
+  margin-top: 1.5em;
+  margin-bottom: 0.3em;
+}
+
+.markdownlayout > h1 {
+  margin-bottom: 0.3em !important;
+  margin-top: 0.5em !important;
+}
+
+
 
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {

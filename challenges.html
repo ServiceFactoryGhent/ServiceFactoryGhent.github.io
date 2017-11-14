@@ -22,7 +22,12 @@ title: Service factory
 							<article class="post-showinfo post type-post status-publish format-standard has-post-thumbnail hentry category-html category-seo tag-css tag-html tag-mobile">
 								<div class="post-media overlay">
 									<a href="{{ site.url }}{{ post.url }}" class="feature-image hover-animate">
-									<img src="{{ site.baseurl }}{{ post.image }}" alt="14ZJP1_5_1.jpg"><i class="fa fa-link"></i></a>
+									{% if post.image == "" or post.image == nil or post.image == blank %}
+										<img src="images/posts/news_placeholder.png" class="" alt="14ZJP1_5_1.jpg">
+									{% else %}
+										<img src="{{ site.baseurl }}{{ post.image }}" alt="14ZJP1_5_1.jpg">
+									{% endif %}				
+									<i class="fa fa-link"></i></a>
 								</div>
 								<div class="post-text">
 									<div class="post-head small-screen-center">

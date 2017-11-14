@@ -1,8 +1,8 @@
 ---
 layout: post
-title: Service Factory gelanceerd
+title: Website Service Factory gelanceerd
 image: /images/logo.svg
-date: 2017-10-10 00:00:00 -0500
+date: 2017-11-18 00:00:00 -0500
 category: news
 ---
 

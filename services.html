@@ -12,12 +12,12 @@ title: Service factory
 			<div class="row">
 				<div id="search-results" class="col-md-9">
 					{% if site.posts.size > 0 %}
-						{% assign projectsbyweight = site.categories.project | sort:"weight"  %}
-						{% for post in projectsbyweight reversed %}
+						{% assign servicesbyweight = site.categories.service | sort:"weight"  %}
+						{% for post in servicesbyweight reversed %}
 							<article class="post-showinfo post type-post status-publish format-standard has-post-thumbnail hentry category-html category-seo tag-css tag-html tag-mobile row">
 								<div class="post-media overlay col-md-6">
 									<a href="{{ site.url }}{{ post.url }}" class="feature-image hover-animate">
-									<img src="{{ site.baseurl }}{{ post.image }}" alt="img-4-1170x400.png" class="proj-image cropprojects"><i class="fa fa-link"></i></a>
+									<img src="{{ site.baseurl }}{{ post.image }}" alt="img-4-1170x400.png" class="proj-image cropservices"><i class="fa fa-link"></i></a>
 								</div>
 								<div class="post-text col-md-6">
 									<div class="post-head small-screen-center">
@@ -55,7 +55,7 @@ title: Service factory
 				<aside class="col-md-3 sidebar">
 					<div id="search-4" class="sidebar-widget  widget_search">
 						<form action="/projects.html" method="get">
-							<input type="text" id="search-box" name="query" placeholder="Zoek naar een project">
+							<input type="text" id="search-box" name="query" placeholder="Zoek naar een Service">
 							<input type="submit" value="zoek">
 						  </form>
 					</div>
@@ -80,11 +80,11 @@ title: Service factory
 						</div>
 					</div>
 					<div id="recent-posts-3" class="sidebar-widget  widget_recent_entries">
-						<h3 class="sidebar-header">Recente Projecten</h3>
+						<h3 class="sidebar-header">Recente Services</h3>
 						<ul>
 							{% if site.posts.size > 0 %}
-								{% assign projectpostsrecent = site.categories.project | sort:"date"  %}
-								{% for post in projectpostsrecent reversed limit:5 %}
+								{% assign servicepostsrecent = site.categories.service | sort:"date"  %}
+								{% for post in servicepostsrecent reversed limit:5 %}
 									<li>
 										<div class="post-icon">
 											<i class="fa fa-file-text"></i>
@@ -107,7 +107,7 @@ title: Service factory
 <script>
 	window.store = {
 		{% for post in site.posts %}
-			{% if post.categories contains "project" or post.categories contains "news" %}
+			{% if post.categories == "service" %}
 			"{{ post.url | slugify }}": {
 				"title": "{{ post.title | xml_escape }}",
 				"category": "{{ post.category | xml_escape }}",
@@ -149,7 +149,7 @@ title: Service factory
 	};
 	
 	// jQuery(document).ready(function(){
-        $(".proj-image").each(function() {
+        $(".cropservices").each(function() {
 			$(this).on('load', function() {
 				window.setTimeout(function() {
 					var img = this;

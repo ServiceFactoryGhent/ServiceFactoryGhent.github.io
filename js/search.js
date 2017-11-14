@@ -17,11 +17,11 @@
       for (var i = 0; i < results.length; i++) {  // Iterate over the results
         var item = store[results[i].ref];
         appendString += '<article class="post-showinfo post type-post status-publish format-standard has-post-thumbnail hentry category-html category-seo tag-css tag-html tag-mobile">'; 
-        appendString += '<div class="post-media overlay">';
+        appendString += '<div class="post-media overlay col-md-6">';
         appendString += '<a href="' + item.url + '" class="feature-image hover-animate">';
-        appendString += '<img src="'+ item.baseUrl + item.image + '" alt="img-4-1170x400.png"><i class="fa fa-link"></i></a>';
+        appendString += '<img class="cropservices" src="'+ item.baseUrl + item.image + '" alt="img-4-1170x400.png"><i class="fa fa-link"></i></a>';
         appendString += '</div>';
-        appendString += '<div class="post-text">';
+        appendString += '<div class="post-text col-md-6">';
         appendString += '<div class="post-head small-screen-center">';
         appendString += '<h2 class="post-title entry-title">';
         appendString += '<a href="' + item.url + '" title="' + item.title + '" rel="bookmark">' + item.title + '</a>';
@@ -106,7 +106,7 @@
       });
 
       var results = idx.search(searchTerm); // Get lunr to perform a search
-      console.log(results);
+      //console.log(results);
       displaySearchResults(results, window.store); // We'll write this in the next section
     }
   }

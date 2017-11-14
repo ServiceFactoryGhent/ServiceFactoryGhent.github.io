@@ -14,5 +14,6 @@ weight: 10
 ## Uitdaging 
 Het genereren van documenten op basis van een template en variabele inhoud zodat een op maat gemaakt document ontstaat.
 
+
 ## Verwacht
 In november 2017 plaatsen we een oproep naar geïnteresseerde partners.

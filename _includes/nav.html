@@ -32,9 +32,9 @@
                             <a href="{{ site.url }}">Start</a>
                         </li>
                         {% if page.url contains "/services" %}
-                            {% assign projects = active %}
+                            {% assign services = active %}
                         {% endif %}
-                        <li id="menu-item-projects" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-115 dropdown {{projects}}">
+                        <li id="menu-item-projects" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-115 dropdown {{services}}">
                             <a href="{{ site.baseurl }}/services" class="dropdown-toggle">Services</a>
                         </li>
                         {% if page.url contains "/challenge" %}

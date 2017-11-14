@@ -37,12 +37,15 @@
                         <li id="menu-item-projects" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-115 dropdown {{services}}">
                             <a href="{{ site.baseurl }}/services" class="dropdown-toggle">Services</a>
                         </li>
-                        {% if page.url contains "/challenge" %}
-                            {% assign challenges = active %}
+						{% if site.categories.challenge.size > 0 %}
+                            {% if page.url contains "/challenge" %}
+                                {% assign challenges = active %}
+                            {% endif %}
+                            <li id="menu-item-projects" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-115 dropdown {{challenges}}">
+                                <a href="{{ site.baseurl }}/challenges" class="dropdown-toggle">Challenges</a>
+                            </li>
                         {% endif %}
-                        <li id="menu-item-projects" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-115 dropdown {{challenges}}">
-                            <a href="{{ site.baseurl }}/challenges" class="dropdown-toggle">Challenges</a>
-                        </li>
+                        
                         {% if page.url contains "/contact" %}
                             {% assign contact = active %}
                         {% endif %}

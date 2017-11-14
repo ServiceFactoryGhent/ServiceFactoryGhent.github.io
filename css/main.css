@@ -6365,6 +6365,10 @@ footer .footer-sections .footer-section.partners img {
   margin: 0 auto;
 }
 
+.partners > h3 {
+  margin-left: 11%;
+}
+
 @media (min-width: 320px) {
   nav#main-navbar.in ul#menu-navigation li:hover {
     border-bottom: none;
@@ -6530,6 +6534,8 @@ footer .footer-sections .footer-section.partners img {
 #instafeed > li > div > article {
   background: #ececec;
 }
+
+
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   #tag_cloud-3,#recent-posts-3 {

@@ -61,7 +61,7 @@
         searchResults.innerHTML += item;
       });
     } else {
-      searchResults.innerHTML = '<li>No results found</li>';
+      searchResults.innerHTML = '<li>Geen resultaten gevonden</li>';
     }
   }
 

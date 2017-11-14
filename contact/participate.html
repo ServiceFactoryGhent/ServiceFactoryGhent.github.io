@@ -13,11 +13,11 @@ title: Contact
 					<h1 class="headline regular">Contact</h1>
 				</header>
 				<div class="text-center">
-					<h2>Ik wil meedoen aan project</h2>
+					<h2>Ik wil meedoen aan Service</h2>
 					<form id="contactform"action="https://formspree.io/servicefactory@digipolis.gent" method="POST">
-						<label>Project</label>
+						<label>Service</label>
 						<div class="selectform" style="position:relative">
-							<select name="projects" id="selectProject">
+							<select name="services" id="selectService">
 								{% if site.posts.size > 0 %}
 									{% for post in site.tags.openstaand %}
 										<option value="{{post.title}}">{{post.title}}</option>
@@ -28,7 +28,7 @@ title: Contact
 						</div>
 						<label>E-mail</label>
 						<input type="email" name="_replyto" required>
-						<label>Plan van aanpak project</label>
+						<label>Plan van aanpak service</label>
 						<textarea name="h" cols="60" rows="10" required></textarea>
 
 						<button type="submit" value="Send"  class="contactformbutton">
@@ -57,11 +57,11 @@ title: Contact
 	            } 
 	        } 
 	    } 
-	    var fieldName = decodeURIComponent(querySt("project"));
+	    var fieldName = decodeURIComponent(querySt("service"));
 	    if( fieldName==null){ 
 	    }
 	    else{ 
-	        var selectObj = document.getElementById('selectProject')
+	        var selectObj = document.getElementById('selectService')
 	        for (var i = 0; i < selectObj.options.length; i++) {
 	            if (selectObj.options[i].text == fieldName) {
 	                selectObj.options[i].selected = true;

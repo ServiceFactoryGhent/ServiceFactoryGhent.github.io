@@ -54,7 +54,7 @@ title: Service factory
 				</div>
 				<aside class="col-md-3 sidebar">
 					<div id="search-4" class="sidebar-widget  widget_search">
-						<form action="/projects.html" method="get">
+						<form action="/services.html" method="get">
 							<input type="text" id="search-box" name="query" placeholder="Zoek naar een Service">
 							<input type="submit" value="zoek">
 						  </form>
@@ -74,7 +74,7 @@ title: Service factory
 						<div class="tagcloud">
 							<ul>
 								{% for tag in site.tags %}
-									<li><a href="{{ site.url }}/projects.html?query={{ tag | first }}" id="tags-list" class="post-tagfilter">{{ tag | first }}</a></li>				
+									<li><a href="{{ site.url }}/services.html?query={{ tag | first }}" id="tags-list" class="post-tagfilter">{{ tag | first }}</a></li>				
 			  					{% endfor %}
 							</ul>
 						</div>

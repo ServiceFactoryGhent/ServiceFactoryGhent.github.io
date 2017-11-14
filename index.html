@@ -273,7 +273,7 @@ String.prototype.capitalize = function () {
 
 $(document).ready(function() {
     $('.owl-carousel').owlCarousel({
-        loop: true,
+        loop: $('.owl-carousel .post-item').length > 2 ? true:false,
         margin: 10,
         nav: true,
         autoHeight: true,

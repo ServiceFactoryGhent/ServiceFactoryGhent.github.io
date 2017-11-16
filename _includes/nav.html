@@ -17,6 +17,9 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
+                {% if page.url == "/" %}
+                    <span>By Digipolis</span>
+                {% endif %}
                 <a href="{{ site.url }}" class="navbar-brand"></a>
             </div>
             <nav id="main-navbar" class="collapse navbar-collapse navbar-white" role="navigation">

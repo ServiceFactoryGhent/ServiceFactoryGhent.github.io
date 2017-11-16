@@ -6567,3 +6567,11 @@ footer .footer-sections .footer-section.partners img {
     height:10em;
   }
 }
+
+.navbar-header span{
+  color: white;
+  position: absolute;
+  bottom: 0;
+  padding-bottom: 18px;
+  padding-left: 5px;
+}

@@ -16,7 +16,7 @@ title: Service factory
 						{% for post in servicesbyweight reversed %}
 							{% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
 							{% if thecycle == 'odd' %}
-								<div class="row">
+								<div class="row row-eq-height">
 							{% endif %}
 							<article class="post-showinfo post type-post status-publish format-standard has-post-thumbnail hentry category-html category-seo tag-css tag-html tag-mobile col-md-6">
 								<div class="post-media overlay">
@@ -135,6 +135,21 @@ title: Service factory
 			
 		{% endfor %}
 	};
+</script>
+<script>
+	$(document).ready(function() {
+		$(".row-eq-height").each(function( index ){
+		  	var heights = $(this).find(".col-md-6").map(function() {
+		        return $(this).height();
+		    }).get(),
+
+		    maxHeight = Math.max.apply(null, heights);
+		    console.log("h="+maxHeight);
+
+		    $(this).find(".col-md-6").height(maxHeight);
+		});
+
+	});
 </script>
 
 <script src="/js/lunr.min.js"></script>

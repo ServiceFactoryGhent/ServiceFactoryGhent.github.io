@@ -279,38 +279,6 @@ title: Service factory
         ga('send', 'pageview');
     </script>
 
-    <script>
-    var processed = {},
-    options = {
-        debug: true,
-        width: 256,
-        height: 172
-    };
-    
-    // jQuery(document).ready(function(){
-        $(".service-image").each(function() {
-            $(this).on('load', function() {
-                window.setTimeout(function() {
-                    var img = this;
-                    // if (processed[img.src]) return;
-                    // processed[img.src] = true;
-                    SmartCrop.crop(img, options).then(function(result) {
-                        var crop = result.topCrop,
-                        canvas = $('<canvas>')[0],
-                        ctx = canvas.getContext('2d');
-                        canvas.width = options.width;
-                        canvas.height = options.height;
-                        ctx.drawImage(img, crop.x, crop.y, crop.width, crop.height, 0, 0, canvas.width, canvas.height);
-                        img.src = canvas.toDataURL();
-                    });
-                }.bind(this), 100);
-            }).each(function() {
-                if (this.complete) $(this).trigger('load');
-            });
-        });
-    // });
-    
-</script>
 
 
 </body>

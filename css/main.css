@@ -6310,6 +6310,8 @@ footer ul li i {
   margin-right: 10px;
 }
 footer .footer-sections {
+  margin-left: -15px;
+  margin-right: -15px;
   display: flex;
 }
 footer .footer-sections .footer-section {

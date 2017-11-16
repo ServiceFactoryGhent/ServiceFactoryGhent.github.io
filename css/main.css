@@ -6568,7 +6568,7 @@ footer .footer-sections .footer-section.partners img {
   }
 }
 
-.navbar-header span{
+#bydigipolis{
   opacity: 1;
   color: white;
   position: absolute;
@@ -6581,6 +6581,6 @@ footer .footer-sections .footer-section.partners img {
        -o-transition: opacity 1s ease-in;
           transition: opacity 1s ease-in;
 }
-.navbar-header .transparant{
+.transparant{
   opacity: 0;
 }

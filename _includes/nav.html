@@ -17,11 +17,11 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                {% if page.url == "/" %}
-                    <span id="bydigipolis" class="transparant">By Digipolis</span>
-                {% endif %}
                 <a href="{{ site.url }}" class="navbar-brand"></a>
             </div>
+            {% if page.url == "/" %}
+                <a href="https://digipolis.be" target="_blank" id="bydigipolis" class="transparant">By Digipolis</a>
+            {% endif %}
             <nav id="main-navbar" class="collapse navbar-collapse navbar-white" role="navigation">
                 <div class="menu-sidebar pull-right">
                 </div>

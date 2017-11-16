@@ -11,6 +11,10 @@ weight: 4
 
 # Data Fetch Service
 
+## Uitdaging
+
+Hoe kunnen we op een uniforme manier informatie uit diverse bestaande applicaties ontsluiten?
+
 
 
  

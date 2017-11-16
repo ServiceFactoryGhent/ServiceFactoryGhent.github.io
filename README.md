@@ -13,7 +13,7 @@ This section will show you how to write different types of posts.
 ``` 
 ---
 layout: post                                
-title: Challenge post
+title: titel van de Challenge
 image: /images/posts/cras-ultricies.jpg
 date: 2017-10-10 00:00:00 -0500
 category: challenge
@@ -25,40 +25,40 @@ Write your Challenge description here
 4. Adjust the settings:
   *  layout DON'T CHANGE - this property sets the post layout for a challenge
   *  title CHANGE - this property sets the title of a challenge
-  *  image CHANGE - this property sets the path for the image you want to use for the challenge
-  *  date CHANGE - this property sets the date when the post is made
+  *  image CHANGE - this property sets the path for the image you want to use for the challenge, if empty it will use placeholder image
+  *  date CHANGE - this property sets the date when the challenge is made
   *  category DON'T CHANGE - this property categorizes the posts as a challenge
   *  weight CHANGE - this property sets the importance of the challenge (range: 1(less important) - 10(very important)
 5. Write your content where 'Write your Challenge description here' is written.
 6. Click 'commit new file', if you followed the previous steps carefully the post should appear on the website.
 
 
-#### Project post
-1. Navigate to https://github.com/ServiceFactoryGhent/ServiceFactoryGhent.github.io/tree/master/_posts/projects.
+#### Service post
+1. Navigate to https://github.com/ServiceFactoryGhent/ServiceFactoryGhent.github.io/tree/master/_posts/services.
 2. Click on the button 'create new file'.
 3. Copy-paste following code into the new file.
 ``` 
 ---
 layout: post
-title: test2 - openstaand project
+title: titel van de servivce
 image: /images/posts/cras-ultricies.jpg
 date: 2017-10-10 00:00:00 -0500
-category: project
+category: service
 tags: [openstaand]
 weight: 3
 ---
 
-Write your Project description here
+Write your Service description here
 ``` 
 4. Adjust the settings:
-  *  layout DON'T CHANGE - this property sets the post layout for a project
-  *  title CHANGE - this property sets the title of a project
-  *  image CHANGE - this property sets the path for the image you want to use for the project
+  *  layout DON'T CHANGE - this property sets the post layout for a service
+  *  title CHANGE - this property sets the title of a service
+  *  image CHANGE - this property sets the path for the image you want to use for the service, if empty it will use placeholder image
   *  date CHANGE - this property sets the date when the post is made
-  *  category DON'T CHANGE - this property categorizes the post as a project
-  *  tags CHANGE - this property sets the status of the project, only one tag at a time allowed! (openstaand,lopend,afgewerkt)
-  *  weight CHANGE - this property sets the importance of the project (range: 1(less important) - 10(very important)
-5. Write your content where 'Write your Project description here' is written.
+  *  category DON'T CHANGE - this property categorizes the post as a service
+  *  tags CHANGE - this property sets the status of the service, only one tag at a time allowed! (openstaand,lopend,afgewerkt)
+  *  weight CHANGE - this property sets the importance of the service (range: 1(less important) - 10(very important)
+5. Write your content where 'Write your Service description here' is written.
 6. Click 'commit new file', if you followed the previous steps carefully the post should appear on the website.
 
 
@@ -69,7 +69,7 @@ Write your Project description here
 ``` 
 ---
 layout: post
-title: test4
+title: title of news item
 image: /images/posts/cras-ultricies.jpg
 date: 2017-10-10 00:00:00 -0500
 category: news
@@ -80,7 +80,7 @@ Write your news post here
 4. Adjust the settings:
   *  layout DON'T CHANGE - this property sets the post layout for a challenge
   *  title CHANGE - this property sets the title of a challenge
-  *  image CHANGE - this property sets the path for the image you want to use for the challenge
+  *  image CHANGE - this property sets the path for the image you want to use for the challenge, if empty it will use placeholder image
   *  date CHANGE - this property sets the date when the post is made
   *  category DON'T CHANGE - this property categorizes the post as a news post
 5. Write your content where 'Write your news post here' is written.

@@ -5,7 +5,7 @@ image: /images/posts/DocGenServ.jpg
 date: 2017-11-18 00:00:00 -0500
 category: service
 tags: [openstaand]
-weight: 10
+weight: 1
 ---
 
 

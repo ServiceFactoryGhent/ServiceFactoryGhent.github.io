@@ -21,6 +21,10 @@ weight: 2
 ---
 
 Write your Challenge description here
+
+Add an image by using the following line:
+![text_thatappears_when_image_is_not_found](https://linktoimage.com/image.jpg)
+
 ``` 
 4. Adjust the settings:
   *  layout DON'T CHANGE - this property sets the post layout for a challenge
@@ -30,7 +34,14 @@ Write your Challenge description here
   *  category DON'T CHANGE - this property categorizes the posts as a challenge
   *  weight CHANGE - this property sets the importance of the challenge (range: 1(less important) - 10(very important)
 5. Write your content where 'Write your Challenge description here' is written.
-6. Click 'commit new file', if you followed the previous steps carefully the post should appear on the website.
+6. If you want to use images inside your text copy paste this link and adjust it: 
+``` 
+![text_thatappears_when_image_is_not_found](https://linktoimage.com/image.jpg)
+``` 
+* [] = the text that will appear when the image is not found or url is wrong
+* () = url to image
+
+7. Click 'commit new file', if you followed the previous steps carefully the post should appear on the website.
 
 
 #### Service post
@@ -49,6 +60,10 @@ weight: 3
 ---
 
 Write your Service description here
+
+Add an image by using the following line:
+![text_thatappears_when_image_is_not_found](https://linktoimage.com/image.jpg)
+
 ``` 
 4. Adjust the settings:
   *  layout DON'T CHANGE - this property sets the post layout for a service
@@ -59,7 +74,14 @@ Write your Service description here
   *  tags CHANGE - this property sets the status of the service, only one tag at a time allowed! (openstaand,lopend,afgewerkt)
   *  weight CHANGE - this property sets the importance of the service (range: 1(less important) - 10(very important)
 5. Write your content where 'Write your Service description here' is written.
-6. Click 'commit new file', if you followed the previous steps carefully the post should appear on the website.
+6. If you want to use images inside your text, copy paste this link and adjust it: 
+``` 
+![text_thatappears_when_image_is_not_found](https://linktoimage.com/image.jpg)
+``` 
+* [] = the text that will appear when the image is not found or url is wrong
+* () = url to image
+
+7. Click 'commit new file', if you followed the previous steps carefully the post should appear on the website.
 
 
 #### News post
@@ -76,6 +98,9 @@ category: news
 ---
 
 Write your news post here
+
+Add an image by using the following line:
+![text_thatappears_when_image_is_not_found](https://linktoimage.com/image.jpg)
 ``` 
 4. Adjust the settings:
   *  layout DON'T CHANGE - this property sets the post layout for a challenge
@@ -84,7 +109,14 @@ Write your news post here
   *  date CHANGE - this property sets the date when the post is made
   *  category DON'T CHANGE - this property categorizes the post as a news post
 5. Write your content where 'Write your news post here' is written.
-6. Click 'commit new file', if you followed the previous steps carefully the post should appear on the website.
+6. If you want to use images inside your text, copy paste this link and adjust it:
+``` 
+![text_thatappears_when_image_is_not_found](https://linktoimage.com/image.jpg)
+``` 
+* [] = the text that will appear when the image is not found or url is wrong
+* () = url to image
+
+7. Click 'commit new file', if you followed the previous steps carefully the post should appear on the website.
 
 ## Instruction manual for Developers
 

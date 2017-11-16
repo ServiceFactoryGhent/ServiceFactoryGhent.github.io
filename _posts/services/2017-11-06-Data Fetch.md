@@ -2,7 +2,7 @@
 layout: post
 title: Data Fetch Service
 image: 
-date: 2017-11-06 00:00:00 -0500
+date: 2017-11-16 00:00:00 -0500
 category: service
 tags: [lopend]
 weight: 4

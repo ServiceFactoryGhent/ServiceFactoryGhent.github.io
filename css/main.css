@@ -6569,9 +6569,18 @@ footer .footer-sections .footer-section.partners img {
 }
 
 .navbar-header span{
+  opacity: 1;
   color: white;
   position: absolute;
   bottom: 0;
   padding-bottom: 18px;
   padding-left: 5px;
+  -webkit-transition: opacity 1s ease-in;
+     -moz-transition: opacity 1s ease-in;
+      -ms-transition: opacity 1s ease-in;
+       -o-transition: opacity 1s ease-in;
+          transition: opacity 1s ease-in;
+}
+.navbar-header .transparant{
+  opacity: 0;
 }

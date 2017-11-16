@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Document Generatie Service
-image: /images/posts/DocGenServ.jpg
+image: /images/posts/dgs.png
 date: 2017-11-03 00:00:00 -0500
 category: service
 tags: [openstaand]

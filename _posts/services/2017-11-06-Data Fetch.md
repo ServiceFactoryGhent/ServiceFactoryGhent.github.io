@@ -4,6 +4,7 @@ title: Data Fetch Service
 image: 
 date: 2017-11-16 00:00:00 -0500
 category: service
+image: /images/posts/dfs.png
 tags: [lopend]
 weight: 4
 ---

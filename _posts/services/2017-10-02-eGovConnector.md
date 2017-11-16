@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Connectoren
-image: /images/posts/koppelen-systemen.jpg
+image: /images/posts/cs.png
 date: 2017-11-14 00:00:00 -0500
 category: service
 tags: [afgewerkt]

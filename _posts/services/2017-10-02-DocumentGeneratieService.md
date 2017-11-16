@@ -2,7 +2,7 @@
 layout: post
 title: Document Generatie Service
 image: /images/posts/DocGenServ.jpg
-date: 2017-11-18 00:00:00 -0500
+date: 2017-11-02 00:00:00 -0500
 category: service
 tags: [openstaand]
 weight: 1

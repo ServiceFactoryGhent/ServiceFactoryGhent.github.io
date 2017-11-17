@@ -6571,9 +6571,8 @@ footer .footer-sections .footer-section.partners img {
 .bydigipolis{
   opacity: 1;
   color: white;
-  position: absolute;
-  bottom: 0;
-  padding-bottom: 18px;
+  position: relative;
+  bottom: -50px;
   padding-left: 5px;
   -webkit-transition: opacity 1s ease-in;
      -moz-transition: opacity 1s ease-in;

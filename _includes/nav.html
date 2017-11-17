@@ -18,10 +18,10 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a href="{{ site.url }}" class="navbar-brand"></a>
+                {% if page.url == "/" %}
+                    <a href="https://digipolis.be" target="_blank" id="bydigipolis" class="bydigipolis transparant">By Digipolis</a>
+                {% endif %}
             </div>
-            {% if page.url == "/" %}
-                <a href="https://digipolis.be" target="_blank" id="bydigipolis" class="bydigipolis transparant">By Digipolis</a>
-            {% endif %}
             <nav id="main-navbar" class="collapse navbar-collapse navbar-white" role="navigation">
                 <div class="menu-sidebar pull-right">
                 </div>

@@ -61,6 +61,7 @@
         postStringList.push(appendString);
         appendString = "";
       }
+
       for(var j=0;j<postStringList.length;j++){
         if(isEven(j))
         {

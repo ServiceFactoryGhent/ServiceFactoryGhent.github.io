@@ -38,7 +38,7 @@
         appendString += '<div class="text-center">';
         appendString += '<span class="post-category">'; 
         appendString += '<i class="fa fa-folder-open"></i>';
-        appendString += '<a href="" rel="tag">'+item.category+'</a>';
+        appendString += '<a href="/services.html?query='+item.category+'" rel="tag">'+item.category+'</a>';
         appendString += '</span>';
 
         var tags = decodeTags(item.tags);
@@ -47,7 +47,7 @@
           appendString += '<span class="post-tags">';
           appendString += '<i class="fa fa-tags"></i>';
           tags.forEach(function (it) {
-            appendString += '<a href="" rel="tag">' + it + '</a>';
+            appendString += '<a href="/services.html?query='+it+'" rel="tag">' + it + '</a>';
           });
           appendString += '</span>';          
         }

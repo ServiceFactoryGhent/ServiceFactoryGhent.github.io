@@ -18,42 +18,44 @@ title: Service factory
 							{% if thecycle == 'odd' %}
 								<div class="row row-eq-height">
 							{% endif %}
-							<article class="post-showinfo post type-post status-publish format-standard has-post-thumbnail hentry category-html category-seo tag-css tag-html tag-mobile col-md-6">
-								<div class="post-media overlay">
-									<div class="post-head small-screen-cente text-center">
-										<h2 class="post-title entry-title">
-											<a href="{{ site.url }}{{ post.url }}" title="Permalink to Increase Traffic being Mobile Friendly" rel="bookmark"> {{ post.title }} </a>
-										</h2>
-									</div>
-									<a href="{{ site.url }}{{ post.url }}" class="feature-image hover-animate">
-									{% if post.image == "" or post.image == nil or post.image == blank %}
-										<img src="images/posts/news_placeholder.png" class="" alt="img-4-1170x400.png">
-									{% else %}
-										<img src="{{ site.baseurl }}{{ post.image }}" alt="img-4-1170x400.png" class="proj-image cropservices"><i class="fa fa-link"></i></a>
-									{% endif %}
-									<div class="post-extras bordered text-center">
-										<div class="text-center">
-											<span class="post-category">
-												<i class="fa fa-folder-open"></i>
-												<a href="{{ site.url }}/services.html?query={{ post.category }}" rel="tag">{{post.category}}</a>
-											</span>
-												{% if post.tags.size > 0 %}
-												<span class="post-tags">												
-													<i class="fa fa-tags"></i>&nbsp;												
-														{% for tag in post.tags %}
-															<a href="{{ site.url }}/services.html?query={{ tag }}" rel="tag">{{ tag }}</a>
-														{% endfor %}
-												</span>
-												{% endif %}
+							<div>				
+								<article class="post-showinfo post type-post status-publish format-standard has-post-thumbnail hentry category-html category-seo tag-css tag-html tag-mobile col-md-6">
+									<div class="post-media overlay">
+										<div class="post-head small-screen-cente text-center">
+											<h2 class="post-title entry-title">
+												<a href="{{ site.url }}{{ post.url }}" title="Permalink to Increase Traffic being Mobile Friendly" rel="bookmark"> {{ post.title }} </a>
+											</h2>
 										</div>
+										<a href="{{ site.url }}{{ post.url }}" class="feature-image hover-animate">
+										{% if post.image == "" or post.image == nil or post.image == blank %}
+											<img src="images/posts/news_placeholder.png" class="" alt="img-4-1170x400.png">
+										{% else %}
+											<img src="{{ site.baseurl }}{{ post.image }}" alt="img-4-1170x400.png" class="proj-image cropservices"><i class="fa fa-link"></i></a>
+										{% endif %}
+										<div class="post-extras bordered text-center">
+											<div class="text-center">
+												<span class="post-category">
+													<i class="fa fa-folder-open"></i>
+													<a href="{{ site.url }}/services.html?query={{ post.category }}" rel="tag">{{post.category}}</a>
+												</span>
+													{% if post.tags.size > 0 %}
+													<span class="post-tags">												
+														<i class="fa fa-tags"></i>&nbsp;												
+															{% for tag in post.tags %}
+																<a href="{{ site.url }}/services.html?query={{ tag }}" rel="tag">{{ tag }}</a>
+															{% endfor %}
+													</span>
+													{% endif %}
+											</div>
+										</div>
+										<div class="entry-content">
+											<p>{{ post.content | remove: post.excerpt | remove: "Uitdaging" | strip_html | truncatewords: 50 }}</p>
+										</div>
+										<a href="{{ site.url }}{{ post.url }}" class="more-link box">Lees meer</a>
+										
 									</div>
-									<div class="entry-content">
-										<p>{{ post.content | remove: post.excerpt | remove: "Uitdaging" | strip_html | truncatewords: 50 }}</p>
-									</div>
-									<a href="{{ site.url }}{{ post.url }}" class="more-link box">Lees meer</a>
-									
-								</div>
-							</article>
+								</article>
+							</div>
 							{% if forloop.last == false %}
 								{% if thecycle == 'even' %}
 									</div>

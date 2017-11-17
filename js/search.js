@@ -22,20 +22,14 @@
         var item = store[results[i].ref];
         appendString += '<article class="post-showinfo post type-post status-publish format-standard has-post-thumbnail hentry category-html category-seo tag-css tag-html tag-mobile col-md-6">'; 
         appendString += '<div class="post-media overlay">';
-        appendString += '<div class="post-head small-screen-center">';
+        appendString += '<div class="post-head small-screen-center text-center">';
         appendString += '<h2 class="post-title entry-title">';
         appendString += '<a href="' + item.url + '" title="' + item.title + '" rel="bookmark">' + item.title + '</a>';
         appendString += '</h2>';
         appendString += '</div>';
         appendString += '<a href="' + item.url + '" class="feature-image hover-animate">';
         appendString += '<img class="cropservices" src="'+ item.baseUrl + item.image + '" alt="img-4-1170x400.png"><i class="fa fa-link"></i></a>';
-        appendString += '<div class="post-text">';
-        appendString += '<div class="entry-content">';
-        appendString += '<p>' + item.content + '</p>';
-        appendString += '</div>';
-        appendString += '<a href="' + item.url + '" class="more-link box">Lees meer</a>';
         appendString += '<div class="post-extras bordered text-center">';
-        appendString += '<div class="text-center">';
         appendString += '<span class="post-category">'; 
         appendString += '<i class="fa fa-folder-open"></i>';
         appendString += '<a href="/services.html?query='+item.category+'" rel="tag">'+item.category+'</a>';
@@ -51,9 +45,14 @@
           });
           appendString += '</span>';          
         }
+
+        appendString += '</div>';
+
+        appendString += '<div class="entry-content">';
+        appendString += '<p>' + item.content + '</p>';
+        appendString += '</div>';
+        appendString += '<a href="' + item.url + '" class="more-link box">Lees meer</a>';
         
-        appendString += '</div>';
-        appendString += '</div>';
         appendString += '</div>';
         appendString += '</div>';
         appendString += '</article>';

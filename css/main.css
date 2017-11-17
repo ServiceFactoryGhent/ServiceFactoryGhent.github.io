@@ -6572,3 +6572,15 @@ footer .footer-sections .footer-section.partners img {
 .transparant{
   opacity: 0;
 }
+
+
+.post {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: #fbfbfb;
+  float: left;
+}
+
+.post-title {
+  margin-top: 1em;
+}

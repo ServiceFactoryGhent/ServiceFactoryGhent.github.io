@@ -21,7 +21,7 @@
       for (var i = 0; i < results.length; i++) {  // Iterate over the results
         var item = store[results[i].ref];
         appendString += '<article class="post-showinfo post type-post status-publish format-standard has-post-thumbnail hentry category-html category-seo tag-css tag-html tag-mobile col-md-6">'; 
-        appendString += '<div class="post-media overlay">';
+        appendString += '<div class="post-media post-service overlay">';
         appendString += '<div class="post-head small-screen-center text-center">';
         appendString += '<h2 class="post-title entry-title">';
         appendString += '<a href="' + item.url + '" title="' + item.title + '" rel="bookmark">' + item.title + '</a>';

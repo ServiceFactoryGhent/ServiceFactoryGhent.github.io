@@ -6581,7 +6581,7 @@ footer .footer-sections .footer-section.partners img {
 }
 
 
-.post-media {
+.post-service {
   border-radius: 10px;
   border: 1px solid #ccc;
   background: #fbfbfb;
@@ -6592,7 +6592,7 @@ footer .footer-sections .footer-section.partners img {
   margin-top: 1em;
 }
 
-.post-media p,
+.post-service p,
 .more-link.box{
   margin-left:15px !important;
   margin-right:15px !important;

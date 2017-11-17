@@ -43,6 +43,35 @@ function toggleClass(element, className) {
     }
 }
 
+$(document).ready( function(){
+    "use strict";
+    var i;
+    addClass(logo, "default-logo");
+    removeClass(navbar, "navbar-white");
+    nav.style.backgroundColor = "rgba(255,255,255,.97)";
+    nav.style.boxShadow = "1px 1px 5px grey";
+    if(bydigipolis){
+        bydigipolis.style.visibility = "hidden";
+        addClass(bydigipolis, "transparant");
+    }
+    for (i = 0; i <= 2; i += 1) {
+        bars[i].style.backgroundColor = "#006495";
+    }
+    if (!(window.pageYOffset >= 1)) {
+        if(bydigipolis){
+            bydigipolis.style.visibility = "visible";
+            removeClass(bydigipolis, "transparant");
+        }
+        removeClass(logo, "default-logo");
+        addClass(navbar, "navbar-white");
+        nav.style.backgroundColor = "transparent";
+        nav.style.boxShadow = "none";
+        for (i = 0; i <= 2; i += 1) {
+            bars[i].style.backgroundColor = "#FFF";
+        }
+    }
+})
+
 window.addEventListener("scroll", function () {
     "use strict";
     var i;

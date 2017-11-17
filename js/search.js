@@ -6,6 +6,10 @@
     return str.split(", ");
   }
 
+  function isEven(n) {
+  return n == parseFloat(n)? !(n%2) : void 0;
+}
+
   function displaySearchResults(results, store) {
     var searchResults = document.getElementById('search-results');
     searchResults.innerHTML = "";
@@ -16,17 +20,16 @@
 
       for (var i = 0; i < results.length; i++) {  // Iterate over the results
         var item = store[results[i].ref];
-        appendString += '<article class="post-showinfo post type-post status-publish format-standard has-post-thumbnail hentry category-html category-seo tag-css tag-html tag-mobile">'; 
-        appendString += '<div class="post-media overlay col-md-6">';
-        appendString += '<a href="' + item.url + '" class="feature-image hover-animate">';
-        appendString += '<img class="cropservices" src="'+ item.baseUrl + item.image + '" alt="img-4-1170x400.png"><i class="fa fa-link"></i></a>';
-        appendString += '</div>';
-        appendString += '<div class="post-text col-md-6">';
+        appendString += '<article class="post-showinfo post type-post status-publish format-standard has-post-thumbnail hentry category-html category-seo tag-css tag-html tag-mobile col-md-6">'; 
+        appendString += '<div class="post-media overlay">';
         appendString += '<div class="post-head small-screen-center">';
         appendString += '<h2 class="post-title entry-title">';
         appendString += '<a href="' + item.url + '" title="' + item.title + '" rel="bookmark">' + item.title + '</a>';
         appendString += '</h2>';
         appendString += '</div>';
+        appendString += '<a href="' + item.url + '" class="feature-image hover-animate">';
+        appendString += '<img class="cropservices" src="'+ item.baseUrl + item.image + '" alt="img-4-1170x400.png"><i class="fa fa-link"></i></a>';
+        appendString += '<div class="post-text">';
         appendString += '<div class="post-body entry-content">';
         appendString += '<p>' + item.content + '</p>';
         appendString += '</div>';
@@ -52,14 +55,22 @@
         appendString += '</div>';
         appendString += '</div>';
         appendString += '</div>';
+        appendString += '</div>';
         appendString += '</article>';
 
         postStringList.push(appendString);
         appendString = "";
       }
-      postStringList.forEach(function (item) {
-        searchResults.innerHTML += item;
-      });
+      for(var j=0;j<postStringList.length;j++){
+        if(isEven(j))
+        {
+          searchResults.innerHTML += '<div class="row row-eq-height" id="row'+j+'">';
+        }
+        document.getElementById('row'+Math.floor(j/2)*2).innerHTML += postStringList[j];
+        if(!isEven(j) || j==postStringList.length-1){
+          searchResults.innerHTML += '</div>';
+        }
+      }
     } else {
       searchResults.innerHTML = '<li>Geen resultaten gevonden</li>';
     }

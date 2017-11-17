@@ -6414,6 +6414,14 @@ footer .footer-sections .footer-section.partners img {
   min-height:70vh;
 }
 
+.menu-item a{
+  color:#337ab7;
+}
+
+.menu-item a:hover, a:focus{
+  color:#006495;
+}
+
 .navbar-white a{
   color:#fff;
 }

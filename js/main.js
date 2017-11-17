@@ -5,6 +5,7 @@ var nav = document.getElementsByTagName("header")[0];
 var bars = document.querySelectorAll("span.icon-bar");
 var hamburger = document.getElementsByClassName("navbar-toggle collapsed")[0];
 var navbar = document.getElementById("main-navbar");
+var bydigipolis = document.getElementById("bydigipolis");
 
 function hasClass(element, className) {
     "use strict";
@@ -49,10 +50,15 @@ window.addEventListener("scroll", function () {
     removeClass(navbar, "navbar-white");
     nav.style.backgroundColor = "rgba(255,255,255,.97)";
     nav.style.boxShadow = "1px 1px 5px grey";
+    document.getElementById("bydigipolis").style.visibility = "hidden";
+    addClass(bydigipolis, "transparant");
+    addClass(navbar, "navbar-white");
     for (i = 0; i <= 2; i += 1) {
         bars[i].style.backgroundColor = "#006495";
     }
     if (!(window.pageYOffset >= 1)) {
+        document.getElementById("bydigipolis").style.visibility = "visible";
+        removeClass(bydigipolis, "transparant");
         removeClass(logo, "default-logo");
         addClass(navbar, "navbar-white");
         nav.style.backgroundColor = "transparent";

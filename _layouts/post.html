@@ -38,7 +38,7 @@ title: Service factory
                             <li class="previous"><a href="{{ prev }}">← Vorige service<!-- : {{pTitle}} --></a></li>
                             {% endif %}
                             {% if page.tags contains "openstaand" %}
-                                <li class="participate"><a href="{{ site.url }}/contact/participate.html?service={{ page.title }}"><span class="button-text">Ik wil informatie over de ontwikkeling van deze service</span><span class="button-text-small">Meedoen</span></a></li>
+                                <li class="participate"><a href="{{ site.url }}/contact/participate.html?service={{ page.title }}"><span class="button-text">Ik wens mee te doen aan de ontwikkeling van deze service</span><span class="button-text-small">Meedoen</span></a></li>
                             {% endif %}
                             {% if next != "" %}
                             <li class="next"><a href="{{ next }}"> Volgende service<!-- : {{nTitle}}  -->→</a></li>
@@ -134,7 +134,7 @@ title: Service factory
                             <li class="previous"><a href="{{ prev }}">← Vorige service<!-- : {{pTitle}} --></a></li>
                             {% endif %}
                             {% if page.tags contains "openstaand" %}
-                                <li class="participate"><a href="{{ site.url }}/contact/participate.html?project={{ page.title }}"><span class="button-text">Ik wil informatie over de ontwikkeling van deze service</span><span class="button-text-small">Meedoen</span></a></li>
+                                <li class="participate"><a href="{{ site.url }}/contact/participate.html?project={{ page.title }}"><span class="button-text">Ik wens mee te doen aan de ontwikkeling van deze service</span><span class="button-text-small">Meedoen</span></a></li>
                             {% endif %}
                             {% if next != "" %}
                             <li class="next"><a href="{{ next }}"> Volgende service<!-- : {{nTitle}}  -->→</a></li>
@@ -169,7 +169,7 @@ title: Service factory
         <section class="related-posts">
             <div class="container">
                 <div class="col-md-12">
-                    <h1>Related posts</h1>
+                    <h1>Andere Services</h1>
                     <ul class="list-unstyled list-container">
                         {% assign servicesbyweight = site.categories.service | sort:"weight"  %}
                         {% for post in servicesbyweight reversed%}
@@ -278,8 +278,6 @@ title: Service factory
         ga('create', 'UA-86297842-1', 'auto');
         ga('send', 'pageview');
     </script>
-
-
 
 </body>
 

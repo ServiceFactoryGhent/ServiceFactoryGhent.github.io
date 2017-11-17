@@ -25,6 +25,10 @@ section.related-posts  .grid-post .post-showinfo .post-head {
     padding: 36px 15px 10px;
 }
 
+.entry-title {
+    min-height: 2.5em ;
+}
+
 
 @media screen and (max-width: 768px) {
     .button-text {

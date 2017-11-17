@@ -6414,6 +6414,14 @@ footer .footer-sections .footer-section.partners img {
   min-height:70vh;
 }
 
+.menu-item a{
+  color:#337ab7;
+}
+
+.menu-item a:hover, a:focus{
+  color:#006495;
+}
+
 .navbar-white a{
   color:#fff;
 }
@@ -6559,9 +6567,8 @@ footer .footer-sections .footer-section.partners img {
 .bydigipolis{
   opacity: 1;
   color: white;
-  position: absolute;
-  bottom: 0;
-  padding-bottom: 18px;
+  position: relative;
+  bottom: -49px;
   padding-left: 5px;
   -webkit-transition: opacity 1s ease-in;
      -moz-transition: opacity 1s ease-in;

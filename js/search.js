@@ -30,7 +30,7 @@
         appendString += '<a href="' + item.url + '" class="feature-image hover-animate">';
         appendString += '<img class="cropservices" src="'+ item.baseUrl + item.image + '" alt="img-4-1170x400.png"><i class="fa fa-link"></i></a>';
         appendString += '<div class="post-text">';
-        appendString += '<div class="post-body entry-content">';
+        appendString += '<div class="entry-content">';
         appendString += '<p>' + item.content + '</p>';
         appendString += '</div>';
         appendString += '<a href="' + item.url + '" class="more-link box">Lees meer</a>';
@@ -61,6 +61,7 @@
         postStringList.push(appendString);
         appendString = "";
       }
+
       for(var j=0;j<postStringList.length;j++){
         if(isEven(j))
         {

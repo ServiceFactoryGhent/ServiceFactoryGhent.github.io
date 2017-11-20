@@ -16,7 +16,7 @@ Op een veilige en uniforme manier gegevens uit authentieke bronnen opvragen.
 
 ## Services
 
-We hebben ondertussen connectoren met het Rijksregister (RR), de Verrijkte Kruispuntbank voor Ondernemingen (VKBO), de Dienst voor Inschrijving van Voertuigen (DIV) en het Magda-platform van het Vlaamse Overheid.
+We hebben ondertussen connectoren met het Rijksregister (RR), de Verrijkte Kruispuntbank voor Ondernemingen (VKBO), de Dienst voor Inschrijving van Voertuigen (DIV) en het Magda-platform van de Vlaamse Overheid.
 
 ## Beschikbaar
 

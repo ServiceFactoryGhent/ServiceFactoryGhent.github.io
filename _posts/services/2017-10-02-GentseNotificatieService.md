@@ -12,14 +12,14 @@ weight: 4
 # Gentse Notificatie Service
 
 ## Uitdaging 
-We willen dat notificaties aan burgers, medewerkers, ... op een uniforme manier afgehandeld worden waarbij we op een flexibele manier nieuwe communicatiemiddelen kunnen toevoegen.
+We willen dat notificaties aan burgers, medewerkers, ... op een uniforme manier afgehandeld worden en dat we op een flexibele manier nieuwe communicatiemiddelen kunnen toevoegen.
 
 ## Services
 
 Er worden momenteel 2 services gebouwd.
 
-* Email service: [Swagger](https://swaggerhub.com/apis/Digipolis/email-service/1.0.0)
-* SMS service: [Swagger](https://swaggerhub.com/apis/Digipolis/sms-service/1.0.0)
+* e-mail service: [Swagger](https://swaggerhub.com/apis/Digipolis/email-service/1.0.0)
+* sms service: [Swagger](https://swaggerhub.com/apis/Digipolis/sms-service/1.0.0)
 
 ## Beschikbaar
 

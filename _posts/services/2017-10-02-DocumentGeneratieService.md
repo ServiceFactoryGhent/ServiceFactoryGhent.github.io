@@ -6,6 +6,7 @@ date: 2017-11-03 00:00:00 -0500
 category: service
 tags: [openstaand]
 weight: 10
+excerpt: "Hier kan je de automatisch gegenereerde intro overschrijven."
 ---
 
 

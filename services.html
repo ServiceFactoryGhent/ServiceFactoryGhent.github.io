@@ -47,8 +47,17 @@ title: Service factory
 												{% endif %}
 										</div>
 									</div>
-									<div class="entry-content">
-										<p>{{ post.content | remove: post.excerpt | remove: "Uitdaging" | strip_html | truncatewords: 50 }}</p>
+									<div class="entry-content post-service-text">
+										{% assign first_line = post.content | | newline_to_br | split: '<br />' | first %}
+										{% if post.excerpt contains first_line %}
+											{{ post.content | remove: post.excerpt | remove: "Uitdaging" | truncatewords: 40 }}
+										{% else %}
+											{% if post.excerpt contains '</' %}
+												{{ post.excerpt }}
+											{% else %}
+												<p>{{ post.excerpt }}</p>
+											{% endif %}
+										{% endif %}
 									</div>
 									<a href="{{ site.url }}{{ post.url }}" class="more-link box">Lees meer</a>
 									

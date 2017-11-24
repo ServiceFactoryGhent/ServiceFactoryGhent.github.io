@@ -1,7 +1,7 @@
 markdown: kramdown
 highlighter: rouge
 plugins:  [jekyll-feed]
-url: https://servicefactoryghent.github.io/
+url: http://servicefactory.digipolis.gent/
 title: "Service Factory"
 description:  "Get your latest info about Service Factory here."
 author: HansF

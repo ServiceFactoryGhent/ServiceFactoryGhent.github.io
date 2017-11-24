@@ -137,8 +137,9 @@ title: Service factory
 	};
 </script>
 <script>
-	$(document).ready(function() {
+	function resizeBox(){
 		$(".row-eq-height").each(function( index ){
+			$(this).find(".col-md-6").css('height', 'auto');
 		  	var heights = $(this).find(".col-md-6").map(function() {
 		        return $(this).height();
 		    }).get(),
@@ -148,8 +149,11 @@ title: Service factory
 
 		    $(this).find(".col-md-6").height(maxHeight);
 		});
-
+	}
+	$(document).ready(function() {
+		resizeBox();
 	});
+	window.addEventListener('resize', resizeBox);
 </script>
 
 <script src="/js/lunr.min.js"></script>

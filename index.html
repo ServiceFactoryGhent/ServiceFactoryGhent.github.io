@@ -201,7 +201,7 @@ title: Service Factory
 															</div>
 														</div>
 														<div class="post-body entry-content">
-															<p>{{ post.content | strip_html | truncatewords: 35 }}</p>
+															{{ post.content | remove: post.excerpt | truncatewords: 35 }}
 														</div>
 														<a href="{{ site.baseurl }}{{ post.url }}" class="more-link box">Lees meer</a>
 														{% comment %} <div class="post-extras bordered text-center">

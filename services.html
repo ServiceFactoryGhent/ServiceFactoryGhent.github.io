@@ -48,7 +48,7 @@ title: Service factory
 										</div>
 									</div>
 									<div class="entry-content post-service-text">
-										{% assign first_line = post.content | | newline_to_br | split: '<br />' | first %}
+										{% assign first_line = post.content | newline_to_br | split: '<br />' | first %}
 										{% if post.excerpt contains first_line %}
 											{{ post.content | remove: post.excerpt | remove: "Uitdaging" | truncatewords: 40 }}
 										{% else %}

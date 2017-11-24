@@ -277,7 +277,7 @@ String.prototype.capitalize = function () {
 }
 
 $(document).ready(function() {
-    $('.owl-carousel').owlCarousel({
+    var $owl = $('.owl-carousel').owlCarousel({
         loop: $('.owl-carousel .post-item').length > 2 ? true:false,
         margin: 10,
         nav: true,
@@ -293,7 +293,10 @@ $(document).ready(function() {
                 items: 3
             }
         }
-    })
+    });
+    setInterval(function () {
+		$owl.trigger('refresh.owl.carousel');
+	}, 500);
 });
 </script>
 

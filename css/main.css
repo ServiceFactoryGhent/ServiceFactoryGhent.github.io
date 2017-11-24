@@ -6564,9 +6564,21 @@ footer .footer-sections .footer-section.partners img {
   }
 }
 
-.bydigipolis{
+.bydigipolis-white{
   opacity: 1;
   color: white;
+  position: relative;
+  bottom: -49px;
+  padding-left: 5px;
+  -webkit-transition: opacity 1s ease-in;
+     -moz-transition: opacity 1s ease-in;
+      -ms-transition: opacity 1s ease-in;
+       -o-transition: opacity 1s ease-in;
+          transition: opacity 1s ease-in;
+}
+.bydigipolis{
+  opacity: 1;
+  color: #337ab7;
   position: relative;
   bottom: -49px;
   padding-left: 5px;

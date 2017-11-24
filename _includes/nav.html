@@ -17,8 +17,10 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="{{ site.url }}" class="navbar-brand"></a>
-                {% if page.url == "/" %}
+                <a href="{{ site.url }}" class="navbar-brand default-logo"></a>
+                {% if page.url == "/" or page.url contains "/contact" %}
+                    <a href="https://digipolis.be" target="_blank" id="bydigipolis" class="bydigipolis-white transparant">By Digipolis</a>
+                {% else %}
                     <a href="https://digipolis.be" target="_blank" id="bydigipolis" class="bydigipolis transparant">By Digipolis</a>
                 {% endif %}
             </div>

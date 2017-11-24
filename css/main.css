@@ -6609,3 +6609,7 @@ footer .footer-sections .footer-section.partners img {
   margin-left:15px !important;
   margin-right:15px !important;
 }
+
+.box-inner{
+  z-index:4;
+}

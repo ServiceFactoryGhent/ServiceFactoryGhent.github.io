@@ -276,8 +276,10 @@ String.prototype.capitalize = function () {
     return this.charAt(0).toUpperCase() + this.slice(1);
 }
 
+var $owl;
+
 $(document).ready(function() {
-    var $owl = $('.owl-carousel').owlCarousel({
+    $owl = $('.owl-carousel').owlCarousel({
         loop: $('.owl-carousel .post-item').length > 2 ? true:false,
         margin: 10,
         nav: true,
@@ -294,9 +296,15 @@ $(document).ready(function() {
             }
         }
     });
-    setInterval(function () {
-		$owl.trigger('refresh.owl.carousel');
-	}, 500);
 });
+
+$(window).on("load", function () {
+	$owl.trigger('refresh.owl.carousel');
+});
+
+window.addEventListener('resize', function () {
+	$owl.trigger('refresh.owl.carousel');
+});
+
 </script>
 

@@ -6,7 +6,7 @@ date: 2017-11-14 00:00:00 -0500
 category: service
 tags: [afgewerkt]
 weight: 1
-excerpt: "Lees hier met welke authentieke bronnen we reeds connecties hebben".
+excerpt: "Lees hier met welke authentieke bronnen we reeds connecties hebben."
 ---
 
 

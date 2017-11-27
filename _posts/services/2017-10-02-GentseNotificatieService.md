@@ -6,6 +6,7 @@ date: 2017-11-06 00:00:00 -0500
 category: service
 tags: [lopend]
 weight: 4
+excerpt: "Er worden momenteel twee services gebouwd, de e-mailservice en de sms-service."
 ---
 
 

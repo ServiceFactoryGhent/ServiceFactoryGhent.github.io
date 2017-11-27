@@ -6,7 +6,7 @@ date: 2017-11-03 00:00:00 -0500
 category: service
 tags: [openstaand]
 weight: 10
-excerpt: "Het genereren van documenten op basis van een template en variabele inhoud zodat een op maat gemaakt document ontstaat."
+excerpt: ""
 ---
 
 

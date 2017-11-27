@@ -16,4 +16,8 @@ excerpt: "Hier kan je de automatisch gegenereerde intro overschrijven."
 Het genereren van documenten op basis van een template en variabele inhoud zodat een op maat gemaakt document ontstaat.
 <br>
 ## Verwacht
-In november 2017 plaatsen we een oproep naar geïnteresseerde partners.
+We willen deze service operationeel hebben tegen midden februari. Heb je
+interesse om mee te doen? Klik op de knop en bezorg ons je mailadres en een
+aantal gegevens van je bedrijf. Op maandag 11/12 sluiten we het
+interesseformulier af. Op die dag sturen we geïnteresseerden het ontwerp van de
+opdracht en de verdere timing.

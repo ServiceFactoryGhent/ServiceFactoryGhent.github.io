@@ -7,7 +7,9 @@ category: challenge
 weight: 2
 ---
 
-# Work in progress
+# Adressen
+
+We werken momenteel aan onze eerste challenges rond het visualiseren van adressen over verschillende applicaties heen. Binnenkort vind je hier meer info.
 
 
 

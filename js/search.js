@@ -48,7 +48,7 @@
 
         appendString += '</div>';
 
-        appendString += '<div class="entry-content">';
+        appendString += '<div class="entry-content post-service-text">';
         appendString += '<p>' + item.content + '</p>';
         appendString += '</div>';
         appendString += '<a href="' + item.url + '" class="more-link box">Lees meer</a>';

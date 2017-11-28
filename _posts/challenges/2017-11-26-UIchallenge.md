@@ -9,7 +9,7 @@ weight: 2
 
 # Adressen
 
-We werken momenteel aan onze eerste challenge rond het visualiseren van adressen over verschillende applicaties heen. Binnenkort vind je hier meer info.
+We werken momenteel aan onze eerste challenge rond het bouwen van een adres presentatie service. Binnenkort vind je hier meer info.
 
 
 

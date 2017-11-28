@@ -6613,3 +6613,8 @@ footer .footer-sections .footer-section.partners img {
 .box-inner{
   z-index:4;
 }
+.footer-section.partners{
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}

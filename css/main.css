@@ -6618,3 +6618,16 @@ footer .footer-sections .footer-section.partners img {
   justify-content: center;
   align-items: center; 
 }
+
+
+.challengepost {
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: #fbfbfb;
+  float: left;
+}
+
+.post-media {
+  margin-bottom: 5px !important;
+  margin-top: 5px !important;
+}

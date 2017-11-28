@@ -19,7 +19,7 @@ title: Service factory
 					{% if site.categories.challenge.size > 0 %}
 						{% assign challengesbyweight = site.categories.challenge | sort:"weight"  %}
 						{% for post in challengesbyweight reversed %}
-							<article class="post-showinfo post type-post status-publish format-standard has-post-thumbnail hentry category-html category-seo tag-css tag-html tag-mobile">
+							<article class="challengepost post-showinfo post type-post status-publish format-standard has-post-thumbnail hentry category-html category-seo tag-css tag-html tag-mobile">
 								<div class="post-media overlay">
 									<a href="{{ site.url }}{{ post.url }}" class="feature-image hover-animate">
 									{% if post.image == "" or post.image == nil or post.image == blank %}

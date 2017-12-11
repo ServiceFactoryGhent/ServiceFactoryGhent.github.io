@@ -4,7 +4,7 @@ title: Document Generatie Service
 image: /images/posts/dgs.png
 date: 2017-11-03 00:00:00 -0500
 category: service
-tags: [openstaand]
+tags: [lopend]
 weight: 10
 excerpt: "Wil je deze service helpen realiseren, vul dan ons interesseformulier in."
 ---

@@ -16,4 +16,4 @@ excerpt: "Deze service willen we operationeel hebben tegen midden februari."
 Het genereren van documenten op basis van een template en variabele inhoud zodat een op maat gemaakt document ontstaat.
 
 ## Verwacht
-We willen deze service operationeel hebben tegen midden februari. Momenteel zitten we in de selectiefase.
+We willen deze service operationeel hebben tegen midden februari. De ontwikkeling van de service is volop bezig.

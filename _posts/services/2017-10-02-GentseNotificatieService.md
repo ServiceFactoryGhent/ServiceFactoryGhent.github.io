@@ -6,7 +6,7 @@ date: 2017-11-06 00:00:00 -0500
 category: service
 tags: [lopend]
 weight: 4
-excerpt: "Er worden momenteel twee services gebouwd, de e-mailservice en de sms-service."
+excerpt: "Deze service wordt momenteel uitgebreid met onder meer spraakberichten"
 ---
 
 
@@ -17,12 +17,12 @@ We willen dat notificaties aan burgers, medewerkers, ... op een uniforme manier 
 
 ## Services
 
-Er worden momenteel 2 services gebouwd.
+Twee services werden reeds gebouwd.
 
 * e-mail service: [Swagger](https://swaggerhub.com/apis/Digipolis/email-service/1.0.0)
 * sms service: [Swagger](https://swaggerhub.com/apis/Digipolis/sms-service/1.0.0)
 
-## Beschikbaar
+## Toekomst
 
-Deze services zullen operationeel zijn in december 2017.
+Momenteel loopt de technische analyse om ook een Push Berichten Service en een Tekst-naar-Spraak Service te bouwen.
  

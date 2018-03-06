@@ -9,7 +9,7 @@ weight: 2
 
 # Adressen
 
-We werken momenteel aan onze eerste challenge rond het bouwen van een adres presentatie service. De oproep tot interesse wordt gelanceerd op maandag 12 maart 2018
+We werken momenteel aan onze eerste challenge rond het bouwen van een adres presentatie service. De oproep tot interesse wordt gelanceerd op maandag 12 maart 2018.
 
 
 

@@ -4,7 +4,7 @@ title: Gentse Notificatie Service
 image: /images/posts/gns.png
 date: 2017-11-06 00:00:00 -0500
 category: service
-tags: [lopend]
+tags: [afgewerkt]
 weight: 4
 excerpt: "Deze service wordt momenteel uitgebreid met onder meer spraakberichten"
 ---

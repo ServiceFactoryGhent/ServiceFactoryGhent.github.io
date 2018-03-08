@@ -1,6 +1,6 @@
 ---
 layout: post                        
-title: Visuele componenten
+title: Wordt verwacht
 image: /images/posts/14ZJP1_5_1.jpg
 date: 2018-03-08 00:00:00 -0500
 category: challenge

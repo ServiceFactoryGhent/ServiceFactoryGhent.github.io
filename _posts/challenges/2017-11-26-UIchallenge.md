@@ -5,6 +5,7 @@ image: /images/posts/14ZJP1_5_1.jpg
 date: 2018-03-08 00:00:00 -0500
 category: challenge
 weight: 2
+excerpt: "We willen een visuele component ontwikkelen voor het zoeken van adressen"
 ---
 
 # Adressen

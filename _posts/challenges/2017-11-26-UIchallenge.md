@@ -1,7 +1,7 @@
 ---
 layout: post                        
 title: Visuele componenten
-image: /images/posts/14ZJP1_5_1.jpg
+image: /images/posts/Postcard_Bermuda_1907_address.jpg
 date: 2018-03-08 00:00:00 -0500
 category: challenge
 weight: 2

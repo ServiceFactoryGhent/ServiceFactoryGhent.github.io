@@ -11,9 +11,8 @@ excerpt: "We willen een visuele component ontwikkelen voor het zoeken van adress
 We hebben nood aan een visuele component voor het zoeken van adressen.
 Alle browser gebaseerde applicaties – onafhankelijk van hun front- en backend technologie - moeten deze component kunnen gebruiken.
 
-Een uitdaging voor jouw bedrijf? Vanaf 12/03/2018 kan je ons interesseformulier invullen en dit tot 19/03/2018.
-
-
+Deze challenge wordt momenteel geïmplementeerd.
+Hou deze pagina in de gaten voor toekomstige challenges.
 
 
 

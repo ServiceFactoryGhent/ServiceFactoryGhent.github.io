@@ -10,7 +10,7 @@ excerpt: "We willen een visuele component ontwikkelen voor het zoeken van adress
 
 We hebben nood aan een visuele component voor het zoeken van adressen.
 Alle browser gebaseerde applicaties – onafhankelijk van hun front- en backend technologie - moeten deze component kunnen gebruiken.
-Deze challenge wordt op dit nu geïmplementeerd.
+Deze challenge wordt op nu geïmplementeerd.
 
 Hou deze pagina in de gaten voor toekomstige challenges.
 

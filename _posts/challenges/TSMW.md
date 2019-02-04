@@ -1,0 +1,15 @@
+---
+layout: post                                
+title: Time & Scheduling Medewerkers Service
+image: /images/posts/cras-ultricies.jpg
+date: 2019-02-01 00:00:00 -0500
+category: challenge
+weight: 1
+---
+
+Digipolis Gent is steeds op zoek naar manieren om de Stad en OCMW Gent een stuk slimmer te maken 
+en dat willen we realiseren door te werken met een aantal nieuwe technologieën. 
+Daarom zoeken we een aantal getalenteerde bedrijven die ons kunnen helpen 
+bij de ontwikkeling van de ‘Time & Scheduling Medewerkers service’ (TSMW service).
+
+Geïnteresseerd? Ga naar https://www.digipolis.be/projecten/TSMWservice_challenge en vul de Google Form in.

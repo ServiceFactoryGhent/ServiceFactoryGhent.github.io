@@ -21,7 +21,7 @@ title: Service factory
 						{% for post in challengesbyweight reversed %}
 							<article class="challengepost post-showinfo post type-post status-publish format-standard has-post-thumbnail hentry category-html category-seo tag-css tag-html tag-mobile">
 								<div class="post-media overlay">
-									<a href="{{ site.url }}{{ post.url }}" class="feature-image hover-animate">
+									<a href="{{ site.url }}{{ post.url }}" class="feature-image hover-animate img-fix">
 									{% if post.image == "" or post.image == nil or post.image == blank %}
 										<img src="images/posts/news_placeholder.png" class="" alt="14ZJP1_5_1.jpg">
 									{% else %}

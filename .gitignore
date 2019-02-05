@@ -11,3 +11,5 @@ _site/
 local_config.yml
 assets/docs/inleiding2.html
 Gemfile.lock
+.bundle
+vendor/

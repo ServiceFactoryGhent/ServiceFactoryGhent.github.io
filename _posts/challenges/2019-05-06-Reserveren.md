@@ -1,1 +1,12 @@
+---
+layout: post                                
+title: titel van de Challenge
+image: /images/posts/cras-ultricies.jpg
+date: 2017-10-10 00:00:00 -0500
+category: challenge
+weight: 2
+---
 
+Write your Challenge description here
+
+Add an image by using the following line:

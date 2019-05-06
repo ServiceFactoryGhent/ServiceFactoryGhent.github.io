@@ -4,8 +4,10 @@ title: Online Reserveren
 image: /images/posts/cras-ultricies.jpg
 date: 2019-05-06 00:00:00 -0500
 category: challenge
-weight: 2
+weight: 10
 ---
+
+Dzju toch
 
 Digipolis Gent zoekt API-first ontwikkelaars om dit kwartaal nog breed inzetbare services te ontwikkelen rond online reserveren.
 Heb jij daar ervaring in en wil je graag meer informatie ontvangen? Schrijf je dan voor maandag 13/5/2019 in via ons formulier.

@@ -20,5 +20,5 @@ Door die componenten op verschillende manieren samen te stellen, komen we tot ta
 Deze services zullen gebruikt worden als basis voor een online reservatietool die door verschillende diensten binnen Stad Gent gebruikt zal worden. Aan de ene kant moet deze tool de administrators ondersteunen om reservaties gemakkelijk te registreren en op te volgen.
 Aan de andere kant moet deze tool gebruikers ook toelaten om zich in te schrijven op evenementen, om materialen, sportterreinen en schooluitstappen te reserveren, om museumtickets te boeken, noem maar op.
 
-Heb jij daar ervaring mee? Aarzel dan niet langer en schrijf je nu in.
-[Inschrijvingsformulier](https://docs.google.com/forms/d/1dF3e8djaQmYglIFpFt0DkkSgHyamIUhc1Wn7_XAUapI/edit?ts=5ccac0a9)
+Heb jij daar ervaring mee? Aarzel dan niet langer en schrijf je nu in via ons
+[inschrijvingsformulier](https://docs.google.com/forms/d/1dF3e8djaQmYglIFpFt0DkkSgHyamIUhc1Wn7_XAUapI/edit?ts=5ccac0a9)

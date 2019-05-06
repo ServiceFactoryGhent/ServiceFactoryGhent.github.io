@@ -8,7 +8,7 @@ weight: 2
 ---
 
 Digipolis Gent zoekt API-first ontwikkelaars om dit kwartaal nog breed inzetbare services te ontwikkelen rond online reserveren.
-Heb jij daarervaring in en wil je graag meer informatie ontvangen? Schrijf je dan voor maandag 13/5/2019 in via ons formulier.
+Heb jij daar ervaring in en wil je graag meer informatie ontvangen? Schrijf je dan voor maandag 13/5/2019 in via ons formulier.
 Zodra we jouw inschrijving hebben ontvangen, sturen we je meer informatie op en krijg je een uitnodiging om jezelf op maandag 20 of dinsdag 21 mei te komen pitchen.
 
 Ons doel?

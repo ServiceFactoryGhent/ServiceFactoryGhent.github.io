@@ -7968,6 +7968,7 @@ h4 {
   border: 1px solid #ccc;
   background: #fbfbfb;
   float: left;
+  max-width: unset !important;
 }
 
 .post-title {
